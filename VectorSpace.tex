@@ -1,0 +1,52 @@
+\section{Vector Spaces in $\R_n$}
+
+Let $L$ be a {\elevenit non-empty} set of vectors of $\R_n$ with the properties:
+\begin{itemize}
+\item[1.] If $\a$ is a vector of the set $L$, then $\lambda \a$ belongs to $L$ for every real $\lambda$.
+\item[2.] If $\a$ and $\b$ are two (not necessarily distinct) vectors of the set $L$, then the vector $\a +\b$ also belongs to $L$.
+\end{itemize}
+Such a set of vectors, satisfying 1. and 2., is  called a {\bf vector space} in $\R_n$.
+
+\begin{theorem} {\bf Steinitz replacement theorem}. Let $\a_1, \a_2, ..., \a_p$ be any $p$ vectors, and let $L$ be the vector space spanned by them. Let $\b_1, \b_2, ..., \b_q$ be any $q$ linearly independent vectors of 
+$L$. Then we may replace a certain set of $q$ vectors from among the vectors $\a_1, \a_2, ..., \a_p$ by the vectors $\b_1, \b_2, ...,\b_q$ so that the remaining vectors of $\a_1, \a_2, ..., \a_p$ together with the vectors $\b_1, \b_2, ..., \b_q$ span the entire vector space $L$.\label{Th2_1}
+\end{theorem}
+
+\begin{proof}
+Use mathematical induction.
+\end{proof}
+
+\begin{theorem}
+Any set of more than $p$ linear combinations of $p$ given vectors is always linearly dependent.\label{Th2_2}
+\end{theorem}
+
+\begin{theorem}
+The maximal number of linearly independent vectors in $\R_n$ is $n$\label{Th2_3}
+\end{theorem}
+
+\begin{definition}{\bf Dimension and Basis}\\
+Let $L$ be any vector space in $\R_n$. The maximal number of linearly independent vectors is $\le n$. Let $p$ be this maximal number of independent vectors in $L$. We call $p$ the {\bf dimension} of $L$. Thus,
+$$0 \le p \le n.$$
+
+We call any system of $p$ linearly independent vectors of $L$, such as $\a_1, \a_2, ..., \a_p$ a {\bf basis} of $L$.
+\end{definition}
+
+\begin{theorem}
+Every vector of $L$ can be represented in exactly one way as a linear combination of the basis vectors $\a_1, \a_2, ..., \a_p$.\label{Th2_4}
+\end{theorem}
+
+\begin{theorem}
+The dimension of the vector space spanned by the vectors $\a_1, \a_2, ...,\a_p$ is equal to the maximal number of linearly independent vectors among $\a_1, \a_2, ..., \a_p$.\label{Th2_5}
+\end{theorem}
+
+\begin{theorem}
+Any $k ~ (k\le p)$ linearly independent vectors $$\b_1, \b_2, ..., \b_k$$
+ of $L$ can be extended to form a basis of $L$ by suitably adjoining to them $p-k$ other vectors $\a_{k+1}, \a_{k+2}, ..., \a_p$.\label{Th2_6}
+\end{theorem}
+
+Let $L'$ and $L''$ be any two vector spaces in $\R_n$. By the {\bf intersection} $D$ of $L'$ and $L''$ we mean the set of all those vectors belonging to both $L'$ and $L''$.\\
+
+If we form the totality $S$ of all vectors of the form $\a' + \a''$, where $\a'$ belongs to $L'$ and $\a''$ belongs to $L''$. $S$ is called the {\bf sum} of $L'$ and $L''$.
+
+\begin{theorem}
+If the dimensions of the vector spaces $L', L'', D,$ and $S$ are respectively $p', p'', d$ and $s$, then $$p' + p'' = d + s.$$\label{Th2_7}
+\end{theorem}

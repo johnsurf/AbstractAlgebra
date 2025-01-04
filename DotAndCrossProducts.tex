@@ -1,0 +1,97 @@
+\section{Some Vector Theorems (3-dimensions)}
+\begin{align*}
+{\bf B} \times {\bf C} = 
+\det\begin{bmatrix}
+{\bf i} & {\bf j} & {\bf k}\\
+B_x & B_y & B_z  \\
+C_x& X_y & C_z \\
+\end{bmatrix} = {\bf i}(B_y C_z - C_y B_z) + {\bf j}(B_z C_x - B_x C_z) + {\bf k}(B_xC_y-B_yC_x) 
+\end{align*}
+
+\begin{theorem}[BAC-CAB]
+\[ {\bf a} \times ({\bf b} \times {\bf c}) = {\bf b}({\bf a}\cdot {\bf c}) - {\bf c}({\bf a}\cdot {\bf b}) \]
+\[ ({\bf a} \times {\bf b}) \times {\bf c} = {\bf b}({\bf a}\cdot {\bf c}) - {\bf a}({\bf b}\cdot {\bf c}) \]
+\end{theorem}
+
+\begin{proof}
+Given the expression for ${\bf B} \times {\bf C}$ we have 
+%\begin{align*}
+\begin{eqnarray*}
+{\bf a} \times ({\bf b} \times {\bf c}) &=& 
+\det\begin{bmatrix}
+{\bf i} & {\bf j} & {\bf k}\\
+a_x & a_y & a_z  \\
+(b_yc_z - b_zc_y)&(b_zc_x - b_xc_z)  &  (b_xc_y-b_yc_x)\\
+\end{bmatrix} \\ \\
+&=& {\bf i} \big( a_y(b_xc_y-b_yc_x) - a_z(b_zc_x - b_xc_z) \big) + \\  
+&\null & {\bf j} \big( a_z(b_yc_z - c_yb_z) - a_x(b_xc_y-b_yc_x) \big) + \\  
+&\null & {\bf k} \big( a_x(b_zc_x - c_zb_x) - a_y(b_yc_z-b_zc_y) \big) \\  
+\end{eqnarray*}
+%\end{align*}
+Prove component-by-component. The ${\bf i}^{th}$ component can be written as 
+$$ b_x (a_yc_y + a_zc_z) - c_x(a_yb_y + a_zb_z)  = b_x (a_xc_x + a_yc_y + a_zc_z) - c_x(a_xb_x +a_yb_y + a_zb_z) = b_x( {\bf a}\cdot{\bf c}) - c_x({\bf a}\cdot{\bf b}).$$  
+The ${\bf j}^{th}$ component can be written as 
+$$ b_y (a_zc_z + a_xc_x) - c_y(a_zb_z + a_xb_x)  = b_y (a_xc_x + a_yc_y + a_zc_z) - c_y(a_xb_x +a_yb_y + a_zb_z) = b_y( {\bf a}\cdot{\bf c}) - c_y({\bf a}\cdot{\bf b}).$$  
+The ${\bf k}^{th}$ component can be written as 
+$$ b_z (a_xc_x + a_yc_y) - c_z(a_xb_x + a_yb_y)  = b_z (a_xc_x + a_yc_y + a_zc_z) - c_z(a_xb_x +a_yb_y + a_zb_z) = b_z( {\bf a}\cdot{\bf c}) - c_z({\bf a}\cdot{\bf b}).$$  
+Putting back the respective unit vectors and adding we find the vector sum to be equal to
+\[ {\bf b}({\bf a}\cdot {\bf c}) - {\bf c}({\bf a}\cdot {\bf b}).\] This demonstrates the proof that 
+\[ {\bf a} \times ({\bf b} \times {\bf c}) = {\bf b}({\bf a}\cdot {\bf c}) - {\bf c}({\bf a}\cdot {\bf b}).\]
+The second part of the theorem is proven in a similar manner:
+\[ ({\bf a} \times {\bf b}) \times {\bf c}  = - {\bf c} \times ({\bf a} \times {\bf b}) = {\bf b}({\bf a}\cdot {\bf c}) - {\bf a}({\bf b}\cdot {\bf c}), \] using the first half of the proof along with the substitutions:
+\[ {\bf a} \goes -{\bf c}\quad {\bf b} \goes {\bf a}\quad {\bf c} \goes {\bf b}\] viz.
+\[ ({\bf a} \times {\bf b}) \times {\bf c}  = -{\bf c} \times ({\bf a} \times {\bf b})  \goes {\bf a} (-{\bf c}\cdot{\bf b}) - {\bf b} (-{\bf c}\cdot{\bf a}) = {\bf b}({\bf a}\cdot{\bf c}) -{\bf a}({\bf b}\cdot{\bf c}).\]\qed
+\end{proof}
+
+\begin{theorem}
+\[ ({\bf a} \times {\bf b}) \cdot ({\bf c} \times {\bf b}) = ({\bf a}\cdot {\bf c})({\bf b}\cdot {\bf d}) - ({\bf a}\cdot {\bf d})({\bf b}\cdot {\bf c}) \]
+\end{theorem}
+\begin{proof}
+\[ {\bf x}\cdot ({\bf c}\times{\bf d}) = ({\bf x}\times {\bf c})\cdot{\bf d}\] Let ${\bf x} = {\bf a}\times{\bf b}$. Then 
+\begin{eqnarray*}
+({\bf a} \times {\bf b}) \cdot ({\bf c} \times {\bf b}) &=&\{({\bf a} \times {\bf b})  \times {\bf c}\} \cdot {\bf d} \\
+&=& \{{\bf b}({\bf a}\cdot {\bf c}) - {\bf a}({\bf b}\cdot {\bf c}) \}\cdot {\bf d} \\
+&=& ({\bf a}\cdot {\bf c})({\bf b}\cdot {\bf d}) - ({\bf a}\cdot {\bf d})({\bf b}\cdot {\bf c}) \\
+&=&\det\begin{bmatrix}
+{\bf a}\cdot {\bf c} & {\bf a}\cdot {\bf d} \\
+{\bf b}\cdot {\bf c} & {\bf b}\cdot {\bf d}
+\end{bmatrix}
+\end{eqnarray*} 
+\end{proof}
+
+\begin{theorem}
+\[ ({\bf a} \times {\bf b}) \times ({\bf c} \times {\bf d}) = {\bf b}({\bf a}\cdot {\bf c}\times {\bf d}) - {\bf a}({\bf b}\cdot {\bf c}\times {\bf d}) =  {\bf c}({\bf a}\cdot {\bf b}\times {\bf d}) - {\bf d}({\bf a}\cdot {\bf b}\times {\bf c})\]
+\end{theorem}
+\begin{proof}
+\[ {\bf x} \times ({\bf c} \times {\bf d}) = {\bf c}({\bf x}\cdot {\bf d}) - {\bf d}({\bf x}\cdot {\bf c}) \] Let ${\bf x} = {\bf a}\times {\bf b}$. Then 
+
+\begin{eqnarray*}
+({\bf a} \times {\bf b}) \times ({\bf c} \times {\bf d}) &=& {\bf c}({\bf a}\times {\bf b}\cdot {\bf d}) - {\bf d}({\bf a}\times {\bf b}\cdot {\bf c}) \\ 
+ &=& {\bf c}({\bf a}\cdot {\bf b}\times {\bf d}) - {\bf d}({\bf a}\cdot {\bf b}\times{\bf c})\qed
+\end{eqnarray*}
+Also 
+\[ ({\bf a} \times {\bf b}) \times {\bf y}  = {\bf b}({\bf a}\cdot {\bf y}) - {\bf a}({\bf b}\cdot {\bf y}) \] Let ${\bf y} = {\bf c}\times {\bf d}$. Then 
+\[({\bf a} \times {\bf b}) \times ({\bf c} \times {\bf d}) ={\bf b}({\bf a}\cdot {\bf c}\times{\bf d}) - {\bf a}({\bf b}\cdot {\bf c}\times{\bf d})\qed\]
+\end{proof}
+
+
+\begin{theorem}[Compound Vector Scalar Product]
+\[ ({\bf a} \times {\bf b})\cdot ({\bf b}\times {\bf c}) \times ({\bf c}\times {\bf a}) = ({\bf a}\cdot {\bf b} \times {\bf c})^2 \]
+\end{theorem}
+
+\begin{proof}
+\[ {\bf x} \times ({\bf c}\times {\bf a}) = {\bf c}({\bf x}\cdot {\bf a}) - {\bf a}({\bf x}\cdot {\bf c}) \]
+Let ${\bf x} = {\bf b} \times {\bf c}$, then 
+\begin{eqnarray*}
+({\bf b}\times {\bf c}) \times ({\bf c}\times {\bf a}) & =&  {\bf c}({\bf b}\times {\bf c} \cdot {\bf a}) - {\bf a}({\bf b}\times{\bf c}\cdot {\bf c}) \\
+                                                                                   & =&  {\bf c}({\bf a}\cdot {\bf b} \times {\bf c}) - {\bf a}({\bf b}\cdot \times{\bf c}\times {\bf c}) \\
+                                                                                   & =&  {\bf c}({\bf a}\cdot {\bf b} \times {\bf c}).
+\end{eqnarray*}
+
+Therefore 
+\begin{eqnarray*}
+({\bf a} \times {\bf b})\cdot ({\bf b}\times {\bf c}) \times ({\bf c}\times {\bf a}) & =&  ({\bf a} \times {\bf b})\cdot {\bf c}({\bf a}\cdot {\bf b} \times {\bf c})\\
+                                                                                                                                & =&  ({\bf a} \times {\bf b}\cdot {\bf c})({\bf a}\cdot {\bf b} \times {\bf c})\\
+                                                                                   & =&  ({\bf a}\cdot {\bf b} \times {\bf c})^2 \qed\\
+\end{eqnarray*}
+\end{proof}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  31 DEC 2024 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  3 JAN 2025 17:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -576,64 +576,66 @@ ar com-bi-na-tion of $\U/euf/m/n/10 a[]\OML/cmm/m/it/10 ; \U/euf/m/n/10 a[]\OML
 /cmm/m/it/10 ; :::; \U/euf/m/n/10 a[]$\OT1/cmr/m/it/10 ,
  []
 
+) (./VectorSpace.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 137.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 137.
+(hyperref)                removing `math shift' on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+) (./DotAndCrossProducts.tex [5] [6]) (./ReciprocalSpace.tex [7])
+(./LinearSpaces.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-) (./EquivalenceRelations.tex [9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+) (./EquivalenceRelations.tex [12]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -643,7 +645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
-) (./SubGroups.tex [10]
+) (./SubGroups.tex [13]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
@@ -653,12 +655,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[11]) (./ChineseRemainder.tex [12]) (./Fields.tex
+[14]) (./ChineseRemainder.tex [15]) (./Fields.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-) (./FiniteFields.tex [13] [14]) (./Descartes.tex
+) (./FiniteFields.tex [16] [17]) (./Descartes.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -678,7 +680,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-[15]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
@@ -693,12 +695,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[16]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[17]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
@@ -708,7 +710,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-[18]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
@@ -723,7 +725,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-[19]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
@@ -736,12 +738,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
-[20]) (./Vandermonde.tex [21]
+[23]) (./Vandermonde.tex [24]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[22]) (./Sylvester.tex [23] [24]
+[25]) (./Sylvester.tex [26] [27]
 Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
 []|$[]$|  
  []
@@ -761,73 +763,73 @@ Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
 []|$[]$|  
  []
 
-[25]) (./Geometry.tex [26] [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+[28]) (./Geometry.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 355--357
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--483
+Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
+Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
@@ -837,39 +839,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 513--516
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 1B30B341A1A9CF381E043A3C79BC5682;4813.
+
+Package rerunfilecheck Warning: File `AbstractAlgebra.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `AbstractAlgebra.out':
+(rerunfilecheck)             Before: DC675C7703FA765990D90AFE32F54AC7;4813
+(rerunfilecheck)             After:  3D453A579B5345877909D05C587417D4;4813.
  ) 
 Here is how much of TeX's memory you used:
- 11610 strings out of 476029
- 185624 string characters out of 5790172
+ 11636 strings out of 476029
+ 186105 string characters out of 5790172
  1882346 words of memory out of 5000000
- 31689 multiletter control sequences out of 15000+600000
+ 31697 multiletter control sequences out of 15000+600000
  522297 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,23n,76p,946b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (38 pages, 364866 bytes).
+
+pdfTeX warning (dest): name{equation.7.6} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.7.5} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.7.2} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.7.4} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.7.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.7.3} has been referenced but does not exis
+t, replaced by a fixed one
+
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on AbstractAlgebra.pdf (38 pages, 364886 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 177 named destinations out of 1000 (max. 500000)
  217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
