@@ -73,6 +73,32 @@ Putting both of the above equations together we find
 \sum_{s=1}^n  a_{ks} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{ks} \,A_{rs} = \delta_{kr} \det |A|  \label{cofactorExpansion}
 \end{equation}
 
+{\bf Classical Adjoint and Inverse Matrix}
+We define the Classical Adjoint of the matrix $A$ as
+\[ {\bf adj}(A)= M^\dagger, \] where $M^\dagger$ is the transpose of the cofactor matrix, $M$.
+Using Eq.(\ref{cofactorExpansion}), the inverse of $A$ is given by
+\[ A^{-1} = {1\over|A|}{\bf adj}(A).\label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$. 
+Therefore the determinant of the Classical Adjoint matrix is \[ |{\bf adj}(A)| = |A|^n | |A|^{-1} = |A|^{n-1},\] for an $n$-by-$n$ matrix $A$. \\
+
+{\bf Reciprocal Vector Space in $n$-Dimensions}
+Consider a set of $n$ vectors $\{ \a'_1, \a'_2, ...,\a'_n\}$, given by
+\[ \a'_j = {1\over|A|}\{M_{j1},M_{j2},\hdots,M_{jn}\}.\] We will refer to this set of vectors as being reciprocal to the set of vectors forming the columns of $A$. 
+From the definition of inverse of matrix $A$ we immediately have
+\[ \a_k \cdot \a'_j = \delta_{kj}.\] 
+Also the determinant of the $n$-by-$n$ matrix formed from the set of $\a'_j, j=1,2,...,n$ vectors arranged in columns
+\begin{equation}
+A' = 
+\begin{bmatrix}
+\a'_{1} & \a'_{2}  & \hdots & \a'_{n}  \\
+\end{bmatrix}
+\end{equation}had a determinant equal to 
+\begin{equation}
+\begin{vmatrix} 
+A'
+\end{vmatrix} = |A|^{-n}| \det(M) =  |A|^{-n}| |A|^{n-1} = |A|^{-1}.
+\end{equation}Therefore the volume of the set of reciprocal vectors ${\rm volume}\{\a'_1, \a'_2, \hdots, \a'_n\} = \displaystyle{{1\over|A|} = {1\over V}}$ where $V =|A|$ is the volume of the set of the vectors
+$\{\a_1, \a_2, \hdots, \a_n\}$. This is the $n$-dimensional Euclidean space version of Reciprocal Vectors in 3-dimensional Euclidean space.   
+
 {\bf Schur's complement}:
 Suppose p, q are nonnegative integers, and suppose $A$, $B$, $C$, $D$ are respectively $p$-by-$p$, $p$-by-$q$, $q$-by-$p$, and $q$-by-$q$ matrices of complex numbers. Let
 \begin{equation}
