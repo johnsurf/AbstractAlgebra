@@ -74,11 +74,47 @@ Putting both of the above equations together we find
 \end{equation}
 
 {\bf Classical Adjoint and Inverse Matrix}
-We define the Classical Adjoint of the matrix $A$ as
+We define the Classical Adjoint, also known as the Adjugate, of the matrix $A$ as
 \[ {\bf adj}(A)= M^\dagger, \] where $M^\dagger$ is the transpose of the cofactor matrix, $M$.
 Using Eq.(\ref{cofactorExpansion}), the inverse of $A$ is given by
 \[ A^{-1} = {1\over|A|}{\bf adj}(A).\label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$. 
 Therefore the determinant of the Classical Adjoint matrix is \[ |{\bf adj}(A)| = |A|^n | |A|^{-1} = |A|^{n-1},\] for an $n$-by-$n$ matrix $A$. \\
+
+{\bf Left Inverse and Right Inverse}
+Suppose we have a left inverse $X$ and a right inverse $Y$ of a matrix $A$. This means that 
+\[ XA = AY = I.\] Therefore we have 
+\begin{eqnarray*}
+XAY &=& X, \quad\mbox{ and}\\
+XAY &=& Y.
+\end{eqnarray*}Therefore 
+\[X = XAY = Y, \mbox{ or }  X=Y.\]  Therefore left and right inverses of a non-singular matrix must be equal.\\
+
+{\bf The inverse of a Symmetric Matrix is Symmetric}
+A symmetric matrix is defined by $A = A^\dagger$. The inverse of $A$ satisfies
+\[ A^{-1} A = I \] Therefore, by taking the transpose of both sides we have
+\[ A^T (A^{-1})^\dagger = A (A^{-1})^\dagger = I.\]Therefore 
+\[ A^{-1} A (A^{-1})^\dagger = A^{-1} I = A^{-1},\] or 
+\[(A^{-1})^\dagger = A^{-1}.\]Therefore the inverse of a symmetric matrix is also symmetric. \\
+
+{\bf Special Cases -- Inverting a Triangular Matrix}
+\begin{theorem}[Upper Triangular Matrices]
+Let $U$ be an upper triangular matrix. If the inverse $U^{-1}$ exists, then it is upper triangular.
+\end{theorem}
+\begin{proof}
+Recall the $(n-1)\times(n-1)$ cofactor matrix, $M_{rs}$ that results from omitting row $r$ and column $s$ of $U = (u_{ij})$. 
+When it exists, \[ U^{-1} = {1\over|U|}{\bf adj}(U),\] so it is enough to prove that the $n \times n$ matrix $(|C_{rs}|)$ of cofactor determinants whose transpose
+is $(|C_{rs}|)^\dagger$ is the adjugate, is lower triangular.\\
+
+In the case $r < s$, every element below the diagonal of the matrix $C_{rs}$ is also below the diagonal of $U$, so must be equal to $0$.\\
+
+Hence $C_{rs}$ is upper triangula, with the determinant equal to the product of its diagonal elements.\\
+
+However, $s-r$ of these diagonal elements are $u_{i+1,j}$ for $i=r,\hdots,s-1$. These elements are from below the diagonal of $U$, and so are equal to $0$. \\
+
+Hence $r <  s$ implies that $|C_{rs}| = 0$, so the $n\times n$ matrix $(|C_{rs}|)$ of cofactor determinants is indeed lower triangular. Hence the adjugate 
+$(|C_{rs}|)^\dagger$ is upper triangular. Hence the inverse of and upper triangular matrix is upper triangular. By similar reasoning we can show that the 
+inverse of a lower triangular matrix is lower triangula.\qed
+\end{proof}
 
 {\bf Reciprocal Vector Space in $n$-Dimensions}
 Consider a set of $n$ vectors $\{ \a'_1, \a'_2, ...,\a'_n\}$, given by
@@ -97,7 +133,7 @@ A' =
 A'
 \end{vmatrix} = |A|^{-n}| \det(M) =  |A|^{-n}| |A|^{n-1} = |A|^{-1}.
 \end{equation}Therefore the volume of the set of reciprocal vectors ${\rm volume}\{\a'_1, \a'_2, \hdots, \a'_n\} = \displaystyle{{1\over|A|} = {1\over V}}$ where $V =|A|$ is the volume of the set of the vectors
-$\{\a_1, \a_2, \hdots, \a_n\}$. This is the $n$-dimensional Euclidean space version of Reciprocal Vectors in 3-dimensional Euclidean space.   
+$\{\a_1, \a_2, \hdots, \a_n\}$. This is the $n$-dimensional Euclidean space version of Reciprocal Vectors in 3-dimensional Euclidean space.\\
 
 {\bf Schur's complement}:
 Suppose p, q are nonnegative integers, and suppose $A$, $B$, $C$, $D$ are respectively $p$-by-$p$, $p$-by-$q$, $q$-by-$p$, and $q$-by-$q$ matrices of complex numbers. Let
@@ -187,7 +223,6 @@ We successively subtract the $\sum_{i=1}^n b_{k\, i} \a_i$ from the $k$-th row o
 \begin{equation}
 \det M = (-1)^m \det (BC)
 \end{equation} where $B$ and $C$ are the matrices corresponding to $b_{kj}$ and $c_{ij}$ respectively.\\
-
 
 Another representation of $\det M$ can be obtained by applying Laplace's Generalized Theorem successively. First swap the bottom $n$ rows with the top $m$ rows (by moving each of the bottom $n$ rows up $m$ positions and changing the sign of $\det M$ accordingly
 \begin{equation}
