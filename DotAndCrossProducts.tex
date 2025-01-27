@@ -94,3 +94,60 @@ Therefore
                                                                                    & =&  ({\bf a}\cdot {\bf b} \times {\bf c})^2 \qed\\
 \end{eqnarray*}
 \end{proof}
+
+\begin{definition}The operator $\nabla$ is given by
+\[ \nabla = {\bf i}{\partial\over\partial x} + {\bf j}{\partial\over\partial y} + {\bf k}{\partial\over\partial z}.\]
+\end{definition}
+
+\begin{definition}
+The Divergence of a vector field is given by
+\[ \nabla\cdot{\bf a} = {\partial\over\partial x} a_x +{\partial\over\partial y} a_y +{\partial\over\partial z} a_z.\]
+\end{definition}
+
+\begin{definition}
+The Laplacian (Divergence of the Gradient) operator is given by
+\[ \nabla^2 = \nabla\cdot \nabla = {\partial^2\over\partial x^2} +{\partial^2\over\partial y^2} +{\partial^2\over\partial z^2}.\]
+\end{definition}
+
+\begin{definition}
+The Curl of a vector field is given by
+\begin{eqnarray*}
+\nabla \times {\bf a} = 
+\det\begin{bmatrix}
+{\bf i} & {\bf j} & {\bf k}\\
+\partial_x & \partial_y & \partial_z  \\
+a_x& a_y & a_z \\
+\end{bmatrix}
+\end{eqnarray*}
+
+\end{definition}
+
+\begin{theorem}
+\[ \nabla\cdot ({\bf a} \times {\bf b}) = {\bf b}\cdot (\nabla \times {\bf a}) - {\bf a} \cdot (\nabla \times {\bf b}). \]
+\end{theorem}
+\begin{proof}
+\begin{eqnarray*}
+\nabla\cdot({\bf a} \times {\bf b}) &=& 
+\det\begin{bmatrix}
+\partial_x & \partial_y & \partial_z\\
+a_x & a_y & a_z  \\
+b_x& b_y  & b_z  \\
+\end{bmatrix}
+\end{eqnarray*}
+\begin{eqnarray*}
+&=&[\partial_x (a_y b_z - a_z b_y)  - \partial_y(a_x b_z - a_z b_x) +  \partial_z(a_x b_y - a_y b_x) ]\\
+&=&b_z \partial_x a_y - b_y \partial_x a_z  - b_z \partial_y a_x + b_x\partial_y a_z + b_y \partial_z a_x  - b_x\partial_z a_y  \\
+&+&a_y \partial_x b_z - a_z\partial_x b_y  - a_x  \partial_y b_z + a_z \partial_y b_x + a_x \partial_z b_y  - a_y \partial_z b_x  \\ \\
+&=& [b_x(\partial_y a_z  - \partial_z a_y) -  b_y (\partial_x a_z - \partial_z a_x ) +  b_z (\partial_x a_y  - \partial_y a_x)]    \\
+&- & [a_x (\partial_y b_z - \partial_z b_y ) - a_y( \partial_x b_z - \partial_z b_x)  +  a_z(\partial_x b_y  - \partial_y b_x)]   \\
+&=& {\bf b}\cdot (\nabla \times {\bf a}) - {\bf a}\cdot (\nabla \times {\bf b})\ \qed
+\end{eqnarray*}
+\end{proof}
+
+\begin{theorem}
+\[ \nabla\times( {\bf a}\times {\bf b}) = ({\bf b}\cdot \nabla){\bf a} - ({\bf a}\cdot \nabla){\bf b} + (\nabla\cdot{\bf b}) {\bf a} -  (\nabla\cdot{\bf a}) {\bf b}. \]  
+\end{theorem}
+
+\begin{theorem}
+\[ \nabla\times( \nabla \times {\bf a}) = \nabla (\nabla \cdot {\bf a})  -  (\nabla\cdot \nabla) {\bf a} =  \nabla (\nabla \cdot {\bf a})  -  \nabla^2{\bf a}.\]  
+\end{theorem}
