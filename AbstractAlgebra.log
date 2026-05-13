@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  26 JAN 2025 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  12 MAY 2026 19:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -530,34 +530,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--76
+Underfull \hbox (badness 10000) in paragraph at lines 68--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--76
+Underfull \hbox (badness 10000) in paragraph at lines 68--78
 
  []
 
 [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 79.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 81.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -565,10 +565,10 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 110.
+(amsmath)                 on input line 112.
 
 
-Overfull \hbox (4.59897pt too wide) in paragraph at lines 131--133
+Overfull \hbox (4.59897pt too wide) in paragraph at lines 133--135
 []\OT1/cmr/m/it/10 If the vec-tors $\U/euf/m/n/10 a[]\OML/cmm/m/it/10 ; \U/euf/
 m/n/10 a[]\OML/cmm/m/it/10 ; :::; \U/euf/m/n/10 a[]$ \OT1/cmr/m/it/10 are lin-e
 arly in-de-pen-dent, and if $\U/euf/m/n/10 b$ \OT1/cmr/m/it/10 is a not a lin-e
@@ -688,17 +688,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-) (./Vandermonde.tex [16]
+) (./FundamentalTheorem.tex [16]) (./Vandermonde.tex [17]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[17] [18]) (./LinearSpaces.tex
+[18] [19]) (./LinearSpaces.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-[19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
@@ -713,7 +713,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[20]
+[21] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
@@ -723,17 +723,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
-[21]
+
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-[22]) (./EquivalenceRelations.tex
+) (./EquivalenceRelations.tex [24]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -743,22 +743,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
-) (./SubGroups.tex [23]
+) (./SubGroups.tex [25]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-) (./FermatLittleTheorem.tex [24]
+) (./FermatLittleTheorem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[25]) (./ChineseRemainder.tex) (./Fields.tex [26]
+[26]) (./ChineseRemainder.tex [27]) (./Fields.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-) (./FiniteFields.tex [27]) (./Descartes.tex
+) (./FiniteFields.tex [28] [29]) (./Descartes.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -773,17 +773,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-[28]
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-) (./Sylvester.tex [29] [30]
+) (./Sylvester.tex [31]
 Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
 []|$[]$|  
  []
@@ -803,7 +803,7 @@ Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
 []|$[]$|  
  []
 
-[31]) (./Geometry.tex
+[32] [33]) (./Geometry.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -818,7 +818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
@@ -828,7 +828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
-[33]
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
@@ -843,22 +843,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[34]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[35]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
-[36]
+[37] [38]
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-[37]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
@@ -868,25 +868,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
-[38]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
-) (./ApplicationsInMechanics.tex [39]) [40] [41
+) (./ApplicationsInMechanics.tex) [41] [42
 
 ] (./AbstractAlgebra.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 15BAD409135EA40929CCEA509867174A;4813.
+(rerunfilecheck)             Checksum: 77A7A402F4A37777309AB962B85A746A;5017.
  ) 
 Here is how much of TeX's memory you used:
- 11644 strings out of 476029
- 186183 string characters out of 5790172
- 1882346 words of memory out of 5000000
- 31700 multiletter control sequences out of 15000+600000
+ 11657 strings out of 476029
+ 186414 string characters out of 5790172
+ 1877346 words of memory out of 5000000
+ 31704 multiletter control sequences out of 15000+600000
  522297 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,23n,76p,946b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -908,10 +908,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
 2/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (41 pages, 376025 bytes).
+Output written on AbstractAlgebra.pdf (42 pages, 383847 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 503 compressed objects within 6 object streams
- 182 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 601 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
