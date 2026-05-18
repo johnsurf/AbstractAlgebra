@@ -1,0 +1,43 @@
+\section{Commutators}
+\begin{definition}
+Let $G$ be a group. An element $g\in G$ is called a commutator if $g = aba^{-1}b^{-1}$ for elements $a,b \in G$. 
+
+The smallest subgroup that contains all commutators of G is called the commutator subgroup or derived subgroup of $G$, and is denoted by $G'$.
+\end{definition}
+
+\begin{proposition}Let $G$ be a group with commutator subgroup $G'$.
+\begin{itemize}
+\item[(a)] The subgroup $G'$ is normal in $G$, and the factor group $G/G'$ is Abelian.
+\item[(b)] If $N$ is any normal subgroup of $G$, then the factor group $G/N$ is Abelian, if and only if $G' \in N$.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+(a) Let $x\in G'$ and let $g \in G$. Then $gxg^{-1}x^{-1} \in G'$, and since $x\in G'$, we must have $gxg^{-1} = gxg^{-1}x^{-1}x \in G'$.
+\end{proof}
+
+The factor group $G/G'$ must be Abelian since for any cosets $aG', bG'$, because $G'$ is normal, we have $xG' = G'x$ for all $x\in G$. 
+\[ aG'bG'a^{-1}G'b^{-1}G' = abG'G'a^{-1}b^{-1}G'G' = aba^{-1}b^{-1} G' = G'. \]
+
+\begin{proof}
+(b) Let $N$ be a normal subgroup of $G$. If $N\supseteq G'$, then $G/N$ is a homomorphic image of $G/G'$ and must be Abelian. Conversely, suppose
+that $G/N$ is Abelian. Then $aN bN = bN aN$ for all $a, b \in G$, or simply $aba^{-1}b^{-1}N = N$, showing that every commutator of $G$ belongs to $N$. 
+This implies $G' \subseteq N$.\qed
+\end{proof} 
+
+\begin{theorem}
+The Symmetric Group $G$ on  $n$ letters is not solvable unless $n\le 4$.
+\end{theorem}
+
+\begin{proof}
+Let $G = S_0 \supseteq S_1 \supseteq S_2 \supseteq \hdots \supseteq S_0$ be any chain of subgroups, each normal in the preceeding with cyclic quotient-group
+$S_{k-1}/S_k$; we shall prove by induction on $s$ that $S_s$ must contain every 3-cycle (ijk). This will imply that $S_s > I$, and so, that $G$ cannot be solvable. 
+Since $S_0 = G$ contains every 3-cycle, it is sufficient to show that if $S_{k-1}$ contains every 3-cycle, then so does $S_k$. First note that if the permutations $\phi$ and $\psi$ are both in $S_{k-1}$, 
+then their so-called commutator $\gamma = \phi^{-1}\psi^{-1}\phi\psi$ is in $S_s$. To see this, consider their images $\phi'$ and $\psi'$ in $S_{k-1}/S_k$. The latter, being cyclic, is commutative; hence
+\[ \gamma' = \phi'^{-1} \psi'^{-1} \phi' \psi' = \phi'^{-1} \psi'^{-1} \psi' \phi'  = I  \mbox{  in  } S_{k-1}/S_k,\] which implies that $\gamma \in S_k$. But in the special case when $\phi = (ijk)$ and $\psi = (jkm)$, where 
+$i, j, k$ are given and $l, m$ are any two other letters (such letters exist unless $n\le 4$), we have 
+\[ \gamma = (jli) (mkj) (ilk) (jkm) = (ijk) \in S_k, \mbox{ for all  }  i, j, k.\]
+This proves that $S_k$ contains every 3-cycle, as desired. 
+\end{proof}
+
+The quotient chain doesn't terminate on the Identity, therefore the group $G$ is not solvable unless $n\le 4$. The 3-cycles generate the Alternating group which is simple and has no normal subgroups. 

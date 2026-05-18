@@ -1,0 +1,64 @@
+\section{Homomorphisms}
+As we have already hinted, the subjects of invariant subgroups and homomorphisms of groups are closely connectedl there is in fact a 1-1 correspondence between subgroups of a given group $G$ and the essentially different 
+homomorphism which have $G$ ax the object space, so that the study of either tops is similar to that of the other. \\
+
+Suppose that $H$ is an invariant subgroup of $G$, so that the quotient group $G/H$ is defined. Consider the mapping $\theta: G \goes G/H$ defined by $g\theta = gH$, the coset containing $g$, which is of course an element of $G/H$.
+
+\begin{theorem}
+The mapping $\theta: G \goes G/H$ defined by $g\theta = gH$ is a homomorphism.
+\end{theorem}
+
+\begin{proof}
+\begin{eqnarray*}
+(gg')\theta &=& gg'H = gg' H H\cr
+                 &=& gH g'H \cr
+                 &=& (g\theta) (g'\theta)
+\end{eqnarray*}
+\end{proof}
+
+\begin{corollary}
+The kernel $\theta$ is $H$ and the image is $G/H$, so that $\theta$ is an epimorphism.
+\end{corollary}
+
+The homomorphism $\theta$ is called the Natural Homomorphism or the Canonical Homomorphism associated with $H$. It is essential that $H$ be an invariant subgroup, for otherwise $G/H$ is not defined and we cannot speak of the product of the cosets $(gH)(g'H)$.
+
+Consider a group $G$ that has a normal subgroup $N$ and $H$ and that $H \subseteq N$. 
+\begin{theorem}
+Because $N\supseteq H$, both $N$ and $H$ are normal subgroups of $G$. Thus $G/N$ is the homomorphic image of $G/H$ under the natural homomorphsim
+$\pi: G/H \goes G/N$ defined by 
+$(xG)\pi = xN$. 
+\end{theorem}
+\begin{proof}
+
+1) Define a function $\phi: G\goes G/N$ by
+\[ x\phi = xN.\]
+This is the standard canonical projection map. It is a surjective group homomorphism with $ker(\phi) = N$. 
+
+2) We want to construct a map $\overline{\phi}: G/H \goes G/N$.
+Define $\overline{\phi}$ by:
+\[ (xH) \overline{\phi} = x\phi = xN.\]
+
+3) We must show that if $xH = yH$, then $(xH)\overline{\phi} = (yH)\overline{\phi}.$
+\begin{eqnarray*}
+xH &=& yH \goes y^{-1}x \in H.\cr
+H &\subseteq& N \mbox{  given}\cr
+y^{-1}x &\in& N\cr
+xN &=& N\cr
+(xH)\overline{\phi} = (yH)\overline{\phi}\cr
+\end{eqnarray*}
+The map is well-defined because $ H \subseteq ker(\phi)$. 
+\end{proof}
+
+4) $\overline{\phi}$ is a Homomorphism:
+\[ (xH) (yH) \overline{\phi} = (xyH)\overline{\phi} = xyN = (xN)(yN) = (xH)\overline{\phi} (yH)\overline{\phi}.\]
+
+5) $\overline{\phi}$ is Surjective:
+Let $yN \in G/N$. 
+Since $y\in G$, we can form the coset $yH \in G/H$:
+\[ (yH)\overline{\phi} = yN.\] Every element in the co-domain has a pre-image
+ 
+6) Apply the First Isomorphism Theorem
+By the First Isomorphism Theorem, the domain modulo the kernel is isomorphic to the image
+
+\[ (G/H)/ker(\overline{\phi}) \equiv Im(\overline{\phi} = G/N .\]
+Since $G/N$ is isomorphic to a quotient group of $G/H$, it is by definition a homomorphic image of $G/H$.\qed

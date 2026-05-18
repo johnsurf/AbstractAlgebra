@@ -1,0 +1,82 @@
+\section{Invariant Subgroups}
+
+\begin{definition}
+$H$ is an invariant subgroup of $G$ if it is a subgroup and if the left and right cosets of $H$ in $G$ coincide; i.e., if 
+\[ gH = Hg \quad \forall g \in G.\]
+\end{definition}
+
+Invariant subgroups are often called normal subgroups or self-conjugate subgroups. 
+
+If the left coset $gH$ is also a right coset, then it contains  $g (= eg)$ and so must be the right coset $Hg$. Hence is every left coset is a right coset (or vice versa) $H$ is invariant.
+e
+
+Let us show that this condition is sufficient.
+\begin{theorem}
+If $H$ is invariant in $G$ then $(gH) (g'H) = g g' H$ for all $g,g' \in G$. 
+\end{theorem} 
+
+\begin{proof}
+\begin{eqnarray*}
+ gH g'H &=& g (Hg') H = g(g'H)H \mbox{ since } Hg' = g'H  \mbox{ as H is invariant,}\cr
+ &=& gg'H^2 = gg'H \mbox{ since } H^2 = H \mbox{ as } H \mbox{ is a subgroup.}
+\end{eqnarray*}
+\end{proof}
+Not that is would have been sufficient to prove that \[ (gH)(g'H) \subseteq gg'H,\] 
+
+\begin{theorem}
+A subgroup $H$ is an invariant subgroup of $G$ is and only if $g^{-1}Hg = H$ for all $g\in G$. 
+\end{theorem}
+
+\section{Conjugacy}
+\begin{definition}
+The elements $x$ and $g^{-1} x g$, where $x$ and $g$ are elements of a group $G$, are called conjugate elements in $G$ : in other words $x$ and $y$ are conjugate if and only if there exists
+and element $g \in G$ such that $y = g^-1 x g$.
+\end{definition}
+
+\begin{theorem}
+The relation of conjugacy between elements of any group $G$ is an equivalence relations. 
+\begin{itemize}
+\item[]{\it ~~~~~Reflexive.} Since $x = e^{-1} x$, $x$ is conjugate to itself.
+\item[]{\it ~~~~~Symmetric.} If $ y = g^{-1} x g$ we have $x = g y g^{-1} = (g^{-1})^{-1} y g^{-1}$. 
+\item[]{\it ~~~~~Transitive.}  If $  y = g^{-1} x g$ and  $z = h^{-1} y h$ we have \[ z = h^{-1}g^{-1} x g h = (gh)^{-1} x (gh).\] 
+\end{itemize}
+\end{theorem}
+It follows that the relation divides the elements of $G$ into mutually exclusive classes; these are called {\it conjugacy classes in G}.
+
+\begin{theorem}
+If $H$ is a subgroup of $G$ then $g^{-1} H g$ is a subgroup for any element $g\in G$. 
+\end{theorem}
+\begin{proof}
+For \[(g^{-1} H g)^2 = (g^{-1} H g g^{-1} H g) = (g^{-1} H H g) = (g^{-1} H g) \mbox{   since }  H^2 = H\] as $H$ is a subgroup. Also
+\[  (g^{-1} H g)^{-1} = g^{-1} H^{-1} g = g^{-1} H g  \mbox{   since } H^-1 = H.\]  
+\end{proof}
+
+We say that $H$ and $g^{-1} H g$ are {\it conjugate subgroups} in $G$. 
+
+\begin{theorem}
+The relation of conjugacy between subgroups of $G$ is an equivalence relation.
+\end{theorem}
+
+\begin{theorem}
+$H$ is an invariant subgroup of $G$ if the conjugacy class of subgroups of $G$ which contains $H$ consists of just $H$ itself: i.e., if the only subgroup
+conjugate to $H$ is $H$. 
+\end{theorem}
+
+\section{Quotient groups}
+\begin{theorem}
+If $H$ is an invariant subgroup of $G$, the cosets of $H$ in $G$ form a group under the group product given by
+\[ (gH) (g'H) = gg'H.\]
+\end{theorem}
+The product is well defined and unique, and is also a coset. 
+
+It is associative, since 
+\[ ((gH)(g'H)) (g'' H) = gg'g''H = (gH)( (g'H)(g''H)).\]
+
+The coset $H = (eH)$ is a unity since
+\[ (gH) (eH) = geH =gH \mbox{   and  } (eH)(gH) = egH = gH.\]
+
+The coset $gH$ has an inverse $g^{-1}H$, since
+\[ (gH)(g^{-1}H) = gg^{-1}H = eH = H \mbox{   and   } (g^{-1}H)(gH) = H\] similarly.
+
+
+The quotient group formed by the cosets of $H$ and $G$ is called the {\it Quotient Group of $H$ in $G$}, or sometimes the {\it Factor Group of $G$ relative to $H$}.

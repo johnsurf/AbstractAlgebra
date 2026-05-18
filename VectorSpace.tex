@@ -1,5 +1,64 @@
 \section{Vector Spaces in $\R_n$}
 
+\begin{definition}
+Vectors are directed segments. The vector in $\R_n$ whose components are $a_1, a_2,...,a_n$ is denoted by $$\a = \{a_1, a_2, ..., a_n\}\hbox{~(braces)}.$$
+The zero vector in $\R_n$ is denoted as $$\o = \{0,0,...,0\},$$ with $n$ components each 0. 
+\end{definition}
+
+\begin{definition}We call $p$ vectors $\a_1, \a_2, ..., \a_p$ {\bf linearly dependent} if there are $p$ numbers $\lambda_1, \lambda_2,...,\lambda_p$ not all $0$, such that 
+$$\lambda_1 \a_1 + \lambda_2 \a_2 +...+ \lambda_p \a_p = \o\hbox{~ (the zero vector)}.$$
+\end{definition}
+
+If no such $p$ numbers exist, then the $p$ vectors $\a_1, \a_2, ...,\a_p$ are called {\bf linearly independent}.
+
+\begin{theorem} 
+It a subset of the $p$ vectors $\a_1, \a_2,...,\a_p$ is linearly dependent, then the set of $p$ vectors is itself linearly dependent.\label{Th1_1}
+\end{theorem}
+
+Suppose the first $r$ vectors $\a_1, \a_2, ..., \a_r, (r < p) $are linearly dependent. Then there are $r$ numbers $\lambda_1, \lambda_2, ..., \lambda_r$ not all zero such that 
+$$\lambda_1 \a_1 + \lambda_2 \a_2 + ... + \lambda_r \a_r = \o.$$ Setting $\lambda_{r+1}, \lambda_{r+2}, ..., \lambda_p$ to zero we have
+$$\lambda_1 \a_1 + \lambda_2 \a_2 + ... + \lambda_r \a_r + \lambda_{r+1}\a_{r+1} +... + \lambda_p \a_p = \o.$$ where the numbers $\lambda_1, \lambda_2, ..., \lambda_p$ are not all zero. Therefore the 
+$p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly dependent. 
+
+\begin{theorem}
+If the $p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, then so is every subset of these $p$ vectors. \label{Th1_2}
+\end{theorem}
+
+For otherwise, by Theorem \ref{Th1_1}, the $p$ vectors would be linearly dependent.
+
+\begin{theorem}
+If the $p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly dependent and if $p>1$, then at least one of these vectors
+is a linear combination of the others.\label{Th1_3}
+\end{theorem}
+
+For, there are numbers $\lambda_i$, which do not all vanish such that $$\lambda_1 \a_1 + \lambda_2 \a_2 +...+ \lambda_p \a_p = \o.$$ Suppose $\lambda_p \ne 0$. The we can solve for $\a_p$,
+$$\a_p = -{\lambda_1\over \lambda_p}\a_1 -{\lambda_2\over \lambda_p}\a_2 - ... - {\lambda_{p-1}\over \lambda_p} \a_{p-1},$$ i.e. $\a_p$ is a linear combination of the vectors $\a_1, \a_2, ..., \a_{p-1}$.  
+
+\begin{theorem}
+If one of the vectors $\a_1, \a_2, ..., \a_p$ is a linear combination of the others, then vectors $\a_1,\a_2,...,\a_p$ are linearly dependent.\label{Th1_4}
+\end{theorem}
+
+Suppose $$\a_1 = \lambda_2 \a_2 + \lambda_3 \a_3 +... + \lambda_p \a_p.$$ Then we have that 
+$$\a_1 - \lambda_2 \a_2 - \lambda_3 \a_3 -... - \lambda_p \a_p = \o,$$ and since the coefficient of $\a_1$ is not zero, the vectors $\a_1, \a_2, ... , \a_p$ are linearly dependent. 
+
+\begin{theorem}
+If the vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, and if the vectors $\a_1, \a_2,...\a_p,\b$ are linearly dependent, then $\b$ is a linear
+combination of $\a_1, \a_2, ..., \a_p$.\label{Th1_5}
+\end{theorem}
+
+We have a relation of the form $$\lambda_1 \a_1 + \lambda_2 \a_2 +... + \lambda_p \a_p + \lambda_{p+1} \b =\o,$$ where not all the $\lambda_i$ vanish. Now
+$\lambda_{p+1}$ cannot be 0 because the last term would drop out and then all the other $\lambda_i$ would vanish because of the linear independence of the $\a_i$ vectors. Therefore
+$\lambda_{p+1} \ne 0$ and so we have 
+$$\b = -{\lambda_1\over \lambda_{p+1}}\a_1 -{\lambda_2\over \lambda_{p+1}}\a_2 - ... - {\lambda_p\over \lambda_{p+1}} \a_p.$$
+
+
+\begin{theorem}
+If the vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, and if $\b$ is a not a linear combination of $\a_1, \a_2, ..., \a_p$, then the vectors
+$\a_1, \a_2,...\a_p,\b$ are linearly independent.\label{Th1_6}
+\end{theorem}
+
+Theorem \ref{Th1_6} follows from Theorem \ref{Th1_5}.
+
 Let $L$ be a {\elevenit non-empty} set of vectors of $\R_n$ with the properties:
 \begin{itemize}
 \item[1.] If $\a$ is a vector of the set $L$, then $\lambda \a$ belongs to $L$ for every real $\lambda$.
