@@ -30,8 +30,6 @@
 \usepackage{multirow,bigdelim}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
 %\input ../inputs/epsf.tex
 
 \newcommand*\hexbrace[2]{%
@@ -130,13 +128,13 @@ University of California, Davis\\}
 \input{SubGroups.tex}
 \input{InvariantSubgroup.tex}
 \input{Homomorphisms.tex}
-\input{FundamentalTheorem.tex}
 \input{Substitutions.tex}
 \input{FermatLittleTheorem.tex}
-\input{ChineseRemainder.tex}
 \input{Commutator.tex}
+\input{ChineseRemainder.tex}
 \input{Fields.tex}
 \input{FiniteFields.tex}
+\input{FundamentalTheorem.tex}
 \input{Descartes.tex}
 \input{Sylvester.tex}
 \input{LinearSpaces.tex}
@@ -251,3 +249,4 @@ University of California, Davis\\}
 %\end{thebibliography}
 %
 \end{document}
+

@@ -1,16 +1,18 @@
 \section{Fundamental Theorem of Algebra}
 
+
+
 \begin{theorem}{(Nested Intervals Therorem):}
-Suppose that 
+Suppose that
 \[ I_n = \{ x: a_n \le x \le b_n\}, \quad n=1,2,...,\]
 is a sequence of closed intervals such that $I_{n+1} \subset I_n$, for each $n$. If $\lim_{\ninfty}(b_n - a_n) = 0$, then there is one and only one number $x_0$ which is in every $I_n$.
 \end{theorem}
 
 \begin{proof}
-By hypothesis, we have $a_n \le a_{n+1}$ and $b_{n+1} \le b_n$. Since $a_n < b_n$ for every $n$, the sequence $\{a_n\}$ is nondecreasing and bounded from above by $b_1$. Similarly, the 
-sequence $b_n $ is nonincreasing and bounded from below by $a_1$. Using Axiom C, we conclude that there are numbers $x_0$ and $x'_0$ such that $a_n \goes x_0, a_n\le x_0$, and 
-$b_n \goes x'_0, b_n\ge x'_0$ as $\ninfty$. Using the fact that $b_n - a_n \goes 0$ as $\ninfty$, we find that $x_0 = x'_0$ and 
-\[ a_n \le x_0 \le b_n\] for every $n$. Thus $x_0$ is in every $I_n$. 
+By hypothesis, we have $a_n \le a_{n+1}$ and $b_{n+1} \le b_n$. Since $a_n < b_n$ for every $n$, the sequence $\{a_n\}$ is nondecreasing and bounded from above by $b_1$. Similarly, the
+sequence $b_n $ is nonincreasing and bounded from below by $a_1$. Using Axiom C, we conclude that there are numbers $x_0$ and $x'_0$ such that $a_n \goes x_0, a_n\le x_0$, and
+$b_n \goes x'_0, b_n\ge x'_0$ as $\ninfty$. Using the fact that $b_n - a_n \goes 0$ as $\ninfty$, we find that $x_0 = x'_0$ and
+\[ a_n \le x_0 \le b_n\] for every $n$. Thus $x_0$ is in every $I_n$.
 
 To show that $x_0$ is the only number in every $I_n$, suppose there is another number $x_1$ also in every $I_n$. Define $\epsilon = | x_1 - x_0|$. Now, since $a_n\goes x_0$ and $b_n\goes x_0$, there is an integer $N_1$, such that $a_{N_2} > x_0 - \epsilon$; also there is an integer $N_2$ such that $b_{N_2} < x_0 + \epsilon$. These inequalities simply that $I_n$ cannot contain $x_1$ for any $n$ beyond $N_1$ and $N_2$. Thus $x_1$ is not in every $I_n$. \qed
 \end{proof}
@@ -19,8 +21,8 @@ To show that $x_0$ is the only number in every $I_n$, suppose there is another n
 \end{theorem}
 
 \begin{proof}
-Since $x_n \ge a$ for each $n$, it follows from the theorem on the limit of inequalities for sequences that $x_0 \ge a$. Likewise $x_0\le b$ so $x_0 \in [a, b]$. If $a< x_0 < b$, 
-then $f(x_n)\goes f(x_0)$ on account of the composite function theorem. The same conclusion holds if $x_0 = a$ or $b$. 
+Since $x_n \ge a$ for each $n$, it follows from the theorem on the limit of inequalities for sequences that $x_0 \ge a$. Likewise $x_0\le b$ so $x_0 \in [a, b]$. If $a< x_0 < b$,
+then $f(x_n)\goes f(x_0)$ on account of the composite function theorem. The same conclusion holds if $x_0 = a$ or $b$.
 \end{proof}
 
 \begin{theorem}{(Intermediate-value theorem)}: Suppose $f$ is continuous on $[a, b], c \in \R, f(a) < c, \mbox{ and } f(b)>c.$ Then there is at least one number $x_0$ on $[a ,b]$ such that $f(x_0)= c$. \end{theorem}
@@ -28,18 +30,112 @@ then $f(x_n)\goes f(x_0)$ on account of the composite function theorem. The same
 There may be more than one such point!
 
 \begin{proof}
-Define $a_1 = 1$ and $b_1 = b$. Then observe that $f((a_1 + b_1)/2)$ is either equal to $c$, greater than $c$, or less than $c$. If it equals $c$, then choose $x_0 = (a_1 + b_1)/2$ and the result is proved. If $f((a_1 + b_1)/2) > c$, then define $a_2 = a_1$ and $b_2 = (a_1 + b_1)/2$. If $f((a_1 + b_1)/2 < c$, then define $a_2 = (a_1 + b_1)/2$ and $b_2 = b_1$. 
+Define $a_1 = 1$ and $b_1 = b$. Then observe that $f((a_1 + b_1)/2)$ is either equal to $c$, greater than $c$, or less than $c$. If it equals $c$, then choose $x_0 = (a_1 + b_1)/2$ and the result is proved. If $f((a_1 + b_1)/2) > c$, then define $a_2 = a_1$ and $b_2 = (a_1 + b_1)/2$. If $f((a_1 + b_1)/2 < c$, then define $a_2 = (a_1 + b_1)/2$ and $b_2 = b_1$.
 
-In each of the last two cases we have $f(a_2) < c$ and $f(b_2) > c$. Again compute  $f((a_2 + b_2)/2)$. If this value equals $c$, the result is proved.
+In each of the last two cases we have $f(a_2) < c$ and $f(b_2) > c$. Again compute $f((a_2 + b_2)/2)$. If this value equals $c$, the result is proved.
 If $f((a_2 + b_2)/2) > c$, set $a_3 = a_2$ and $b_3 = (a_2 + b_2)/2$. If $f((a_2 + b_2)/2 < c$, then define $a_3 = (a_2 + b_2)/2$ and $b_3 = b_2$.
 
-Continuing in this way, we either find a solution in a finite number of steps or we find a sequence $\{[a_n, b_n]\}$ of closed intervals each of which is one of the two halves of the preceding one, and for which we have 
+Continuing in this way, we either find a solution in a finite number of steps or we find a sequence $\{[a_n, b_n]\}$ of closed intervals each of which is one of the two halves of the preceding one, and for which we have
 \[ b_n - a_n = 2^{1-n}(b_1 - a_1),\]
 \[f(a_n) < c, \quad f(b_n) > c, \mbox{ for each } n,\]
 
-From the Nested Intervals Theorem it follows that there is a unique point $x_0$ in all these intervals and 
+From the Nested Intervals Theorem it follows that there is a unique point $x_0$ in all these intervals and
 \[ \lim_{\ninfty} a_n = x_0\mbox{ and } \lim_{\ninfty} b_n = x_0.\]
 
-From the theorem of continuous function on a sequence of points in a closed interval, we conclude that \[f(a_n) \goes f(x_0) \mbox{ and } f(b_n)\goes f(x_0).\] 
+From the theorem of continuous function on a sequence of points in a closed interval, we conclude that \[f(a_n) \goes f(x_0) \mbox{ and } f(b_n)\goes f(x_0).\]
 From the inequalities about and the limit of inequalities it follows that $f(x_0) \le c$ and $f(x_0) \ge c$ so that $f(x_0) = c$.
 \end{proof}
+
+\begin{definition}
+A polynomial over a field $F$ is a {\it rational} and {\it integral} expression of the form
+\be f(x) = p_0 x^n + p_{1}x^{n-1} + ... + p_{n-1} x + p_n, \label{poly} \ee where the coefficients $ p_i  \in F, i = 1, 2, \hdots, n$ and  {\it rational} means free from fractional powers and {\it integral} means never in the denominator of a fraction. 
+A polynomial function is a function which can be written in the form of Eq. (\ref{poly}). 
+\end{definition}
+
+If $p_0 = 1$ we say the polynomial is in {\it monic} form. \\
+
+The roots $\{a_1, a_2, \hdots a_n\}$ of a polynomial are the values of $x$ such that $f(x) = 0$. The roots are in general complex numbers.
+According to a theorem of Vi\`ete, the relationship between the roots and the coefficients for a monic polynomial is given by the 
+\begin{eqnarray*}
+f(x) &=&   x^n + p_{1} x^{n-1} + \hdots + p_{n-1} x + p_n \cr
+  &=& (x - a_1)(x-a_2)(x-a_3) \hdots (x- a_n).
+  \end{eqnarray*}
+  Expanding the product on the right-hand side we find the explicit relationships:\\
+  
+  \begin{eqnarray*}  
+  p_1 &=& - (a_1 + a_2 + \hdots + a_n)\cr
+  p_2 &=&   (a_1a_2 + a_1a_3 + \hdots + a_2a_3 +\hdots +a_{n-1}a_n)\cr
+  p_3 &=&  -(a_1a_2a_3 + a_1a_2a_4 + \hdots + a_2a_3a_4 +\hdots +a_{n-2}a_{n-1}a_n)\cr
+         &\vdots& \cr 
+  p_n &=&  -(1)^n(a_1 a_2 a_3 a_4 \hdots a_{n-1}a_n)
+  \end{eqnarray*}
+
+These relationships are encapsulated in the following theorem
+\begin{theorem}
+In every algebraic equation, the coefficient of whose highest term is unity, the coefficient $p_1$ of the second term with its sign changed is equal to the sum of the roots. \\
+
+The coefficient $p_2$ of the third terms is equal to the sum of the products of the roots taken two by two. \\
+
+The coefficient of the fourth term with its sign changed is equal to the sum of the products of the roots taken three by three; and so on, the signs of the coefficients 
+being taken alternately negative and positive, and the number of roots multiplied together in each term of the corresponding function of the roots increasing by unity
+till finally that function is reached with consists of the produces of the $n$ roots. 
+\end{theorem}
+
+\begin{definition}
+The Elementary Symmetric functions $c_1, c_2, c_3, \hdots c_n$ are defined as functions of $n$ indeterminants $x_1, x_2,  x_3, \hdots, x_n$ as follows
+ \begin{eqnarray*}  
+  c_1 &=&  x_1 + x_2 + \hdots + x_n\cr
+  c_2 &=&  x_1x_2 + x_1x_3 + \hdots + x_2x_3 +\hdots + x_{n-1}x_n\cr
+  c_3 &=&  x_1x_2x_3 + x_1x_2x_4 + \hdots + x_2x_3x_4  +\hdots + x_{n-2}x_{n-1}x_n\cr
+         &\vdots& \cr 
+  c_n &=&  x_1x_2x_3 x_4 \hdots x_{n-1}x_n
+  \end{eqnarray*}
+\end{definition}
+
+\begin{theorem}[Theorems related to Symmetric Functions] The sum of the exponents of all the roots in any term of any symmetric function of the roots
+is equal to the sum of the suffices in each term of the corresponding value in terms of the coefficients.
+\end{theorem}
+
+The sum of the exponents is of course the same for every term of the symmetric function, and may be called the degree in all the roots of that function. In other words
+the suffix for each coefficient is equal to the degree in the roots of the corresponding function of the roots; hence in any product of any powers of the coefficients the sum of the
+suffices must equal to the degree in all the roots of the corresponding function of the roots. 
+
+\begin{theorem}
+When an equation is written with binomial coefficients, the expression in terms of the coefficients for any symmetric function of the roots, which is a function 
+of their differences only, is such that the algebraic sum of the numerical factors of all the terms in it is equal to zero. 
+\end{theorem}
+
+\begin{theorem}[Division Algorithm for Polynomials]
+If $F$ is any field, and $a(x) \ne 0$ and $b(x)$ are any two polynomials over $F$, then we can find polynomials $q(x)$ and $r(x)$ such that
+\[ b(x) = q(x)a(x) + r(x),\] where $r(x)$ is either zero or has a degree less than that of $a(x)$. 
+\end{theorem}
+
+\begin{theorem}
+In $F[x]$, any two polynomials $a$ and $b$ have a {\it greatest common divisor (GCD)} $d$ satisfying (i) $d | a$ and $d | b$, (ii) $c | a$ and $c | b$ imply that $c | d$. Moreover, (iii) $d$ is a linear combination $d = sa + tb$ of $a$ and $b$. 
+\end{theorem}
+
+The procedure for determining the GCD of $a(x)$ and $b(x)$ is given in  Algorithm (\ref{Euclid}): 
+
+\begin{algorithm}
+\caption{Polynomial Euclidean Algorithm}
+\begin{algorithmic}[1]
+\Procedure{PolyGCD}{$a(x), b(x)$}
+\While{$b(x) \neq 0$}
+\State $r(x) \gets a(x) \bmod b(x)$
+\State $a(x) \gets b(x)$
+\State $b(x) \gets r(x)$
+\EndWhile
+\State \textbf{return} $a(x)$
+\EndProcedure
+\end{algorithmic}\label{Euclid}
+\end{algorithm}
+
+
+\begin{theorem}[Eisenstein's Irreducibility Criterion] For a given prime $p$, let $a(x) = a_n x^n + a_{n-1}x^{n-1} + \hdots a_n$ be a polynomial with integral coefficients, such that $a_n \ne 0 (\mod p), \quad a_{n-1} = a_{n-2} = a_0 = 0 (\mod p), a_0 \ne 0 (\mod p^2)$. Then $a(x)$ is irreducible 
+over the field of rational. 
+\end{theorem}
+
+\begin{theorem}[Euler-Gauss: Fundamental Theorem of Algebra] Every polynomial p(x) of positive degree with complex coefficients has a complex root. 
+\end{theorem}
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  17 MAY 2026 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  20 MAY 2026 19:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -420,12 +420,49 @@ Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 \c@subfigure=\count289
 \c@subtable=\count290
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 43.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count291
+\float@exts=\toks22
+\float@box=\box61
+\@float@everytoks=\toks23
+\@floatcapt=\box62
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count292
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count293
+\c@ALG@rem=\count294
+\c@ALG@nested=\count295
+\ALG@tlm=\skip56
+\ALG@thistlm=\skip57
+\c@ALG@Lnr=\count296
+\c@ALG@blocknr=\count297
+\c@ALG@storecount=\count298
+\c@ALG@tmpcounter=\count299
+\ALG@tmplength=\skip58
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 44.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box61
+\l__color_backend_stack_int=\count300
+\l__pdf_internal_box=\box63
 )
 
 LaTeX Warning: Unused global option(s):
@@ -447,24 +484,24 @@ LaTeX Warning: Label `cofactorExpansion' multiply defined.
 )
 \openout1 = `AbstractAlgebra.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 
@@ -474,7 +511,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 77.
+Package hyperref Info: Link coloring ON on input line 78.
 
 (./AbstractAlgebra.out) (./AbstractAlgebra.out)
 \@outlinefile=\write3
@@ -483,17 +520,17 @@ Package hyperref Info: Link coloring ON on input line 77.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
+\scratchcounter=\count301
 \scratchdimen=\dimen317
-\scratchbox=\box62
-\nofMPsegments=\count293
-\nofMParguments=\count294
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count295
+\scratchbox=\box64
+\nofMPsegments=\count302
+\nofMParguments=\count303
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count304
 \MPscratchDim=\dimen318
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count305
+\makeMPintoPDFobject=\count306
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -504,10 +541,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./mytexdefs.tex
-\c@theorem=\count298
+\c@theorem=\count307
 ) (./Logic.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 
@@ -572,21 +610,205 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
  []
 
 ) (./InvariantSubgroup.tex [4] [5]) (./Homomorphisms.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
+Underfull \hbox (badness 10000) in paragraph at lines 82--4
 
  []
 
-[6]) (./FermatLittleTheorem.tex
+[6] [7] [8]) (./FundamentalTheorem.tex [9]
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Overfull \hbox (38.14955pt too wide) in paragraph at lines 85--86
+[]\tenrm The El-e-men-tary Sym-met-ric func-tions $\OML/cmm/m/it/10 c[]; c[]; c
+[]; [] c[]$ \tenrm are de-fined as func-tions of $\OML/cmm/m/it/10 n$ \tenrm in
+-de-ter-mi-nants $\OML/cmm/m/it/10 x[]; x[]; x[]; [] ; x[]$
+ []
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 120.
+[11]) (./Substitutions.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Overfull \hbox (7.51688pt too wide) in paragraph at lines 176--177
+[]\OT1/cmr/m/it/10 Two ra-tio-nal func-tions be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
+
+ []
+
+[15]
+Overfull \hbox (5.26416pt too wide) in paragraph at lines 202--204
+[]\OT1/cmr/m/it/10 If two ra-tio-nal func-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 227.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+) (./FermatLittleTheorem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[7]) (./Commutator.tex [8]) (./ChineseRemainder.tex [9]) (./Fields.tex
+[17] [18]) (./ChineseRemainder.tex) (./Commutator.tex [19]) (./Fields.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-) (./FiniteFields.tex [10] [11]) (./VectorSpace.tex
+[20]) (./FiniteFields.tex [21]) (./Descartes.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+) (./Sylvester.tex [23] [24]
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+[25]) (./LinearSpaces.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+[27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+[29]) (./VectorSpace.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -599,32 +821,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 35.
-
-[12] [13]
+[30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-) (./DotAndCrossProducts.tex [14] [15] [16]) (./ReciprocalSpace.tex [17])
+) (./DotAndCrossProducts.tex [32] [33] [34]) (./ReciprocalSpace.tex [35])
 (./Determinants.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[18] [19]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -639,7 +852,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
@@ -649,7 +862,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
@@ -669,7 +882,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[21]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
@@ -679,12 +892,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[22]
+
 Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
@@ -694,7 +907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-[23]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
@@ -707,102 +920,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-[24]) (./FundamentalTheorem.tex [25]) (./Vandermonde.tex [26]
+[42]) (./Vandermonde.tex [43]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[27]) (./LinearSpaces.tex [28]
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-) (./Descartes.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-) (./Sylvester.tex [33] [34]
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-[35]) (./Geometry.tex
+[44]) (./Geometry.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
@@ -812,7 +940,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-[36]
+
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
@@ -822,7 +950,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
-[37]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
@@ -837,22 +965,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[38]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[39]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
-[40]
+[49] [50]
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-[41]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
@@ -862,30 +990,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
-[42]
+
 Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
-) (./ApplicationsInMechanics.tex [43]) [44] [45
+[52]) (./ApplicationsInMechanics.tex) [53] [54
 
 ] (./AbstractAlgebra.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 7ED3DBA09A77D744DF2DF1800BA5C157;5450.
+(rerunfilecheck)             Checksum: AA332994BD2011418C2DC0466AB2D4F2;6243.
  ) 
 Here is how much of TeX's memory you used:
- 11694 strings out of 476029
- 186970 string characters out of 5790172
+ 12474 strings out of 476029
+ 199461 string characters out of 5790172
  1882346 words of memory out of 5000000
- 31713 multiletter control sequences out of 15000+600000
- 522061 words of font info for 70 fonts, out of 8000000 for 9000
+ 32416 multiletter control sequences out of 15000+600000
+ 522598 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,23n,76p,946b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,23n,76p,1016b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
@@ -894,18 +1023,19 @@ local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (45 pages, 393068 bytes).
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on AbstractAlgebra.pdf (54 pages, 450997 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 556 compressed objects within 6 object streams
- 207 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 775 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 262 named destinations out of 1000 (max. 500000)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
