@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  21 MAY 2026 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  22 MAY 2026 07:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,30 +620,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Overfull \hbox (38.14955pt too wide) in paragraph at lines 85--86
+Overfull \hbox (38.14955pt too wide) in paragraph at lines 86--87
 []\tenrm The El-e-men-tary Sym-met-ric func-tions $\OML/cmm/m/it/10 c[]; c[]; c
 []; [] c[]$ \tenrm are de-fined as func-tions of $\OML/cmm/m/it/10 n$ \tenrm in
 -de-ter-mi-nants $\OML/cmm/m/it/10 x[]; x[]; x[]; [] ; x[]$
  []
 
+[11]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 120.
-[11]) (./Substitutions.tex
+put line 121.
+) (./Substitutions.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
@@ -1027,7 +1033,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (54 pages, 452642 bytes).
+Output written on AbstractAlgebra.pdf (54 pages, 452609 bytes).
 PDF statistics:
  775 PDF objects out of 1000 (max. 8388607)
  672 compressed objects within 7 object streams
