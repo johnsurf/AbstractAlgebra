@@ -11,8 +11,8 @@ The Determinant $D(\a_1,\a_2,...,\a_n)$ has the following properties
 
 \begin{definition}
 {\bf Range Convention.} {\it When a small Latin suffix (superscript or subscript) occurs unrepeated in a term, it is understood to take all the values
-$1,2,...,n$, where n is the number of dimensions of the space.} 
-\end{definition} 
+$1,2,...,n$, where n is the number of dimensions of the space.}
+\end{definition}
 
 \begin{definition}
 {\bf Summation Convention.} {\it When a small Latin suffix is repeated in a term, summation with respect to that suffix is understood, the range of summation
@@ -21,27 +21,27 @@ being $1,2,...,n$.}
 
 {\bf Kronecker delta}:
 \[ \delta^s_r = \begin{cases} 1 & \mbox{if } s = r \\0 & \mbox{if } r \ne s\end{cases} \]
-Also, the another form of the  Kronecker delta is $\delta_{rs}$ which satisfies the same cases as above. \\
+Also, the another form of the Kronecker delta is $\delta_{rs}$ which satisfies the same cases as above. \\
 
-{\bf Permutation Symbol}: Consider a set $\sigma$ of $\sigma_1, \sigma_2, ..., \sigma_n$ numbers taken from the set $\{1,2,...,n\}$. Let 
-\[ \epsilon_{\sigma_1\sigma_2...\sigma_n}  = 
+{\bf Permutation Symbol}: Consider a set $\sigma$ of $\sigma_1, \sigma_2, ..., \sigma_n$ numbers taken from the set $\{1,2,...,n\}$. Let
+\[ \epsilon_{\sigma_1\sigma_2...\sigma_n} =
 \begin{cases}
-+1 & \mbox{if }\sigma  \mbox{ is an even permutation of $\{1, 2, ..., n\}$}\\ 
--1 & \mbox{if }\sigma  \mbox{ is an odd permutation of $\{1, 2, ..., n\}$}\\
-0  & \mbox{if }\sigma  \mbox{ has any duplicates}
++1 & \mbox{if }\sigma \mbox{ is an even permutation of $\{1, 2, ..., n\}$}\\
+-1 & \mbox{if }\sigma \mbox{ is an odd permutation of $\{1, 2, ..., n\}$}\\
+0 & \mbox{if }\sigma \mbox{ has any duplicates}
 \end{cases} \]
 
-Let the $S_n$ be the set of all permutation of the numbers $\{1,2,...,n\}$. In the case of $n$-by-$n$ matrix $A$ we obtain the complete 
-development of the determinant of $A$ as follows: 
+Let the $S_n$ be the set of all permutation of the numbers $\{1,2,...,n\}$. In the case of $n$-by-$n$ matrix $A$ we obtain the complete
+development of the determinant of $A$ as follows:
 \begin{equation}
-\det |A| = \sum_{\sigma \in S_{n}} \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1} a_{2 \sigma_2} ... a_{n \sigma_n} \label{detA} = 
+\det |A| = \sum_{\sigma \in S_{n}} \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1} a_{2 \sigma_2} ... a_{n \sigma_n} \label{detA} =
 \begin{vmatrix}
-a_{11} & a_{12}  & \hdots & a_{1n}  \\
-a_{21} & a_{22}  & \hdots & a_{2n}  \\
+a_{11} & a_{12} & \hdots & a_{1n} \\
+a_{21} & a_{22} & \hdots & a_{2n} \\
 \hdotsfor[2]{4}\\
-a_{i1} & a_{i2}  & \hdots & a_{in}  \\
+a_{i1} & a_{i2} & \hdots & a_{in} \\
 \hdotsfor[2]{4}\\
-a_{n1} & a_{n2}  & \hdots & a_{nn}  \\
+a_{n1} & a_{n2} & \hdots & a_{nn} \\
 \end{vmatrix}
 \end{equation}
 If the rows are permuted by $\rho \in S_n$, we find
@@ -52,48 +52,48 @@ If the rows are permuted by $\rho \in S_n$, we find
 {\bf Cofactor} of an element $a_{rs}$,
 
 \begin{equation}
-M _{rs}= \hbox{cofactor}(a_{rs}) =  \sum_{\sigma \in S_{n},~\sigma_{r} = s } \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1}  a_{2 \sigma_2} ... a_{r-1 \sigma_{r-1}} a_{r+1 \sigma_{r+1}} ....a_{n \sigma_n} \label{detA}
+M _{rs}= \hbox{cofactor}(a_{rs}) = \sum_{\sigma \in S_{n},~\sigma_{r} = s } \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1} a_{2 \sigma_2} ... a_{r-1 \sigma_{r-1}} a_{r+1 \sigma_{r+1}} ....a_{n \sigma_n} \label{detA}
 \end{equation}
 
-Relation between cofactors and minors obtained by taking the determinant obtained from $A$ by striking out row $r$ and column $s$ from $A$. We denote such minor determinants by $A_{rs}$ : 
+Relation between cofactors and minors obtained by taking the determinant obtained from $A$ by striking out row $r$ and column $s$ from $A$. We denote such minor determinants by $A_{rs}$ :
 
 $$M_{rs} = (-1)^{r+s} A_{rs}$$
 
 For every $r$, $1\le r \le n$ we can write $\det |A |$ in terms of a cofactor expansion
 \begin{equation}
-\det |A| = \sum_{s=1}^n  a_{rs} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{rs} \,A_{rs}  \label{cofactorExpansion}
+\det |A| = \sum_{s=1}^n a_{rs} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{rs} \,A_{rs} \label{cofactorExpansion}
 \end{equation}
 
-Also, if there is a mismatch between the row indices between the matrix element and the cofactor or minor, i.e., 
+Also, if there is a mismatch between the row indices between the matrix element and the cofactor or minor, i.e.,
 \begin{equation}
-\sum_{s=1}^n  a_{ks} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{ks} \,A_{rs}  = 0, \mbox{ for}\quad k\ne r  \label{cofactorExpansion}
-\end{equation} The case $k\ne r$ corresponds to a determinant with two identical rows and hence vanishes because the rows are linearly dependent.  
+\sum_{s=1}^n a_{ks} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{ks} \,A_{rs} = 0, \mbox{ for}\quad k\ne r \label{cofactorExpansion}
+\end{equation} The case $k\ne r$ corresponds to a determinant with two identical rows and hence vanishes because the rows are linearly dependent.
 Putting both of the above equations together we find
 \begin{equation}
-\sum_{s=1}^n  a_{ks} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{ks} \,A_{rs} = \delta_{kr} \det |A|  \label{cofactorExpansion}
+\sum_{s=1}^n a_{ks} \, M_{rs} = \sum_{s=1}^n\, (-1)^{r+s} \,a_{ks} \,A_{rs} = \delta_{kr} \det |A| \label{cofactorExpansion}
 \end{equation}
 
 {\bf Classical Adjoint and Inverse Matrix}
 We define the Classical Adjoint, also known as the Adjugate, of the matrix $A$ as
 \[ {\bf adj}(A)= M^\dagger, \] where $M^\dagger$ is the transpose of the cofactor matrix, $M$.
 Using Eq.(\ref{cofactorExpansion}), the inverse of $A$ is given by
-\[ A^{-1} = {1\over|A|}{\bf adj}(A).\label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$. 
+\[ A^{-1} = {1\over|A|}{\bf adj}(A).\label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$.
 Therefore the determinant of the Classical Adjoint matrix is \[ |{\bf adj}(A)| = |A|^n | |A|^{-1} = |A|^{n-1},\] for an $n$-by-$n$ matrix $A$. \\
 
 {\bf Left Inverse and Right Inverse}
-Suppose we have a left inverse $X$ and a right inverse $Y$ of a matrix $A$. This means that 
-\[ XA = AY = I.\] Therefore we have 
+Suppose we have a left inverse $X$ and a right inverse $Y$ of a matrix $A$. This means that
+\[ XA = AY = I.\] Therefore we have
 \begin{eqnarray*}
 XAY &=& X, \quad\mbox{ and}\\
 XAY &=& Y.
-\end{eqnarray*}Therefore 
-\[X = XAY = Y, \mbox{ or }  X=Y.\]  Therefore left and right inverses of a non-singular matrix must be equal.\\
+\end{eqnarray*}Therefore
+\[X = XAY = Y, \mbox{ or } X=Y.\] Therefore left and right inverses of a non-singular matrix must be equal.\\
 
 {\bf The inverse of a Symmetric Matrix is Symmetric}
 A symmetric matrix is defined by $A = A^\dagger$. The inverse of $A$ satisfies
 \[ A^{-1} A = I \] Therefore, by taking the transpose of both sides we have
-\[ A^T (A^{-1})^\dagger = A (A^{-1})^\dagger = I.\]Therefore 
-\[ A^{-1} A (A^{-1})^\dagger = A^{-1} I = A^{-1},\] or 
+\[ A^T (A^{-1})^\dagger = A (A^{-1})^\dagger = I.\]Therefore
+\[ A^{-1} A (A^{-1})^\dagger = A^{-1} I = A^{-1},\] or
 \[(A^{-1})^\dagger = A^{-1}.\]Therefore the inverse of a symmetric matrix is also symmetric. \\
 
 {\bf Special Cases -- Inverting a Triangular Matrix}
@@ -101,7 +101,7 @@ A symmetric matrix is defined by $A = A^\dagger$. The inverse of $A$ satisfies
 Let $U$ be an upper triangular matrix. If the inverse $U^{-1}$ exists, then it is upper triangular.
 \end{theorem}
 \begin{proof}
-Recall the $(n-1)\times(n-1)$ cofactor matrix, $M_{rs}$ that results from omitting row $r$ and column $s$ of $U = (u_{ij})$. 
+Recall the $(n-1)\times(n-1)$ cofactor matrix, $M_{rs}$ that results from omitting row $r$ and column $s$ of $U = (u_{ij})$.
 When it exists, \[ U^{-1} = {1\over|U|}{\bf adj}(U),\] so it is enough to prove that the $n \times n$ matrix $(|C_{rs}|)$ of cofactor determinants whose transpose
 is $(|C_{rs}|)^\dagger$ is the adjugate, is lower triangular.\\
 
@@ -111,27 +111,27 @@ Hence $C_{rs}$ is upper triangula, with the determinant equal to the product of 
 
 However, $s-r$ of these diagonal elements are $u_{i+1,j}$ for $i=r,\hdots,s-1$. These elements are from below the diagonal of $U$, and so are equal to $0$. \\
 
-Hence $r <  s$ implies that $|C_{rs}| = 0$, so the $n\times n$ matrix $(|C_{rs}|)$ of cofactor determinants is indeed lower triangular. Hence the adjugate 
-$(|C_{rs}|)^\dagger$ is upper triangular. Hence the inverse of and upper triangular matrix is upper triangular. By similar reasoning we can show that the 
+Hence $r < s$ implies that $|C_{rs}| = 0$, so the $n\times n$ matrix $(|C_{rs}|)$ of cofactor determinants is indeed lower triangular. Hence the adjugate
+$(|C_{rs}|)^\dagger$ is upper triangular. Hence the inverse of and upper triangular matrix is upper triangular. By similar reasoning we can show that the
 inverse of a lower triangular matrix is lower triangula.\qed
 \end{proof}
 
 {\bf Reciprocal Vector Space in $n$-Dimensions}
 Consider a set of $n$ vectors $\{ \a'_1, \a'_2, ...,\a'_n\}$, given by
-\[ \a'_j = {1\over|A|}\{M_{j1},M_{j2},\hdots,M_{jn}\}.\] We will refer to this set of vectors as being reciprocal to the set of vectors forming the columns of $A$. 
+\[ \a'_j = {1\over|A|}\{M_{j1},M_{j2},\hdots,M_{jn}\}.\] We will refer to this set of vectors as being reciprocal to the set of vectors forming the columns of $A$.
 From the definition of inverse of matrix $A$ we immediately have
-\[ \a_k \cdot \a'_j = \delta_{kj}.\] 
+\[ \a_k \cdot \a'_j = \delta_{kj}.\]
 Also the determinant of the $n$-by-$n$ matrix formed from the set of $\a'_j, j=1,2,...,n$ vectors arranged in columns
 \begin{equation}
-A' = 
+A' =
 \begin{bmatrix}
-\a'_{1} & \a'_{2}  & \hdots & \a'_{n}  \\
+\a'_{1} & \a'_{2} & \hdots & \a'_{n} \\
 \end{bmatrix}
-\end{equation}had a determinant equal to 
+\end{equation}had a determinant equal to
 \begin{equation}
-\begin{vmatrix} 
+\begin{vmatrix}
 A'
-\end{vmatrix} = |A|^{-n}| \det(M) =  |A|^{-n}| |A|^{n-1} = |A|^{-1}.
+\end{vmatrix} = |A|^{-n}| \det(M) = |A|^{-n}| |A|^{n-1} = |A|^{-1}.
 \end{equation}Therefore the volume of the set of reciprocal vectors ${\rm volume}\{\a'_1, \a'_2, \hdots, \a'_n\} = \displaystyle{{1\over|A|} = {1\over V}}$ where $V =|A|$ is the volume of the set of the vectors
 $\{\a_1, \a_2, \hdots, \a_n\}$. This is the $n$-dimensional Euclidean space version of Reciprocal Vectors in 3-dimensional Euclidean space.\\
 
@@ -161,65 +161,64 @@ $$\alpha_1 < \alpha_2 < ... < \alpha_p \mbox{ and } \beta_1 < \beta_2 < ... < \b
 \begin{equation}
 \det A = \sum_{\substack{\rho_1, \rho_2, ...,\rho_p \\ \rho_1 < \rho_2 < ... < \rho_p}} \, (-1)^{(\alpha_1 + \alpha_2 + ... + \alpha_p + \rho_1 + \rho_2 ... + \rho_p)}
 \begin{vmatrix}
-a_{\alpha_1\rho_1} & a_{\alpha_1\rho_2}  & \hdots & a_{\alpha_1\rho_p}  \\
-a_{\alpha_2\rho_1} & a_{\alpha_2\rho_2}  & \hdots & a_{\alpha_2\rho_p}  \\
+a_{\alpha_1\rho_1} & a_{\alpha_1\rho_2} & \hdots & a_{\alpha_1\rho_p} \\
+a_{\alpha_2\rho_1} & a_{\alpha_2\rho_2} & \hdots & a_{\alpha_2\rho_p} \\
 \hdotsfor[2]{4}\\
-a_{\alpha_i\rho_1} & a_{\alpha_i\rho_2}  & \hdots & a_{\alpha_i\rho_p}  \\
+a_{\alpha_i\rho_1} & a_{\alpha_i\rho_2} & \hdots & a_{\alpha_i\rho_p} \\
 \hdotsfor[2]{4}\\
-a_{\alpha_p\rho_1} & a_{\alpha_p\rho_2}  & \hdots & a_{\alpha_p\rho_p}  \\
+a_{\alpha_p\rho_1} & a_{\alpha_p\rho_2} & \hdots & a_{\alpha_p\rho_p} \\
 \end{vmatrix}
 \begin{vmatrix}
-a_{\beta_1\sigma_1} & a_{\beta_1\sigma_2}  & \hdots & a_{\beta_1\sigma_q}  \\
-a_{\beta_2\sigma_1} & a_{\beta_2\sigma_2}  & \hdots & a_{\beta_2\sigma_q}  \\
+a_{\beta_1\sigma_1} & a_{\beta_1\sigma_2} & \hdots & a_{\beta_1\sigma_q} \\
+a_{\beta_2\sigma_1} & a_{\beta_2\sigma_2} & \hdots & a_{\beta_2\sigma_q} \\
 \hdotsfor[2]{4}\\
-a_{\beta_i\sigma_1} & a_{\beta_i\sigma_2}  & \hdots & a_{\beta_i\sigma_q}  \\
+a_{\beta_i\sigma_1} & a_{\beta_i\sigma_2} & \hdots & a_{\beta_i\sigma_q} \\
 \hdotsfor[2]{4}\\
-a_{\beta_q\sigma_1} & a_{\beta_q\sigma_2}  & \hdots & a_{\beta_q\sigma_q}  \\
+a_{\beta_q\sigma_1} & a_{\beta_q\sigma_2} & \hdots & a_{\beta_q\sigma_q} \\
 \end{vmatrix}
 \end{equation}
- The sets $\{\alpha_1, \alpha_2, ..., \alpha_p\}$ and $\{ \beta_1, \beta_2, ..., \beta_q\}$  were defined to be fixed. 
- The summation is taken over all $p$-tuples $(\rho_1, \rho_2, ..., \rho_p)$ from among the numbers $1,2,...,n$ for which $\rho_1 < \rho_2 < ... < \rho_p$ and where 
- $$\sigma_1 < \sigma_2 < ... < \sigma_q$$ are the remaining $q$ integers.\\
- 
+The sets $\{\alpha_1, \alpha_2, ..., \alpha_p\}$ and $\{ \beta_1, \beta_2, ..., \beta_q\}$ were defined to be fixed.
+The summation is taken over all $p$-tuples $(\rho_1, \rho_2, ..., \rho_p)$ from among the numbers $1,2,...,n$ for which $\rho_1 < \rho_2 < ... < \rho_p$ and where
+$$\sigma_1 < \sigma_2 < ... < \sigma_q$$ are the remaining $q$ integers.\\
 
 \section{Cauchy-Binet Formula}
 
- Application 1: {\bf Example Partitioned Matrix and the Cauchy-Binet Formula}
- \begin{equation}
- M =
+Application 1: {\bf Example Partitioned Matrix and the Cauchy-Binet Formula}
+\begin{equation}
+M =
 \left[
-  \begin{array}{cccc|cccc}
-  0 &  0 & \hdots & 0  & b_{11} & b_{12} & \hdots & b_{1n}\\
-  0 & 0 & \hdots  & 0 & b_{21} & b_{22} & \hdots & b_{2n}\\
-  \hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
-  0 & 0 & \hdots  & 0 & b_{m1} & b_{m2} & \hdots & b_{mn}\\
-  \hline
-  c_{11} &  c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
-  c_{21} &  c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
-  \hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
-  c_{n1} &  c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1 
+\begin{array}{cccc|cccc}
+0 & 0 & \hdots & 0 & b_{11} & b_{12} & \hdots & b_{1n}\\
+0 & 0 & \hdots & 0 & b_{21} & b_{22} & \hdots & b_{2n}\\
+\hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
+0 & 0 & \hdots & 0 & b_{m1} & b_{m2} & \hdots & b_{mn}\\
+\hline
+c_{11} & c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
+c_{21} & c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
+\hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
+c_{n1} & c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1
 \end{array} \right]
 \end{equation}
 In the above $M$ is an ($m+n$)-by-($m+n$) matrix which is partitioned into: $A$ an $m$-by-$m$ matrix of 0's, $B$ an $m$-by-$n$ matrix, $C$ an $n$-by-$m$ matrix and $D$ is the $n$-by-$n$ Identity matrix. Then using the determinant in the Schur's Complement form we have
 $$\det M = \det D \det(A - BD^{-1}C) = \det (-BC) = (-1)^m \det(BC).$$\\
 
-We can obtain a similar result by row operations. Denote the ($m+i)$ row by $\a_i$.  Adding a multiple of row $i$ to row $j$ does not change the value of $\det M$.
+We can obtain a similar result by row operations. Denote the ($m+i)$ row by $\a_i$. Adding a multiple of row $i$ to row $j$ does not change the value of $\det M$.
 We successively subtract the $\sum_{i=1}^n b_{k\, i} \a_i$ from the $k$-th row of M, for $k=1, 2, ..., m$ changing M into a different matrix with the same determinant, viz.,
- \begin{equation}
- \tilde M=
+\begin{equation}
+\tilde M=
 \left[
-  \begin{array}{cccc|cccc}
-  -d_{11} &  -d_{12} & \hdots & -d_{1m}  & 0 & 0& \hdots & 0\\
-  -d_{21} & -d_{22}  & \hdots  & -d_{2m}  & 0 & 0 & \hdots & 0\\
-  \hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
-  -d_{m1} & -d_{m2} & \hdots  & -d_{mm} & 0 & 0 & \hdots & 0\\
-  \hline
-  c_{11} &  c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
-  c_{21} &  c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
-  \hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
-  c_{n1} &  c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1 
+\begin{array}{cccc|cccc}
+-d_{11} & -d_{12} & \hdots & -d_{1m} & 0 & 0& \hdots & 0\\
+-d_{21} & -d_{22} & \hdots & -d_{2m} & 0 & 0 & \hdots & 0\\
+\hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
+-d_{m1} & -d_{m2} & \hdots & -d_{mm} & 0 & 0 & \hdots & 0\\
+\hline
+c_{11} & c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
+c_{21} & c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
+\hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
+c_{n1} & c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1
 \end{array} \right],
-\end{equation}where $\displaystyle{d_{kj} = \sum_{i=1}^n \, b_{ki} c_{ij}}, ~\mbox{ for } k,j = 1\,,...,\,m$. Since $\det M = \det \tilde M$ we have another demonstration of 
+\end{equation}where $\displaystyle{d_{kj} = \sum_{i=1}^n \, b_{ki} c_{ij}}, ~\mbox{ for } k,j = 1\,,...,\,m$. Since $\det M = \det \tilde M$ we have another demonstration of
 \begin{equation}
 \det M = (-1)^m \det (BC)
 \end{equation} where $B$ and $C$ are the matrices corresponding to $b_{kj}$ and $c_{ij}$ respectively.\\
@@ -228,35 +227,35 @@ Another representation of $\det M$ can be obtained by applying Laplace's General
 \begin{equation}
 \det M = (-1)^{m^2}
 \det \left[
-  \begin{array}{cccc|cccc}
-  c_{11} &  c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
-  c_{21} &  c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
-  \hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
-  c_{n1} &  c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1 \\
-  \hline
-  0 &  0 & \hdots & 0  & b_{11} & b_{12} & \hdots & b_{1n}\\
-  0 & 0 & \hdots  & 0 & b_{21} & b_{22} & \hdots & b_{2n}\\
-  \hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
-  0 & 0 & \hdots  & 0 & b_{m1} & b_{m2} & \hdots & b_{mn}
+\begin{array}{cccc|cccc}
+c_{11} & c_{12} &\hdots & c_{1m} & 1 & 0& \hdots & 0\\
+c_{21} & c_{22} &\hdots & c_{2m} & 0 & 1& \hdots & 0\\
+\hdotsfor[2]{3} & \hdots & \hdotsfor[2]{3} & 0\\
+c_{n1} & c_{n2} &\hdots & c_{nm} & 0 & 0& \hdots& 1 \\
+\hline
+0 & 0 & \hdots & 0 & b_{11} & b_{12} & \hdots & b_{1n}\\
+0 & 0 & \hdots & 0 & b_{21} & b_{22} & \hdots & b_{2n}\\
+\hdotsfor[2]{3} & \hdots &\hdotsfor[2]{3} & \hdots\\
+0 & 0 & \hdots & 0 & b_{m1} & b_{m2} & \hdots & b_{mn}
 \end{array} \right]
 \end{equation}
 
 Using Laplace's Generalized Theorem the first time across the bottom $m$ rows and taking advantage of the $m$-by-$m$ block of zeros in the lower left hand corner to drop some of the minors in the expansion we have only a sum over the $m$-by-$m$ minors in the $b_{ij}$ elements starting in columns $m+1$ through $m+n$ of $M$. After forming any one of these minors we have to select $m$ columns to remove to form the algebraic complement to use in the Laplace Theorem. The $n$-by-$n$ complementary minor consists of the $n$-by-$m$ $c_{ij}$ matrix elements with an additional $n-m$ columns which remain in from the former Identity matrix in the upper right hand side of the working matrix.\\
 
-We now apply Laplace's Generalized Theorem a second time, now expanding over the first $m$ columns of the complementary $n$-by$n$ minor. We must again sum over the choice of $m$ rows from the first $n$ rows. The complementary minor to this second set of minors is obtained from the original $n$-by-$n$ Identity matrix, $I_n$, with $m$ columns removed by forming the first set of minors in the $b_{ij} $ and removing the $m$ rows to form the second set of minors. We are left with an $n-m$-by-$n-m$ matrix from $I_{n}$. If the rows that were struck out do not match exactly the columns that were struck out then there will appear in the the reduced matrix rows and columns with all zero entries and the corresponding determinant vanishes. So in the second application of Laplace's Generalized theorem there is only one term surviving in the sum, for any given choice of $m$ numbers 
-$1 \le \rho_1 \le \rho_2 \le  ...\le \rho_m \le n$, the only term that survive is 
+We now apply Laplace's Generalized Theorem a second time, now expanding over the first $m$ columns of the complementary $n$-by$n$ minor. We must again sum over the choice of $m$ rows from the first $n$ rows. The complementary minor to this second set of minors is obtained from the original $n$-by-$n$ Identity matrix, $I_n$, with $m$ columns removed by forming the first set of minors in the $b_{ij} $ and removing the $m$ rows to form the second set of minors. We are left with an $n-m$-by-$n-m$ matrix from $I_{n}$. If the rows that were struck out do not match exactly the columns that were struck out then there will appear in the the reduced matrix rows and columns with all zero entries and the corresponding determinant vanishes. So in the second application of Laplace's Generalized theorem there is only one term surviving in the sum, for any given choice of $m$ numbers
+$1 \le \rho_1 \le \rho_2 \le ...\le \rho_m \le n$, the only term that survive is
 \begin{equation}
 \begin{vmatrix}
-c_{1\rho_1} & c_{1\rho_2}  & \hdots & c_{1\rho_m}  \\
-c_{2\rho_1} & c_{2\rho_2}  & \hdots & c_{2\rho_m}  \\
+c_{1\rho_1} & c_{1\rho_2} & \hdots & c_{1\rho_m} \\
+c_{2\rho_1} & c_{2\rho_2} & \hdots & c_{2\rho_m} \\
 \hdotsfor[2]{4}\\
-c_{m\rho_1} & c_{m\rho_2}  & \hdots & c_{m\rho_m}  \\
+c_{m\rho_1} & c_{m\rho_2} & \hdots & c_{m\rho_m} \\
 \end{vmatrix}
 \begin{vmatrix}
-b_{1\rho_1} & b_{1\rho_2}  & \hdots & b_{1\rho_m}  \\
-b_{2\rho_1} & b_{2\rho_2}  & \hdots & b_{2\rho_m}  \\
+b_{1\rho_1} & b_{1\rho_2} & \hdots & b_{1\rho_m} \\
+b_{2\rho_1} & b_{2\rho_2} & \hdots & b_{2\rho_m} \\
 \hdotsfor[2]{4}\\
-b_{m\rho_1} & b_{m\rho_2}  & \hdots & b_{m\rho_m}  \\
+b_{m\rho_1} & b_{m\rho_2} & \hdots & b_{m\rho_m} \\
 \end{vmatrix}
 \end{equation}
 
@@ -264,43 +263,42 @@ Putting both results together and using the fact that both methods give an expre
 \begin{equation}
 \det(BC) =\sum_{\substack{\rho_1, \rho_2, ...,\rho_m =1 \\ \rho_1 < \rho_2 < ... < \rho_m}}^n \,
 \begin{vmatrix}
-c_{1\rho_1} & c_{1\rho_2}  & \hdots & c_{1\rho_m}  \\
-c_{2\rho_1} & c_{2\rho_2}  & \hdots & c_{2\rho_m}  \\
+c_{1\rho_1} & c_{1\rho_2} & \hdots & c_{1\rho_m} \\
+c_{2\rho_1} & c_{2\rho_2} & \hdots & c_{2\rho_m} \\
 \hdotsfor[2]{4}\\
-c_{m\rho_1} & c_{m\rho_2}  & \hdots & c_{m\rho_m}  \\
+c_{m\rho_1} & c_{m\rho_2} & \hdots & c_{m\rho_m} \\
 \end{vmatrix}
 \begin{vmatrix}
-b_{1\rho_1} & b_{1\rho_2}  & \hdots & b_{1\rho_m}  \\
-b_{2\rho_1} & b_{2\rho_2}  & \hdots & b_{2\rho_m}  \\
+b_{1\rho_1} & b_{1\rho_2} & \hdots & b_{1\rho_m} \\
+b_{2\rho_1} & b_{2\rho_2} & \hdots & b_{2\rho_m} \\
 \hdotsfor[2]{4}\\
-b_{m\rho_1} & b_{m\rho_2}  & \hdots & b_{m\rho_m}  \\
+b_{m\rho_1} & b_{m\rho_2} & \hdots & b_{m\rho_m} \\
 \end{vmatrix}
 \end{equation}\\
- 
+
+{\bf 1: For rectangular matrices, when the number of columns exceeds the number of rows.} The overall determinant is formed summing the product of all the sub-determinants be formed from one array {(\it by taking a number of columns equal to the number of rows}) multiplied by the corresponding determinants from the other array.\\
+
+{\bf 2: When the number of rows exceeds the number of columns, the resulting determinant vanishes.} It will be observed that the resulting determinant is the same as would arise if an appropriate number of zero-columns were added to each of the given arrays and then forming the determinant of the product.\\
 Application 2: {\bf Alternate Derivation of the Cauchy-Binet Formula}\\
- Let $A$ be an $m$-by-$n$ matrix and let $B$ be an $n$-by-$m$ matrix. Let $1\le j_1,j_2,...,j_m\le n$.
- Let $A_{j_1j_2...j_m}$ denote the $m$-by-$m$ matrix consisting of the $m$ columns $j_1,j_2,...,j_m$ of $A$.
- Let $B_{j_1j_2...j_m}$ denote the $m$-by-$m$ matrix consisting of the $m$ rows $j_1,j_2,...,j_m$ of $B$.
- Let $\{k_1,k_2,...,k_m\}$ be an ordered $m$-tuple of integers and let $\{j_1,j_2,...,j_m\}$ be the same set of integers but arranged into non-decreasing order:
- $$\j_1\le j_2 \le ... \le j_m.$$
- 
- Then we have the relationships that 
- \begin{eqnarray*}
- \det \left(B_{k_1k_2...k_m}\right) &=& \epsilon_{k_1k_2...k_m} \det \left(B_{j_1j_2...j_m}\right),\\
- \det \left(B_{j_1j_2...j_m}  \right) &=& \epsilon_{k_1k_2...k_m}  \det \left(B_{k_1k_2...k_m}\right)\mbox{ no implied sum on } k_i's.
+Let $A$ be an $m$-by-$n$ matrix and let $B$ be an $n$-by-$m$ matrix. Let $1\le j_1,j_2,...,j_m\le n$.
+Let $A_{j_1j_2...j_m}$ denote the $m$-by-$m$ matrix consisting of the $m$ columns $j_1,j_2,...,j_m$ of $A$.
+Let $B_{j_1j_2...j_m}$ denote the $m$-by-$m$ matrix consisting of the $m$ rows $j_1,j_2,...,j_m$ of $B$.
+Let $\{k_1,k_2,...,k_m\}$ be an ordered $m$-tuple of integers and let $\{j_1,j_2,...,j_m\}$ be the same set of integers but arranged into non-decreasing order:
+$$\j_1\le j_2 \le ... \le j_m.$$
+Then we have the relationships that
+\begin{eqnarray*}
+\det \left(B_{k_1k_2...k_m}\right) &=& \epsilon_{k_1k_2...k_m} \det \left(B_{j_1j_2...j_m}\right),\\
+\det \left(B_{j_1j_2...j_m} \right) &=& \epsilon_{k_1k_2...k_m} \det \left(B_{k_1k_2...k_m}\right)\mbox{ no implied sum on } k_i's.
 \end{eqnarray*}\\
- Now from the definition of determinant for the $m$-by-$m$ matrix $AB$ we have 
- \begin{eqnarray*}
- \det (AB) &=& \sum_{1\le l_1,...l_m \le m} \, \epsilon_{l_1l_2...l_m} \left( \sum_{k=1}^n a_{1k} b_{kl_1} \right) ... \left( \sum_{k=1}^n a_{mk}b_{kl_m}\right)  \\
-                &=& \sum_{1\le k_1,...k_m \le n} \, \left(a_{1k_1}...a_{mk_m}\right) \sum_{1\le l_1,...l_m \le m} \, \epsilon_{l_1l_2...l_m} b_{k_1l_1}  ... b_{k_ml_m} \\
-                &=& \sum_{1\le k_1,...k_m \le n} \, \left( a_{1k_1}...a_{mk_m} \right) \det \left(B_{k_1...k_m}\right)\\
-                &=& \sum_{1\le k_1,...k_m \le n} \, \left(a_{1k_1}...a_{mk_m} \epsilon_{k_1...k_m}\right) \det \left(B_{j_1...j_m}\right)\\
-                &=& \sum_{1\le k_1,...k_m \le n} \, \left(\epsilon_{k_1...k_m} \, a_{1k_1}...a_{mk_m}\right) \det \left(B_{j_1...j_m}\right)\\
-                &=& \sum_{1\le j_1 \le j_2 \le ...\le j_m \le n} \det \left(A_{j_1...j_m}\right)\,\det \left(B_{j_1...j_m}\right) \\
- \end{eqnarray*}
- 
- If any two $j$'s are equal then $\det  \left(A_{j_1...j_m}\right) = 0$\\
- 
- In the case of $A$ and $B = A^T$ we immediately have
+Now from the definition of determinant for the $m$-by-$m$ matrix $AB$ we have
+\begin{eqnarray*}
+\det (AB) &=& \sum_{1\le l_1,...l_m \le m} \, \epsilon_{l_1l_2...l_m} \left( \sum_{k=1}^n a_{1k} b_{kl_1} \right) ... \left( \sum_{k=1}^n a_{mk}b_{kl_m}\right) \\
+&=& \sum_{1\le k_1,...k_m \le n} \, \left(a_{1k_1}...a_{mk_m}\right) \sum_{1\le l_1,...l_m \le m} \, \epsilon_{l_1l_2...l_m} b_{k_1l_1} ... b_{k_ml_m} \\
+&=& \sum_{1\le k_1,...k_m \le n} \, \left( a_{1k_1}...a_{mk_m} \right) \det \left(B_{k_1...k_m}\right)\\
+&=& \sum_{1\le k_1,...k_m \le n} \, \left(a_{1k_1}...a_{mk_m} \epsilon_{k_1...k_m}\right) \det \left(B_{j_1...j_m}\right)\\
+&=& \sum_{1\le k_1,...k_m \le n} \, \left(\epsilon_{k_1...k_m} \, a_{1k_1}...a_{mk_m}\right) \det \left(B_{j_1...j_m}\right)\\
+&=& \sum_{1\le j_1 \le j_2 \le ...\le j_m \le n} \det \left(A_{j_1...j_m}\right)\,\det \left(B_{j_1...j_m}\right) \\
+\end{eqnarray*}
+If any two $j$'s are equal then $\det \left(A_{j_1...j_m}\right) = 0$\\
+In the case of $A$ and $B = A^T$ we immediately have
 $$ \det (AA^T) = \sum_{1\le j_1 \le j_2 \le ...\le j_m \le n} \left[ \det \left(A_{j_1...j_m}\right)\right]^2 $$
- 

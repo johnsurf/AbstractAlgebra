@@ -188,18 +188,44 @@ is clearly a symmetric function of the elements, for it appears by the same reas
 If we now take $j = 1$ and assign to $i$ all the values $0,1,2,\hdots,\rho-1$ in succession, we obtain the following $\rho$ equations linear in $\psi_1, \psi_2, \hdots, \psi_\rho$:
 \be
 \begin{array}{r c r c r c r r}
-\psi_1            & + & \psi_2         & + & \hdots & + & \psi_\rho = & T_0 \\
+\psi_1 & + & \psi_2 & + & \hdots & + & \psi_\rho = & T_0 \\
 \phi_1 \psi_1 & + & \phi_2\psi_2& + & \hdots & + &\phi_\rho \psi_\rho = & T_1 \\
 \phi_1^2 \psi_1 & + & \phi_2^2\psi_2& + & \hdots & + &\phi_\rho^2 \psi_\rho = & T_2 \\
-\hdots & \hdots  & \hdots & \hdots  & \hdots & \hdots  &\hdots  = & \hdots  \\
+\hdots & \hdots & \hdots & \hdots & \hdots & \hdots &\hdots = & \hdots \\
 \phi_1^{\rho-1} \psi_1 & + & \phi_2^{\rho-1}\psi_2& + & \hdots & + &\phi_\rho^{\rho-1} \psi_\rho = & T_{\rho-1} \\
 \end{array}\label{linearSys}
-\ee whoer $T_0, T_1, \hdots, T_{\rho-1}$ are all symmetric functions of $x_1, x_2, \hdots, x_n$. 
-
+\ee where $T_0, T_1, \hdots, T_{\rho-1}$ are all symmetric functions of $x_1, x_2, \hdots, x_n$.
 \end{proof}
+We can write the above as a linear system
+$$
+\begin{bmatrix}
+1 & 1 & 1 & 1 & \hdots & 1 \\
+\phi_1 & \phi_2 & \phi_3 & \phi_4 & \hdots & \phi_\rho \\
+\phi_1^2 & \phi_2^2 & \phi_3^2 & \phi_4^2 & \hdots & \phi_\rho^2 \\
+\vdots & \vdots & \vdots& \vdots & \vdots & \vdots \\
+\phi_1^{\rho-1} & \phi_2^{\rho-1} & \phi_3^{\rho-1} & \phi_4^{\rho-1} & \hdots & \phi_\rho^{\rho-1} \\
+\end{bmatrix}
+\begin{bmatrix}
+\psi_1 \\
+\psi_2 \\
+\vdots\\
+\vdots\\
+\psi_\rho
+\end{bmatrix}
+=
+\begin{bmatrix}
+T_0 \\
+T_1 \\
+\vdots\\
+\vdots\\
+T_{\rho-1}
+\end{bmatrix}
+$$
 
 
-\begin{theorem}[Extension o Lagrange's Theorem to Non Symmetric Functions] If two rational functions of any set of variables are such that one remains unchanged by all the substitutions of the group to
+
+
+\begin{theorem}[Extension of Lagrange's Theorem to Non Symmetric Functions] If two rational functions of any set of variables are such that one remains unchanged by all the substitutions of the group to
 which the other belongs, the first is expressible by means of the second in the form of an integral polynomial whose coefficients are rational symmetric functions of the variables. \\
 
 {\bf Another statement of Lagrange's Theorem: } \\
@@ -271,4 +297,3 @@ easily find $\tau^5 \phi = \omega^5 \phi$; whence $\omega^5 = 1$, since $\tau^5 
 obtained, we infer that when the number of elements is greater than 4, it is impossile to find any multiple-valiued function $\phi$, a prime power of which will be two-valued.\\
 
 There are actually, when $n$ is not greater than 4, multiple-valiued functions, a third power of which is two-vaued.
-

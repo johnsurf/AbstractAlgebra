@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  20 MAY 2026 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  21 MAY 2026 19:21
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **AbstractAlgebra.tex
 (./AbstractAlgebra.tex
@@ -679,41 +679,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--187
  []
 
 [15]
-Overfull \hbox (5.26416pt too wide) in paragraph at lines 202--204
-[]\OT1/cmr/m/it/10 If two ra-tio-nal func-tions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 227.
+(amsmath)                 on input line 253.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 269--272
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
 
  []
 
-) (./FermatLittleTheorem.tex
+) (./FermatLittleTheorem.tex [17]
 Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[17] [18]) (./ChineseRemainder.tex) (./Commutator.tex [19]) (./Fields.tex
+[18]) (./ChineseRemainder.tex) (./Commutator.tex [19]) (./Fields.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
@@ -893,44 +888,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 285.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 287.
 
 [42]) (./Vandermonde.tex [43]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[44]) (./Geometry.tex
+[44] [45]) (./Geometry.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-[45]
+
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
@@ -940,7 +935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
@@ -950,7 +945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
-[46]
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
@@ -960,17 +955,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
-
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[47]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[48]
+
 Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
@@ -990,12 +985,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
-
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
-[52]) (./ApplicationsInMechanics.tex) [53] [54
+) (./ApplicationsInMechanics.tex) [53] [54
 
 ] (./AbstractAlgebra.aux)
 
@@ -1032,7 +1027,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (54 pages, 450997 bytes).
+Output written on AbstractAlgebra.pdf (54 pages, 452642 bytes).
 PDF statistics:
  775 PDF objects out of 1000 (max. 8388607)
  672 compressed objects within 7 object streams
