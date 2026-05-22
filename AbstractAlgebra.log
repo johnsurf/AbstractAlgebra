@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  22 MAY 2026 07:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  22 MAY 2026 08:26
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **AbstractAlgebra.tex
 (./AbstractAlgebra.tex
@@ -649,196 +649,28 @@ Overfull \hbox (38.14955pt too wide) in paragraph at lines 86--87
 [11]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 121.
-) (./Substitutions.tex
-Underfull \hbox (badness 10000) in paragraph at lines 13--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--74
-
- []
-
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-
- []
-
-
-Overfull \hbox (7.51688pt too wide) in paragraph at lines 176--177
-[]\OT1/cmr/m/it/10 Two ra-tio-nal func-tions be-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 253.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 295--298
-
- []
-
-) (./FermatLittleTheorem.tex [17]
-Underfull \hbox (badness 10000) in paragraph at lines 13--17
-
- []
-
-[18]) (./ChineseRemainder.tex) (./Commutator.tex [19]) (./Fields.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-[20]) (./FiniteFields.tex [21]) (./Descartes.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-) (./Sylvester.tex [23] [24]
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
-[]|$[]$|  
- []
-
-[25]) (./LinearSpaces.tex
-LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
+) (./Determinants.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-[29]) (./VectorSpace.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-[30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
-) (./DotAndCrossProducts.tex [32] [33] [34]) (./ReciprocalSpace.tex [35])
-(./Determinants.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[36]
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[37]
+[12]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 80.
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -853,7 +685,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[38]
+
 Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
@@ -863,7 +695,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
@@ -883,7 +715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[39]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
@@ -893,12 +725,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-[40]
+
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
@@ -908,7 +740,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-[41]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
@@ -919,9 +751,183 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--280
  []
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 287.
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
-[42]) (./Vandermonde.tex [43]
+ []
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 288.
+
+[18]) (./Substitutions.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Overfull \hbox (7.51688pt too wide) in paragraph at lines 176--177
+[]\OT1/cmr/m/it/10 Two ra-tio-nal func-tions be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
+
+ []
+
+) (./FermatLittleTheorem.tex [24]
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+[25]) (./ChineseRemainder.tex) (./Commutator.tex [26]) (./Fields.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[27]) (./FiniteFields.tex [28]) (./Descartes.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+) (./Sylvester.tex [30] [31]
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+[]|$[]$|  
+ []
+
+[32]) (./LinearSpaces.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+[34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+[36]) (./VectorSpace.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+[37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+) (./DotAndCrossProducts.tex [39] [40] [41]) (./ReciprocalSpace.tex [42])
+(./Vandermonde.tex [43]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
@@ -956,12 +962,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
-[47]
+
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
@@ -971,12 +977,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
-[49] [50]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
@@ -996,18 +1002,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
-) (./ApplicationsInMechanics.tex) [53] [54
+) (./ApplicationsInMechanics.tex [53]) [54] [55
 
 ] (./AbstractAlgebra.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: AA332994BD2011418C2DC0466AB2D4F2;6243.
+(rerunfilecheck)             Checksum: 5514E8C41CB436CC46D952D5A8A789AA;6243.
  ) 
 Here is how much of TeX's memory you used:
- 12474 strings out of 476029
- 199461 string characters out of 5790172
+ 12475 strings out of 476029
+ 199468 string characters out of 5790172
  1882346 words of memory out of 5000000
  32416 multiletter control sequences out of 15000+600000
  522598 words of font info for 72 fonts, out of 8000000 for 9000
@@ -1033,10 +1039,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (54 pages, 452609 bytes).
+Output written on AbstractAlgebra.pdf (55 pages, 452450 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
- 672 compressed objects within 7 object streams
- 262 named destinations out of 1000 (max. 500000)
+ 780 PDF objects out of 1000 (max. 8388607)
+ 676 compressed objects within 7 object streams
+ 263 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

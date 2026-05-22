@@ -77,7 +77,7 @@ Putting both of the above equations together we find
 We define the Classical Adjoint, also known as the Adjugate, of the matrix $A$ as
 \[ {\bf adj}(A)= M^\dagger, \] where $M^\dagger$ is the transpose of the cofactor matrix, $M$.
 Using Eq.(\ref{cofactorExpansion}), the inverse of $A$ is given by
-\[ A^{-1} = {1\over|A|}{\bf adj}(A).\label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$.
+\[ A^{-1} = {1\over|A|}{\bf adj.}(A) = {1\over|A|}M^\dagger. \label{inverseMatrix}\] Since $A^{-1} A = I$ we see that the determinant of $A^{-1}$ is $|A|^{-1}$.
 Therefore the determinant of the Classical Adjoint matrix is \[ |{\bf adj}(A)| = |A|^n | |A|^{-1} = |A|^{n-1},\] for an $n$-by-$n$ matrix $A$. \\
 
 {\bf Left Inverse and Right Inverse}
@@ -279,6 +279,7 @@ b_{m\rho_1} & b_{m\rho_2} & \hdots & b_{m\rho_m} \\
 {\bf 1: For rectangular matrices, when the number of columns exceeds the number of rows.} The overall determinant is formed summing the product of all the sub-determinants be formed from one array {(\it by taking a number of columns equal to the number of rows}) multiplied by the corresponding determinants from the other array.\\
 
 {\bf 2: When the number of rows exceeds the number of columns, the resulting determinant vanishes.} It will be observed that the resulting determinant is the same as would arise if an appropriate number of zero-columns were added to each of the given arrays and then forming the determinant of the product.\\
+
 Application 2: {\bf Alternate Derivation of the Cauchy-Binet Formula}\\
 Let $A$ be an $m$-by-$n$ matrix and let $B$ be an $n$-by-$m$ matrix. Let $1\le j_1,j_2,...,j_m\le n$.
 Let $A_{j_1j_2...j_m}$ denote the $m$-by-$m$ matrix consisting of the $m$ columns $j_1,j_2,...,j_m$ of $A$.
