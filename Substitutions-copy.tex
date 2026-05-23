@@ -28,7 +28,7 @@ an even number of transpositions (an even substitution), or all constain an odd 
 \end{theorem}
 
 \begin{corollary}
-The totality of even substitutions on $n$ letters forms a group, called the Alternating Group on n letters.
+The totality of even substitions on $n$ letters forms a group, called the Alternating Group on n letters.
 \end{corollary}
 
 
@@ -47,20 +47,20 @@ consisting of the product of all the difference of the elements.\\
 
 $\phi(x)$ is related to the Vandemonde determinant
 
-$$\phi(x) = V(x) =
-\begin{vmatrix}
+$$\phi(x) =
+\begin{bmatrix}
 1 & x_1 & x_1^2 & x_1^3 & \hdots & x_1^{n-1} \\
 1 & x_2 & x_2^2 & x_2^3 &\hdots &x_2^{n-1} \\
 1 & x_3 & x_3^2 & x_3^3 &\hdots & x_2^{n-1} \\
 \vdots \\
 1 & x_n & x_n^2 & x_n^3 &\hdots & x_n^{n-1} \\
-\end{vmatrix}
+\end{bmatrix}
 $$
 
-The square of $V(x)$ is a
-well- known symmetric function, the discriminant $\triangle$. Therefore $V(x)$ has two values equal
-numerically with opposites signs, viz. $\sqrt{\triangle}$ and $-\sqrt{\triangle}$. $V(x)$ is an example
-of an alternating function. Any transposition alters the sign of $V(x)$. For example, the transposition
+The square of $\phi(x)$ is a
+well- known symmetric function, the discriminant $\triangle$. Therefore $\phi$ has two values equal
+numerically with opposites signs, viz. $\sqrt{\triangle}$ and $-\sqrt{\triangle}$. $\phi(x)$ is an example
+of an alternating function. Any transposition alters the sign of $\phi$. For example, the transposition
 $(x_1x_2)$ affects only the terms in the first and second lines of the product, and replaces them by
 \[
 \begin{array}{r}
@@ -68,9 +68,8 @@ $(x_1x_2)$ affects only the terms in the first and second lines of the product, 
 (x_1-x_3) (x_1-x_4) \quad \hdots\hdots\quad (x_1 - x_n). \\
 \end{array}
 \]
-Hence, if $s$ is the product of an even number of transpositions, it leaves $v(x)$ unaltered; if $s$
-is the product of an odd number of transpositions, it changes $V(x)$ into $-V(x)$. \\
-
+Hence, if $s$ is the product of an even number of transpositions, it leaves $\phi$ unaltered; if $s$
+is the product of an odd number of transpositions, it changes $\phi(x)$ into $-\phi(x)$. \\
 {\bf Conjugate values of Multiple-valued Function and Conjugate Groups}\\
 
 \begin{theorem}[Lagrange] The order of a subgroup is a divisor of the order of the group.
@@ -81,13 +80,13 @@ Consider a group $G$ of $N$ and a subgroup $H$ composed of the substitutions
 \be h_1 = I, h2, h3, \hdots, h_P. \label{HL1} \ee
 If G constains no further substitutions, then $N = P$ and the theorem is true. Now let $G$ contain a
 substitution $g_2$ not in $H$. Then G also must contain
-\be g_2, h_2 g_2, h_3 g_2, \hdots, h_P g_2. \label{HL2} \ee This set are all distinct and all different from the substitutions
-(\ref{HL1}), since $h_\alpha g_2 = h_\beta$ requires that $g_2 = h_\alpha^{-1} h_\beta = $ a substition of $H$
+\be g_2, h_2 g_2, h_3 g_2, \hdots, h_P g_2. \label{HL2} \ee This set are all distinct and all different from the substititions
+(\ref{HL1}), since $h_\alpha g_2 = h_\beta$ requires that $g_2 = h_\alpha^{-1} h_beta = $ a substition of $H$
 contrary to the assumption that $g_2$ is distinct from the elements of $H$. Hence the substitutions combined now
 give $2P$ distinct substitutions of $G$. If there are no other substitutions in $G$, then $N=2P$ and the theorem
 is true. If there are any other distrinct substitutions $g_3$ in $G$ not in (\ref{HL1}) or (\ref{HL2}), then $G$ contains
 \be g_3, h_2 g_3, h_3 g_3, \hdots, h_P g_3. \label{HL3} \ee Moreover, these substitutions are all different from (\ref{HL1})
-and (\ref{HL2}), since $h_\alpha g_3 = h_\beta g_2$ requires that $g_3 = h_\alpha^{-1}h_\beta g_2$ and shall belong
+and (\ref{HL2}), since $h_alpha g_3 = h_beta g_2$ requires that $g_3 = h_alpha^{-1}h_\beta g_2$ and shall belong
 to (ref{HL2}), contrary to assumption. We now have $3P$ distinct substitutions of $G$. Either $N=3P$ or else $G$
 contains a substitution $g_4$ not in the sets (\ref{HL1}), (\ref{HL3}), (\ref{HL3}). In the latter case $G$ contains the products
 \be g_4, h_2 g_4, h_2 g_4, \hdots, h_P g_4, \label{HL4} \ee all of which are distrinct and all different from the sets
@@ -146,7 +145,7 @@ then $\psi_{g_\alpha g_beta^{-1}} = \psi,$ so that $g_\alpha g_\beta^{-1} h_i \i
 in forming the rectangular array.
 \end{proof}
 
-Regarding the orders of a group $H$ and a larger group $G$ containing $H$ as a subgroup; that is to say, the order $r$ of $H$ is an exact divisor of the order $G$ which contains $H$ as a subgroup, the quotient $m$ being the number of distinct values of a multiple-valued function unaltered by the substitutions of $G$ which are obtained by the substutions of $H$.
+Regarding the orders of a group $H$ and a larger group $G$ containing $H$ as a subgrouip; that is to say, the order $r$ of $H$ is an exact divisor of the order $G$ which contains $H$ as a subgroup, the quotient $m$ being the number of distinct values of a multiple-valued function unaltered by the substitutions of $G$ which are obtained by the substutions of $H$.
 
 \begin{definition}
 The $\nu$ distinct functions $\psi, \psi_{g_2}, \psi_{g_3}, \hdots, \psi_{g_\nu}$ are called {\bf conjugate values} of $\psi$ under $G$.
@@ -222,7 +221,7 @@ T_{\rho-1}
 \end{bmatrix}
 \label{LagrangeSystem}\ee
 
-Linear systems such as Eq.(\ref{LagrangeSystem}) can be solved using Cramer's rule. Alternatively, in order to understand better the relatonship between $\phi_i$ and $\psi_i$ let us consider
+Linear systems such as Eq.(\ref{LagrangeSystem}) can be solved using Cramer's rule. Alternatively, in order to understand better the relatonship between $\phi$ and $\psi$ let us consider
 a method based on transforming non-homogenous linear systems into sets of corresponding homogeneous linear systems in each of the unknown parameters. To this effect consider 
 the linear system \cite{Burnside}.
 \be
@@ -299,72 +298,36 @@ Since the determinant vanishes we can factor out the $-1$ from the last column a
 \end{equation}
 
 Multiplying the above determinant by the non-singular determinant 
-\begin{equation}
-\begin{vmatrix}
-1            & 1           & 1               &  0  \\
-\alpha    & \beta     & \gamma    &  0   \\
-\alpha^2 & \beta^2 & \gamma^2 & 0   \\
-0            & 0           & 0               &  1   \\
-\end{vmatrix} 
-\end{equation}we find
+%\begin{equation}
+%\begin{vmatrix}
+%1            & 1           & 1               &  0    \\
+%\alpha    & \beta     & \gamma    &  0\\
+%\alpha^2 & \beta^2 & \gamma^2 & 0 \\
+%0            & 0           & 0               &  1    \\
+%\end{vmatrix} 
+%\end{equation}we find
 
-\begin{equation}
-\begin{vmatrix}
-0            & 1           & 0               &  y     \\
-1            & 1           & 1               &  A_0 \\
-\alpha    & \beta     & \gamma    &  A_1 \\
-\alpha^2 & \beta^2 & \gamma^2 & A_2  \\
-\end{vmatrix} 
-\begin{vmatrix}
-1   & \alpha    & \alpha^2   &  0    \\
-1   & \beta      & \beta^2    &  0    \\
-1   & \gamma & \gamma^2 & 0    \\
-0    & 0           & 0               &  1    \\
-\end{vmatrix}
-=
-\begin{vmatrix}
-1            & \beta     & \beta^2      &  y    \\
-s_0        & s_1       & s_2             &  A_0\\
-s_1        & s_2       & s_3             &  A_1\\
-s_2        &s_3        & s_4             & A_2 \\
-\end{vmatrix} = 0,
-\label{BandPFinal}\end{equation}
-where \[s_i = \alpha^i + \beta^i + \gamma^i\] and the $s_i$ are symmetric functions in $\alpha, \beta, \mbox{  and } \gamma$. \\ 
+%\begin{equation}
+%\begin{vmatrix}
+%0            & 1           & 0               &  y    \\
+%1            & 1           & 1               &  A_0\\
+%\alpha    & \beta     & \gamma    &  A_1\\
+%\alpha^2 & \beta^2 & \gamma^2 & A_2 \\
+%\end{vmatrix} 
+%\begin{vmatrix}
+%1            & 1           & 1               &  0    \\
+%\alpha    & \beta     & \gamma    &  0\\
+%\alpha^2 & \beta^2 & \gamma^2 & 0 \\
+%0            & 0           & 0               &  1    \\
+%\end{vmatrix} =
+%\begin{vmatrix}
+%1            & \beta     & \beta^2      &  y    \\
+%s_0        & s_1       & s_2             &  A_0\\
+%s_1        & s_2       & s_3             &  A_1\\
+%s_2        &s_3        & s_4             & A_2 \\
+%\end{vmatrix} = 0.
+%\end{equation}
 
-Since the $s_i$'s are sums of powers of $\alpha, \beta, \gamma$ and are symmetric functions, they can be expressed rationally in terms of the elementary symmetric functions. By expanding the final determinant in Eq. (\ref{BandPFinal}) along the top row and setting the expansion equal to zero to satisfy the consistency requirement we see that we have $y$ expressed as a quadratic function of $\beta$ along with the sums of powers of the three quantities $\alpha, \beta, \gamma$. 
-
-Returning to the original problem  Eq. (\ref{linearSys}), we can similarly express the solution for $\psi_j$ in terms of $\phi_j$ in the form of a determinant: 
-
-\be
-\begin{vmatrix}
-1            & \phi_j     & \phi_j^2      &  \hdots & \phi_j^{\rho-1} & \psi_j  \\
-s_0        & s_1        & s_2      &  \hdots & s_{\rho-1}              & T_0     \\
-s_1        & s_2        & s_3      &  \hdots & s_\rho                     & T_1     \\
-\hdots    & \hdots    & \hdots        &  \hdots & \hdots              & \hdots  \\
-s_{\rho-1}            & s_\rho     & s_{\rho+2}      &  \hdots & s_{2\rho-2} & T_{\rho-1}   \\
-\end{vmatrix} = 0,
-\ee where $T_0, T_1, \hdots, T_{\rho-1}$ are all symmetric functions of $x_1, x_2, \hdots, x_n$ and $s_k = \phi_1^k + \phi_2^k + \phi_3^k + \hdots + \phi_\rho^k$.\\
-
-The solution of these equations takes the form 
-\be \triangle(\phi_1, \phi_2, \phi_3, \hdots, \phi_\rho) \psi_j = A_0 \phi_j^{\rho-1} + A_1 \phi_j^{\rho-2} + \hdots + A_{\rho-1},\ee
-where $\triangle$ is the product of the square of the differences of all the $\phi$'s and $A_0, A_1, \hdots, A_{\rho-1}$ are all symmetric in $x_1, x_2, \hdots, x_n$. \\
-
-{\bf Lagrange Interpolation Formula: } \\
-Given a set of $k+1$ nodes $\{x_0, x_1, \hdots, x_k\}$, which must all be distinct, $x_j \ne x_m$ for indices $j\ne m$, the {\it Lagrange basis} for polynomials of degree $\le k$ for those nodes is the set of polynomials $\{ l_0(x), l_1(x), \hdots, l_k(x)\}$ each of degree $k$ which take values $l_j(x_m) = 0$ if $m\ne j$ and $l_j(x_j) = 1$. Using the Kronecker delta this can be written
-$l_k(x_m) = \delta_{jm}$. Each basis polynomial can be explicitly described by the product: 
-
-\begin{eqnarray*}
-l_j(x) &=& {(x-x_0)\over (x_j-x_0)}{(x-x_1)\over (x_j-x_1)} \hdots {(x-x_{j-1})\over (x_j-x_{j-1})}{(x-x_{j+1})\over (x_j-x_{j+1})}\hdots{(x-x_k)\over (x_j-x_k)}\\
-         &=& \prod_{\substack{0\le m\le k \\ m \ne j }}\,\, {x-x_m\over x_j - x_m}
-\end{eqnarray*}
-
-Notice that the numerator $\displaystyle \prod_{m\ne j} (x-x_m)$ has $k$ roots at the nodes $\{x_m\}_{m\ne k}$ while the denominator 
-$\displaystyle \prod_{m \ne j} (x_j -x_m)$ scales the resulting polynomial so that $l_j(x_j) = 1$. \\
-
-The Lagrange interpolating polynomial for those nodes through the corresponding values $\{ y_0, y_1, \hdots, y_k\}$ is the linear combination
-\[ L(x) = \sum_{j=0}^k \, y_j l_j(x),\]
-Each basis polynomial has degree $k$, so the sum $L(x)$ has degree $\le k$, and it interpolates the data because 
-\[ L(x_m) = \sum_{j=0}^k y_j l_j(x_m) = \sum_{j=0}^k y_j \delta_{mj} = y_m,\]
 
 \begin{theorem}[Extension of Lagrange's Theorem to Non Symmetric Functions] If two rational functions of any set of variables are such that one remains unchanged by all the substitutions of the group to
 which the other belongs, the first is expressible by means of the second in the form of an integral polynomial whose coefficients are rational symmetric functions of the variables. \\
