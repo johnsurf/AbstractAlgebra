@@ -165,8 +165,13 @@ We define the Galois Function having $n!$ values for all the substiutionts of th
 called the Galois Function. If we use all the $P$ substitutions of $H$ to form the functions $\psi_1, \psi_2, \hdots, \psi_P$ by the substitutions of $H$ anysymmetric funciton of these values will be unaltered by the substitutions of $H$. In particular $\phi_1 = (y-\psi_1)(y-\psi_2)\hdots(y-\psi_P)$ will be unaltered by the substutions of $H$, and altered to a different value by the substitutions not in $H$. The function $\phi_1$ is not therefore unaltered by the substitutions of any wider group that contains $H$ as a subgroup. Noting the forms of the expression of the sums of powers of the roots in terms of the coefficients, we see that instead of the coefficients of the powers of $y$ in $\phi_1$ we may take sums of powers of $\psi_1, \psi_2, \hdots, \psi_P$ up to the $P^{th}$ and deduce that one at least of such $P$ sums of powers will provide a function unlatered by the substitutions of $H$ and altered by any other substitution of the symmetric group.
 
 \begin{theorem}
-Every integral symmetric function of the distrinct values of any integral multiple-valued function of $n$ elements is a symmetric function of the elements themselves.
+Every integral symmetric function of the distinct values of any integral multiple-valued function of $n$ elements is a symmetric function of the elements themselves.
 \end{theorem}
+
+\begin{proof}
+Let $F(\phi_1, \phi_2, \hdots, \phi_\rho)$ be any rational integral symmetric function of the $\rho$-values. Any substitution $S$ whatever affecting the elements applied to these $\rho$-values
+either leaves any function unchanged or replaces it by one of the others. No two of the resulting values can be equal, for if $\phi_i S$ were equal to $\phi_j S$ it would follow, by applying the substitution $S^{-1}$,  that $\phi_i = \phi_j$ which is contrary to the assumptions. Consequently the $\rho$ values of $\phi$ are reproduced by $S$ in some order or other. The symmetric function $F$ therefore remains unchanged by any substitutiont, and is consequently a symmetric element of the elements themselves. 
+\end{proof}
 
 \begin{corollary}
 The $\rho$ distinct values of an integral multiple-valued function are roots of an equation whose coefficients are integral symmetric functions of the elements themselves.
@@ -174,7 +179,7 @@ The $\rho$ distinct values of an integral multiple-valued function are roots of 
 
 \begin{theorem}[Lagrange Theorem on functions belonging to the same group]
 Two rational functions belonging to the same group are rationally expressed each in terms of the other.
-\end{theorem}
+\label{FunctionsOfSameGroup}\end{theorem}
 
 \begin{proof}
 Let $\phi_1$ and $\psi_1$ be two functions belonging to the same group
@@ -347,7 +352,9 @@ s_{\rho-1}            & s_\rho     & s_{\rho+2}      &  \hdots & s_{2\rho-2} & T
 
 The solution of these equations takes the form 
 \be \triangle(\phi_1, \phi_2, \phi_3, \hdots, \phi_\rho) \psi_j = A_0 \phi_j^{\rho-1} + A_1 \phi_j^{\rho-2} + \hdots + A_{\rho-1},\ee
-where $\triangle$ is the product of the square of the differences of all the $\phi$'s and $A_0, A_1, \hdots, A_{\rho-1}$ are all symmetric in $x_1, x_2, \hdots, x_n$. \\
+where $\triangle$ is the product of the square of the differences of all the $\phi$'s (the square of the Vandermonde determinant) and $A_0, A_1, \hdots, A_{\rho-1}$ are all symmetric in $x_1, x_2, \hdots, x_n$. \\
+
+Therefore $\psi_j$ can be rationally expressed as a rational function of $\phi_j$ and the elementary symmetric functions of $x_1, x_2, \hdots, x_n$ (the coefficients of the polynomial that has $x_1, x_2, \hdots, x_n$ as roots). \\
 
 {\bf Lagrange Interpolation Formula: } \\
 Given a set of $k+1$ nodes $\{x_0, x_1, \hdots, x_k\}$, which must all be distinct, $x_j \ne x_m$ for indices $j\ne m$, the {\it Lagrange basis} for polynomials of degree $\le k$ for those nodes is the set of polynomials $\{ l_0(x), l_1(x), \hdots, l_k(x)\}$ each of degree $k$ which take values $l_j(x_m) = 0$ if $m\ne j$ and $l_j(x_j) = 1$. Using the Kronecker delta this can be written
@@ -387,7 +394,7 @@ g_\nu & h_2 g_\nu & \hdots & h_P g_\nu & \psi_{g_\nu} = \psi_\nu & \phi_{g_\nu} 
 \ee
 The $\psi_1, \psi_2, \hdots, \psi_\nu$ are all distinct; but$\phi_1, \phi_2, ...\phi_nu$ need not be distinct since $\phi$ belongs to a group $G$ which may be bigger than $H$.
 Under any substitution $s$ on $x_1, x_2, \hdots, x_n$, the functions $\psi_1, \psi_2, \hdots, \psi_\nu$ are merely permuted. Moreover, if $s$ replaces
-$\psi_i$ by $\psi_j$, it replaces $\phi_i$ by $\phi_j$. Set
+$\psi_i$ by $\psi_j$, it replaces $\phi_i$ by $\phi_j$. Set (using the Lagrange Interpolation formula)
 
 \begin{eqnarray*}
 g(t) &=& (t-\psi_1)(t-\psi_2)\hdots, (t-\psi_\nu), \cr
@@ -405,13 +412,39 @@ taking $\psi_1 = \psi$ for $t$, we get
 \end{proof}
 
 \begin{theorem}
-Every two valued function of $n$ variables is of the form $S_1 \pm S_2\sqrt{\triangle}$, where $S_1$ and $S_2$ are integral symmetric functions, and $\triangle$ is the discriminant
+Every two valued function of $n$ variables is of the form $S_1 \pm S_2\sqrt{\triangle}$, where $S_1$ and $S_2$ are integral symmetric functions, and $\triangle$ is the discriminant.
 \end{theorem}
+
+\begin{proof}
+A two-valued function must belong the the group of order $\half N$. The only group of this order is the alternating group to which the function $\sqrt{\triangle}$ belongs. The theorem therefore 
+follows as an immediate consequence of the fundamental theorem Thm (\ref{FunctionsOfSameGroup}). \\
+
+{\bf An Second Proof}\\
+Let two values of the function be denoted by $\phi_1$ and $\phi_2$ and let $G_1$ and $G_2$ be the corresponding groups, each of order $\half N$. In the first place, these two groups must
+be identical; for it any substitution $S$ of $G_1$ were to change $\phi_2$ to its second value $\phi_1$, then $S^{-1}$ would change $\phi_1$ into $\phi_2$; but this is impossible, since $S^{-1}$ and $S$ each belong to $G_1$. Every substitution therefore of $G_1$ must belong to $G_2$ and vice-versa. \\
+
+To show now that these groups coincided with the alternating group, consider the function $\psi = \phi_1 - \phi_2$. Any substitution which belongs to the common group leaves this unaltered; any other will change $phi_1$ to $\phi_2$ and $\phi_2$ to $\phi_1$, and will therefore change the sign of $\psi$; some transposition, $(x_\alpha x_\beta)$ for example, will have this affect, for no group can include all the transpositions without coinciding with the symmetric group. It is easily inferred that $\psi_1 - \psi_2$ is divisible by $x_\alpha - x_\beta$, and hence by the product of all the differences, since $\psi^2$ is symmetric. \\
+
+The quotient of $\psi$ by $\sqrt{\triangle}$ is symmetric. To prove this, let $(\sqrt{triangle})^m$ be the highest power of $\sqrt{\triangle}$ which occurs in $\psi$. The quotient of $\psi$ by
+$(\sqrt{\triangle}^m$ is symmetric, since, if not, it would be an alternating function, and would again contain $\sqrt{\triangle}$ as a factor, which is contrary to assumption. It follows immediately that $m$ is an odd number and that the quotient of $\psi$ by $\sqrt{\triangle}$ is symmetric. Writing therefore $\psi_1 - \psi_2 = A\sqrt{\triangle}$ and $\phi_1 + \phi_2 = B$, where $A$ and $B$ are both symmetric, we have 
+\[ \phi_1 = S_1 + S_2\sqrt{\triangle} \mbox{  and  } \phi_2 = S_1 - S_2\sqrt{\triangle},\] where $S_1$ and $S_2$ are both symmetric functions of the variables $x_1, x_2, \hdots, x_n$. The groups $G_1$ and $G_2$ obviously coincide with the group of $\sqrt{\triangle}$ -- the Alternatng Group. 
+\end{proof}
 
 \begin{theorem}
 The alternating functions are the only unsymmetrical functions of $n$ variables of which a power can be symmetric.
 \end{theorem}
 
+\begin{proof}
+It is sufficient to prove this theorem for prime powers; for if there exists a function $F(x_1, x_2, \hdots, x_n)$ such that $F^{pq}$ is symmetric and $p$ is a prime, then there is 
+also a function $\phi = F^q$ such that $\phi^p$ is symmetric. \\
+
+Therefore let \[ \phi^p = S, \mbox{    a symmetric function.}\] Since the group of $\phi$ which is unsymmetric, cannot contain all the transpositions, let $\sigma = (x_\alpha x_beta)$ be a 
+transposition which converts $\phi$ into $\phi_j$; we have \[ \phi_j^p = \phi^p = S.\] and therefore $\phi_j = \omega\phi$, where $\omega$ is a $p$th root of unity. Hence
+\[ \sigma \phi = \phi_j = \omega \phi,\] and operating again with $\sigma$ 
+\[ \sigma^2 \phi = \omega\sigma\phi = \omega^2 \phi,\] but $\sigma^2 = I$ and therefore $\omega^2 = 1$, and consequently $p=2$. \\
+
+Since $\phi^s$ is symmetric, $\phi$ is an alternating function. \qed
+\end{proof}
 
 \begin{theorem}
 For any number, $n$, of independent elements there is no multiple-valied function of which a power is two-valiued when $n>4$; and when $n=3$, or $n=4$, if there is any such power it is
