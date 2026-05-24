@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  24 MAY 2026 08:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  24 MAY 2026 09:06
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **AbstractAlgebra.tex
 (./AbstractAlgebra.tex
@@ -615,7 +615,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--4
  []
 
 [6] [7] [8]) (./FundamentalTheorem.tex [9]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
@@ -624,23 +629,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-
-Overfull \hbox (38.14955pt too wide) in paragraph at lines 86--87
+Overfull \hbox (38.14955pt too wide) in paragraph at lines 84--85
 []\tenrm The El-e-men-tary Sym-met-ric func-tions $\OML/cmm/m/it/10 c[]; c[]; c
 []; [] c[]$ \tenrm are de-fined as func-tions of $\OML/cmm/m/it/10 n$ \tenrm in
 -de-ter-mi-nants $\OML/cmm/m/it/10 x[]; x[]; x[]; [] ; x[]$
@@ -648,7 +648,7 @@ Overfull \hbox (38.14955pt too wide) in paragraph at lines 86--87
 
 [11]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 121.
+put line 128.
 ) (./Determinants.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 2.
 
@@ -690,12 +690,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
@@ -725,12 +725,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
@@ -904,22 +904,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
  []
 
 ) (./Sylvester.tex [34]
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 52--52
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 51--51
 []|$[]$|  
  []
 
 
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 52--52
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 51--51
 []|$[]$|  
  []
 
 
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 52--52
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 51--51
 []|$[]$|  
  []
 
 
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 52--52
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 51--51
 []|$[]$|  
  []
 
@@ -1067,8 +1067,8 @@ Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
 (rerunfilecheck)             Checksum: 7C1A590DCEF48F69FAB6C46DC29B9869;5953.
  ) 
 Here is how much of TeX's memory you used:
- 12496 strings out of 476029
- 199737 string characters out of 5790172
+ 12498 strings out of 476029
+ 199764 string characters out of 5790172
  1882346 words of memory out of 5000000
  32422 multiletter control sequences out of 15000+600000
  522598 words of font info for 72 fonts, out of 8000000 for 9000
@@ -1094,10 +1094,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (58 pages, 466164 bytes).
+Output written on AbstractAlgebra.pdf (58 pages, 466270 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 704 compressed objects within 8 object streams
- 278 named destinations out of 1000 (max. 500000)
+ 814 PDF objects out of 1000 (max. 8388607)
+ 706 compressed objects within 8 object streams
+ 280 named destinations out of 1000 (max. 500000)
  265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

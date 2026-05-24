@@ -1,7 +1,5 @@
 \section{Fundamental Theorem of Algebra}
 
-
-
 \begin{theorem}{(Nested Intervals Therorem):}
 Suppose that
 \[ I_n = \{ x: a_n \le x \le b_n\}, \quad n=1,2,...,\]
@@ -84,14 +82,23 @@ till finally that function is reached with consists of the produces of the $n$ r
 
 \begin{definition}
 The Elementary Symmetric functions $c_1, c_2, c_3, \hdots c_n$ are defined as functions of $n$ indeterminants $x_1, x_2,  x_3, \hdots, x_n$ as follows
- \begin{eqnarray*}  
-  c_1 &=&  x_1 + x_2 + \hdots + x_n\cr
-  c_2 &=&  x_1x_2 + x_1x_3 + \hdots + x_2x_3 +\hdots + x_{n-1}x_n\cr
-  c_3 &=&  x_1x_2x_3 + x_1x_2x_4 + \hdots + x_2x_3x_4  +\hdots + x_{n-2}x_{n-1}x_n\cr
-         &\vdots& \cr 
-  c_n &=&  x_1x_2x_3 x_4 \hdots x_{n-1}x_n
-  \end{eqnarray*}
+\be \begin{array}{lll}  
+  s(x_1) & =   x_1 + x_2 + \hdots + x_n & = c_1\cr
+  s(x_1x_2)  &   =   x_1x_2 + x_1x_3 + \hdots + x_2x_3 +\hdots + x_{n-1}x_n & = c_2\cr
+  s(x_1x_2,x_3) &=  x_1x_2x_3 + x_1x_2x_4 + \hdots + x_2x_3x_4  +\hdots + x_{n-2}x_{n-1}x_n &=  c_3\cr
+\hfill{ \hdots} \hfill      &\hfill{\hdots\hdots\hdots}\hfill& \hfill{\hdots}\hfill\cr 
+  s(x_1x_2\hdots x_n)  &=  x_1x_2x_3 x_4 \hdots x_{n-1}x_n & = c_n\cr
+  \end{array}
+  \ee
 \end{definition}
+
+\begin{theorem}
+Every rational symmetric function of $x_1, x_2, \hdots, x_n$ is rationally expressible in terms of the elementary symmetric functions. 
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
 
 \begin{theorem}[Theorems related to Symmetric Functions] The sum of the exponents of all the roots in any term of any symmetric function of the roots
 is equal to the sum of the suffices in each term of the corresponding value in terms of the coefficients.
