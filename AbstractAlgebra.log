@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  24 MAY 2026 08:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  24 MAY 2026 08:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -904,22 +904,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
  []
 
 ) (./Sylvester.tex [34]
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 52--52
 []|$[]$|  
  []
 
 
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 52--52
 []|$[]$|  
  []
 
 
-Overfull \hbox (21.85297pt too wide) in paragraph at lines 54--54
+Overfull \hbox (21.85297pt too wide) in paragraph at lines 52--52
 []|$[]$|  
  []
 
 
-Overfull \hbox (24.63075pt too wide) in paragraph at lines 54--54
+Overfull \hbox (24.63075pt too wide) in paragraph at lines 52--52
 []|$[]$|  
  []
 
@@ -1064,13 +1064,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--386
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AbstractAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 5514E8C41CB436CC46D952D5A8A789AA;6243.
+(rerunfilecheck)             Checksum: 7C1A590DCEF48F69FAB6C46DC29B9869;5953.
  ) 
 Here is how much of TeX's memory you used:
- 12498 strings out of 476029
- 199759 string characters out of 5790172
+ 12496 strings out of 476029
+ 199737 string characters out of 5790172
  1882346 words of memory out of 5000000
- 32423 multiletter control sequences out of 15000+600000
+ 32422 multiletter control sequences out of 15000+600000
  522598 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,23n,76p,1016b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1094,10 +1094,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (58 pages, 466228 bytes).
+Output written on AbstractAlgebra.pdf (58 pages, 466164 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 707 compressed objects within 8 object streams
- 279 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 812 PDF objects out of 1000 (max. 8388607)
+ 704 compressed objects within 8 object streams
+ 278 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
