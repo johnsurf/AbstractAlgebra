@@ -170,7 +170,53 @@ Every rational symmetric function of $x_1, x_2, \hdots, x_n$ is rationally expre
 \end{theorem}
 
 \begin{proof}
+It is sufficient to prove this theorem for integral functions only, since fractional symmetric functions can be reduced to a single fraction whose numerator and denominator are 
+both integral symmetric functions. Every integral function of $a_1, a_2, a_3, \hdots a_n$ is the sum of a number of terms of the form $Na_1^p a_2^q a_3^r\hdots$, where $N$ is 
+a numerical constant; and if this function be symmetrical we can write it under the form $N\sum a_1^p a_2^q a_3^r\hdots$, all the terms being of the same type. Therefore if we can prove that this 
+quantity be expressed rationally in terms of the coefficients, the theorem will be demonstrated.\\
 
+Let us begin with the symmetric function \be\sum\, a_1^p a_2^ q = s_p s_q - s_{p+q}.\label{Symmetric2}\ee Which can be proven by multiplying $s_p$ and $s_q$, where 
+\begin{eqnarray*}
+s_p &=& a_1^p + a_2^p + a_3^p +\hdots + a_n^p, \cr
+s_q &=& a_1^q + a_2^q + a_3^q +\hdots + a_n^q, 
+\end{eqnarray*}
+Therefore 
+\begin{eqnarray*}
+s_p s_q &=& a_1^{p+q} + a_2^{p+q} + a_3^{p+q} +\hdots + a_n^{p+q}+a_1^pa+2^q + a_1^pa+3^q + \hdots, \mbox{  or  }\cr
+s_p s_q &=& s_{p+q} + \sum\,a_1^q a_2^q, 
+\end{eqnarray*}and finally
+\[ \sum\, a_1^p a_2^p = s_p s_q - s_{p+q}.\]\\
+
+We proceed now to prove a similar expression for the triple function, 
+\be\sum\, a_1^p a_2^q a_3^r = s_p s_q s_r - s_{q+r} s_p - s_{r+p} s_q - s_{p+q} s_r + 2s_{p+q+r}. \label{Symmetric3} \ee
+
+Multiplying together $\sum\, a_1^p a_2^q \mbox{  and  } s_r$, where 
+\begin{eqnarray*}
+\sum\, a_1^p a_2^q &=& a_1^p a_2^q + a_1^q a_q^p + + a_1^p a_3^q + \hdots,\cr
+ s_r  &=& a_1^r + a_2^r + a_3^r + \hdots + a_n^r
+\end{eqnarray*}
+we obtain an expression consisting of three different parts of the forms
+$\sum\, a_1^{p+r} a_2^q, \quad \sum\, a_1^{q+r} a_2^p,\mbox{    and   } \sum\,a_1^p a_2^q a_3^r$, a formula connecting double and triple symmetric functions. 
+However, by Eq(\ref{Symmetric2}):
+\begin{eqnarray*}
+\sum\, a_1^{p+r} a_2^q &=& s_{p+r} s_q - s_{p+q+r},\cr
+\sum\, a_1^{q+r} a_2^p &=& s_{q+r} s_p - s_{p+q+r},\cr
+\sum\, a_1^p a_2^q &=& s_p s_q - s_{p+q},\cr
+\end{eqnarray*}
+Substituting these values we find the triple function expressed as in Eq(\ref{Symmetric3}).\\
+
+In the same manner the quadriple function $\sum\, a_1^p a_2^q a_3^r a_4^s$, can be made to depend on the triple function $\sum\, a_1^p a_2^q a_3^r$, and ultimately on $s_1, s_2, s_3, \hdots$. Finally every rational 
+symmetric function of the roots may be expressed in terms of the elementary symmetric functions (the coefficients of a polynomial). \\
+
+The formulas Eq.(\ref{Symmetric2}) and Eq.(\ref{Symmetric3}) require modification when any of the exponents become equal. \\
+
+Thus if $p = q,~~ a_1^p a_2^q = a_2^p a_1^q$, and the terms in Eq.(\ref{Symmetric2}) become equal to two and two; therefore $\sum\, a_1^p a_2^q = 2\sum\, a_1^p a_2^p$ and 
+\[ \sum\, a_1^p a_2^p = \half(s_p^2 - s_{2p}). \]\\
+
+Similarly, if $p = q = r$, the six terms obtained by interchanging the roots in $a_1^p a_2^q a_3^r$ become equal and therefore
+\[ \sum\, a_1^p a_2^p a_3^p = {1\over 2\cdot3}\left( s_p^3 - 3s_p s_{2p} + 2s_{3p} \right). \]\\
+
+And in general, if $m$ exponents become equal, each term is repeated $m!$ times.  
 \end{proof}
 
 \begin{theorem}[Theorems related to Symmetric Functions] The sum of the exponents of all the roots in any term of any symmetric function of the roots

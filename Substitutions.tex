@@ -431,6 +431,29 @@ $(\sqrt{\triangle}^m$ is symmetric, since, if not, it would be an alternating fu
 \end{proof}
 
 \begin{theorem}
+Permutations act on products of functions homomorphically 
+because the action naturally distributes over multiplication. 
+By definition, a permutation rearranges inputs, which respects function evaluation and standard pointwise multiplication. 
+\end{theorem}
+\begin{proof}
+{\bf 1. Define the Permutation Action A permutation} $\sigma$ acts on a function $f$  by precomposition: \[ (\sigma \cdot f)(x) = f(\sigma^{-1}(x)) \] 
+
+{\bf 2. Evaluate the Action on a Product of Functions} We apply the permutation  to the pointwise product of two functions, 
+$(fg)(x) = f(x) g(x)$. \[ [\sigma\cdot (fg)](x) = (fg)(\sigma^{-1}(x)).\]
+
+{\bf 3. Unpack the Function Evaluation} Evaluate the product at the permuted input $\sigma^{-1}(x)$:
+\[ [\sigma\cdot (fg)](x) = f(\sigma^{-1}(x)) \cdot g(\sigma^{-1}(x)).\]
+
+{\bf 4. Regroup using the Action Definition} By the definition of the action in Step 1, we rewrite the scalar outputs:
+\[ [\sigma\cdot (fg)](x) = (\sigma\cdot f)(x) \cdot (\sigma \cdot g)(x).\]
+
+{\bf 5. Conclude for the Pointwise Product} Since this holds for every element $x\in X$, the functions are equivalent:
+\[ \sigma\cdot(fg) = (\sigma\cdot f)(\sigma \cdot g).\]
+
+Because this action distributes over the product of functions, it satisfies the required structural property (a homomorphism) for group actions on algebraic structures.
+\end{proof}
+
+\begin{theorem}
 The alternating functions are the only unsymmetrical functions of $n$ variables of which a power can be symmetric.
 \end{theorem}
 
