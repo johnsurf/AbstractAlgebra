@@ -232,9 +232,9 @@ a method based on transforming non-homogenous linear systems into sets of corres
 the linear system \cite{Burnside}.
 \be
 \begin{array}{r r r r r r r r}
-x               & + &             y   & + &                z     & = & A_0\\
-\alpha x    & + &     \beta y  & + & \gamma z      & = & A_1 \\
-\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & = & A_2 \\
+x               & + &             y   & + &                z     & = & T_0\\
+\alpha x    & + &     \beta y  & + & \gamma z      & = & T_1 \\
+\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & = & T_2 \\
 \end{array}
 \label{ExampleLinearSystem}
 \ee
@@ -244,9 +244,9 @@ Adding $y = y$ to the above system and converting it into a system of homogenous
 \be
 \begin{array}{r r r r r r r r}
 0               & + &             y   & + &                0     & = & y   \\
-x               & + &             y   & + &                z     & = & A_0\\
-\alpha x    & + &     \beta y  & + & \gamma z      & = & A_1 \\
-\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & = & A_2 \\
+x               & + &             y   & + &                z     & = & T_0\\
+\alpha x    & + &     \beta y  & + & \gamma z      & = & T_1 \\
+\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & = & T_2 \\
 \end{array}
 \ee
 
@@ -255,9 +255,9 @@ The above system can be converted into a Homogeneous System by moving the final 
 \be
 \begin{array}{r r r r r r r r r r}
 0               & + &             y   & + &                0     & - & y    & = & 0\\
-x               & + &             y   & + &                z     & - & A_0& = & 0\\
-\alpha x    & + &     \beta y  & + & \gamma z      & - & A_1 & = & 0\\
-\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & - & A_2 & = & 0\\
+x               & + &             y   & + &                z     & - & T_0& = & 0\\
+\alpha x    & + &     \beta y  & + & \gamma z      & - & T_1 & = & 0\\
+\alpha^2 x & + & \beta^2 y  & + & \gamma^2 z  & - & T_2 & = & 0\\
 \end{array}
 \ee
 
@@ -265,9 +265,9 @@ Writing the above system using a matrix of coefficients and introducing the 4th 
 \be
 \begin{bmatrix}
 0            & 1           & 0 & -y  \\
-1            & 1           & 1 & -A_0  \\
-\alpha    & \beta     & \gamma & -A_1  \\
-\alpha^2 & \beta^2 & \gamma^2 & -A_2  \\
+1            & 1           & 1 & -T_0  \\
+\alpha    & \beta     & \gamma & -T_1  \\
+\alpha^2 & \beta^2 & \gamma^2 & -T_2  \\
 \end{bmatrix}
 \begin{bmatrix}
 x \\
@@ -288,18 +288,18 @@ In order for this homogenous system to be consistent with Eq.(\ref{ExampleLinear
 \begin{equation}
 \begin{vmatrix}
 0            & 1           & 0               & -y    \\
-1            & 1           & 1               & -A_0\\
-\alpha    & \beta     & \gamma    & -A_1\\
-\alpha^2 & \beta^2 & \gamma^2 & -A_2\\
+1            & 1           & 1               & -T_0\\
+\alpha    & \beta     & \gamma    & -T_1\\
+\alpha^2 & \beta^2 & \gamma^2 & -T_2\\
 \end{vmatrix}\end{equation}
 Since the determinant vanishes we can factor out the $-1$ from the last column and write the consistency condition as 
 
 \begin{equation}
 \begin{vmatrix}
 0            & 1           & 0               &  y    \\
-1            & 1           & 1               &  A_0\\
-\alpha    & \beta     & \gamma    &  A_1\\
-\alpha^2 & \beta^2 & \gamma^2 & A_2 \\
+1            & 1           & 1               &  T_0\\
+\alpha    & \beta     & \gamma    &  T_1\\
+\alpha^2 & \beta^2 & \gamma^2 & T_2 \\
 \end{vmatrix} = 0.
 \end{equation}
 
@@ -316,9 +316,9 @@ Multiplying the above determinant by the non-singular determinant
 \begin{equation}
 \begin{vmatrix}
 0            & 1           & 0               &  y     \\
-1            & 1           & 1               &  A_0 \\
-\alpha    & \beta     & \gamma    &  A_1 \\
-\alpha^2 & \beta^2 & \gamma^2 & A_2  \\
+1            & 1           & 1               &  T_0 \\
+\alpha    & \beta     & \gamma    &  T_1 \\
+\alpha^2 & \beta^2 & \gamma^2 & T_2  \\
 \end{vmatrix} 
 \begin{vmatrix}
 1   & \alpha    & \alpha^2   &  0    \\
@@ -329,14 +329,67 @@ Multiplying the above determinant by the non-singular determinant
 =
 \begin{vmatrix}
 1            & \beta     & \beta^2      &  y    \\
-s_0        & s_1       & s_2             &  A_0\\
-s_1        & s_2       & s_3             &  A_1\\
-s_2        &s_3        & s_4             & A_2 \\
+s_0        & s_1       & s_2             &  T_0\\
+s_1        & s_2       & s_3             &  T_1\\
+s_2        &s_3        & s_4             & T_2 \\
 \end{vmatrix} = 0,
 \label{BandPFinal}\end{equation}
 where \[s_i = \alpha^i + \beta^i + \gamma^i\] and the $s_i$ are symmetric functions in $\alpha, \beta, \mbox{  and } \gamma$. \\ 
 
-Since the $s_i$'s are sums of powers of $\alpha, \beta, \gamma$ and are symmetric functions, they can be expressed rationally in terms of the elementary symmetric functions. By expanding the final determinant in Eq. (\ref{BandPFinal}) along the top row and setting the expansion equal to zero to satisfy the consistency requirement we see that we have $y$ expressed as a quadratic function of $\beta$ along with the sums of powers of the three quantities $\alpha, \beta, \gamma$. 
+Since the $s_i$'s are sums of powers of $\alpha, \beta, \gamma$ and are symmetric functions, they can be expressed rationally in terms of the elementary symmetric functions. By expanding the final determinant in Eq. (\ref{BandPFinal}) along the top row and setting the expansion equal to zero to satisfy the consistency requirement we see that we have $y$ expressed as a quadratic function of $\beta$ along with the sums of powers of the three quantities $\alpha, \beta, \gamma$. Summarizing the results obtained -- we expand the above determinant along the top row and solve for $y$.
+
+\be
+y = {\begin{vmatrix}
+s_1       & s_2             &  T_0\\
+s_2       & s_3             &  T_1\\
+s_3       & s_4             & T_2 \\
+\end{vmatrix} -
+\beta\begin{vmatrix}
+s_0        & s_2             &  T_0\\
+s_1        & s_3             &  T_1\\
+s_2        & s_4             & T_2 \\
+\end{vmatrix} 
++
+\beta^2\begin{vmatrix}
+s_0        & s_1       &  T_0\\
+s_1        & s_2       &  T_1\\
+s_2        &s_3        & T_2 \\
+\end{vmatrix} 
+\over 
+\begin{vmatrix}
+s_0        & s_1       & s_2\\
+s_1        & s_2       & s_3\\
+s_2        &s_3        & s_4\\
+\end{vmatrix}}.
+\label{yBeta}\ee
+The right-hand-side depends quadratically on $\beta$ and other expressions which are symmetric functions of $\alpha, \beta, \mbox{  and  } \gamma$ and hence demonstrate the claim made in Theorem (\ref{FunctionsOfSameGroup}).\\
+
+The denominator of Eq. (\ref{yBeta}) is a function of the squares of the differences of $\alpha, \beta, \mbox{  and  } \gamma$:  
+\be\triangle(\alpha, \beta, \gamma) = 
+\begin{vmatrix}
+s_0        & s_1       & s_2\\
+s_1        & s_2       & s_3\\
+s_2        &s_3        & s_4\\
+\end{vmatrix} = (\alpha - \beta)^2 (\alpha - \gamma)^2  (\beta - \gamma)^2
+\ee Using this result we can write the solution for $y$ as
+\be\triangle(\alpha, \beta, \gamma) y = \begin{vmatrix}
+s_1       & s_2             &  T_0\\
+s_2       & s_3             &  T_1\\
+s_3       & s_4             & T_2 \\
+\end{vmatrix} -
+\beta\begin{vmatrix}
+s_0        & s_2             &  T_0\\
+s_1        & s_3             &  T_1\\
+s_2        & s_4             & T_2 \\
+\end{vmatrix} 
++
+\beta^2\begin{vmatrix}
+s_0        & s_1       &  T_0\\
+s_1        & s_2       &  T_1\\
+s_2        &s_3        & T_2 \\
+\end{vmatrix} .
+\ee\\
+
 
 Returning to the original problem  Eq. (\ref{linearSys}), we can similarly express the solution for $\psi_j$ in terms of $\phi_j$ in the form of a determinant: 
 
@@ -425,9 +478,9 @@ be identical; for it any substitution $S$ of $G_1$ were to change $\phi_2$ to it
 
 To show now that these groups coincided with the alternating group, consider the function $\psi = \phi_1 - \phi_2$. Any substitution which belongs to the common group leaves this unaltered; any other will change $phi_1$ to $\phi_2$ and $\phi_2$ to $\phi_1$, and will therefore change the sign of $\psi$; some transposition, $(x_\alpha x_\beta)$ for example, will have this affect, for no group can include all the transpositions without coinciding with the symmetric group. It is easily inferred that $\psi_1 - \psi_2$ is divisible by $x_\alpha - x_\beta$, and hence by the product of all the differences, since $\psi^2$ is symmetric. \\
 
-The quotient of $\psi$ by $\sqrt{\triangle}$ is symmetric. To prove this, let $(\sqrt{triangle})^m$ be the highest power of $\sqrt{\triangle}$ which occurs in $\psi$. The quotient of $\psi$ by
+The quotient of $\psi$ by $\sqrt{\triangle}$ is symmetric. To prove this, let $(\sqrt{\triangle})^m$ be the highest power of $\sqrt{\triangle}$ which occurs in $\psi$. The quotient of $\psi$ by
 $(\sqrt{\triangle}^m$ is symmetric, since, if not, it would be an alternating function, and would again contain $\sqrt{\triangle}$ as a factor, which is contrary to assumption. It follows immediately that $m$ is an odd number and that the quotient of $\psi$ by $\sqrt{\triangle}$ is symmetric. Writing therefore $\psi_1 - \psi_2 = A\sqrt{\triangle}$ and $\phi_1 + \phi_2 = B$, where $A$ and $B$ are both symmetric, we have 
-\[ \phi_1 = S_1 + S_2\sqrt{\triangle} \mbox{  and  } \phi_2 = S_1 - S_2\sqrt{\triangle},\] where $S_1$ and $S_2$ are both symmetric functions of the variables $x_1, x_2, \hdots, x_n$. The groups $G_1$ and $G_2$ obviously coincide with the group of $\sqrt{\triangle}$ -- the Alternatng Group. 
+\[ \phi_1 = S_1 + S_2\sqrt{\triangle} \mbox{  and  } \phi_2 = S_1 - S_2\sqrt{\triangle},\] where $S_1$ and $S_2$ are both symmetric functions of the variables $x_1, x_2, \hdots, x_n$. The groups $G_1$ and $G_2$ obviously coincide with the group of $\sqrt{\triangle}$ -- the Alternating Group. 
 \end{proof}
 
 \begin{theorem}
