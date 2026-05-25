@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  25 MAY 2026 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.20)  25 MAY 2026 14:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1138,10 +1138,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AbstractAlgebra.pdf (61 pages, 478876 bytes).
+Output written on AbstractAlgebra.pdf (61 pages, 478894 bytes).
 PDF statistics:
- 844 PDF objects out of 1000 (max. 8388607)
- 733 compressed objects within 8 object streams
+ 845 PDF objects out of 1000 (max. 8388607)
+ 734 compressed objects within 8 object streams
  290 named destinations out of 1000 (max. 500000)
  265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
