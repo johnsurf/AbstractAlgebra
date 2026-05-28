@@ -58,6 +58,20 @@ The relation of conjugacy between subgroups of $G$ is an equivalence relation.
 \end{theorem}
 
 \begin{theorem}
+Normal subgroups of $G$ are composed of all elements of $g$ which are common to the set of conjugate subgroups of $G$. 
+\end{theorem}
+\begin{proof}
+Suppose the set of conjugate subgroups of $G$ are
+\[ H_1, H_2, \hdots H_i.\]
+The elements which are common to these subgroups form a group, since with any two of them contained in $H_i$ their product is also contained in $H_i$. 
+Also, the transformations of $H_1$ by elements in $G$ are the same conjugate subgroups
+\[ H_1, g_2^{-1}H_1 g_2, \hdots, g_i^{-1} H_1 g_i, \] the group of common elements, which is part of any one of them as it is of $H_1$, is identical with its 
+transforms and hence a normal subgroup of $G$. 
+\end{proof}
+A group of all elements which are common to conjugate subgroups, is called their {\bf greatest common subgroup} and a greatest common subgroup 
+is normal in the group. 
+
+\begin{theorem}
 $H$ is an invariant subgroup of $G$ if the conjugacy class of subgroups of $G$ which contains $H$ consists of just $H$ itself: i.e., if the only subgroup
 conjugate to $H$ is $H$. 
 \end{theorem}
