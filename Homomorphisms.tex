@@ -64,7 +64,9 @@ We have proved that to any invariant subgroup $H$ of $G$ there is a natural homo
 a natural homomorphism associated with its kernel. Therefore there is a 1-1 correspondence between the invariant subgroups and the essential different homomorphisms of $G$. By 
 essentially different homomorphisms we mean those having different kernels: two homomorphisms having the same kernel are both equivalent to the same natural homomorphism abd therefore exhibit the same structure. 
 
-The image space $G'$ is largely irrelevant : the subgroup $G\theta$ of $G'$ is isomorphic to $G/H$ but $G'$ may be larger. Also there is nor reason why $G\theta$ should be invariant in $G'$. 
+The image space $G'$ is largely irrelevant : the subgroup $G\theta$ of $G'$ is isomorphic to $G/H$ but $G'$ may be larger. Also there is nor reason why $G\theta$ should be invariant in $G'$. \\
+
+{\bf Lattice Isomorphism Theorems}
  
 \begin{theorem}First Isomorphism Theorem: Let $\phi$ be a group homomorphism from $G$ tp $G'$. Then the mapping from $G/Ker(\phi)$ to $G\phi$ given by 
 $g Ker(\phi) \goes g\phi$ is an isomorphism.
@@ -84,6 +86,18 @@ Notice that we can create a mapping $\overline{\phi}$ that mapps $G/Ker(\phi)$ i
 \overline{\phi}(3+\langle4\rangle) &=& (3)\phi = 3
 \end{eqnarray*}
 \end{example}
+
+
+\begin{theorem} [Second Isomorphism Theorem] The Second Isomorphism Theorem: If  $S$
+ is a subgroup of $G$  and $N$  is a normal subgroup of $G$ , then the product $SN$ is a subgroup, and the quotient 
+$SN / N$  is isomorphic to  $S / (S \cap N$.\end{theorem}
+
+\begin{theorem}[Third Isomorphism Theorem] Normal Subgroups of Quotients: If $N$ and $H$ are normal subgroups of $G$ (where $N \subseteq H$), then 
+$H/N$ is  is a normal subgroup of $G/N$. Furthermore, the second quotient is 
+isomorphic to the primary quotient: \[ (G / N )/  (H / N)  \cong G / H. \]
+\end{theorem}
+The Third Isomorphism Theorem is analogous to fractions:
+\[ {G / N \over H / N} \cong {G\over H}.\]
 
 \begin{theorem}
 The mapping $\phi: \Z\goes\Z_n$ defined by $m\phi = m\mod n$ is a homomorphism with kernel $\langle n \rangle$. By the 
@@ -151,10 +165,3 @@ By the First Isomorphism Theorem, the domain modulo the kernel is isomorphic to 
 
 \[ (G/H)/ker(\overline{\phi}) \cong Im(\overline{\phi}) = G/N .\]
 Since $G/N$ is isomorphic to a quotient group of $G/H$, it is by definition a homomorphic image of $G/H$.\qed \\
-
-{\bf Lattice Isomorphism Theorem}
-
-\begin{theorem}[Third Isomorphism Theorem] Normal Subgroups of Quotients: If $N$ and $H$ are normal subgroups of $G$ (where $N \subseteq H$), then 
-$H/N$ is  is a normal subgroup of $G/N$. Furthermore, the second quotient is 
-isomorphic to the primary quotient: \[ (G / N )/  (H / N)  \cong G / H. \]
-\end{theorem}
