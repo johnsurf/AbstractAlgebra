@@ -1,9 +1,13 @@
-\section{Commutators}
+\section{The Commutator Subgroup (The Abelian Quotient)}
 \begin{definition}
 Let $G$ be a group. An element $g\in G$ is called a commutator if $g = aba^{-1}b^{-1}$ for elements $a,b \in G$. 
 
 The smallest subgroup that contains all commutators of G is called the commutator subgroup or derived subgroup of $G$, and is denoted by $G'$.
 \end{definition}
+
+A highly practical relationship emerges with the commutator subgroup $G'$.
+The quotient $G / G'$ forms the largest Abelian (commutative) group that can be created from $G$. If you ``mod out'' by 
+the commutator subgroup, all order-dependent operations are eliminated.  
 
 \begin{proposition}Let $G$ be a group with commutator subgroup $G'$.
 \begin{itemize}
@@ -13,11 +17,11 @@ The smallest subgroup that contains all commutators of G is called the commutato
 \end{proposition}
 
 \begin{proof}
-(a) Let $x\in G'$ and let $g \in G$. Then $gxg^{-1}x^{-1} \in G'$, and since $x\in G'$, we must have $gxg^{-1} = gxg^{-1}x^{-1}x \in G'$.
-\end{proof}
+(a) Let $x\in G'$ and let $g \in G$. Then $gxg^{-1}x^{-1} \in G'$, and since $x\in G'$, we must have $gxg^{-1} = gxg^{-1}x^{-1}x \in G'$.\\
 
 The factor group $G/G'$ must be Abelian since for any cosets $aG', bG'$, because $G'$ is normal, we have $xG' = G'x$ for all $x\in G$. 
 \[ aG'bG'a^{-1}G'b^{-1}G' = abG'G'a^{-1}b^{-1}G'G' = aba^{-1}b^{-1} G' = G'. \]
+\end{proof}
 
 \begin{proof}
 (b) Let $N$ be a normal subgroup of $G$. If $N\supseteq G'$, then $G/N$ is a homomorphic image of $G/G'$ and must be Abelian. Conversely, suppose
