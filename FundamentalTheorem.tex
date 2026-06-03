@@ -258,9 +258,32 @@ The procedure for determining the GCD of $a(x)$ and $b(x)$ is given in  Algorith
 \end{algorithm}
 
 
-\begin{theorem}[Eisenstein's Irreducibility Criterion] For a given prime $p$, let $a(x) = a_n x^n + a_{n-1}x^{n-1} + \hdots a_n$ be a polynomial with integral coefficients, such that $a_n \ne 0 (\mod p), \quad a_{n-1} = a_{n-2} = a_0 = 0 (\mod p), a_0 \ne 0 (\mod p^2)$. Then $a(x)$ is irreducible 
+\begin{theorem}[Eisenstein's Irreducibility Criterion] For a given prime $p$, let $a(x) = a_n x^n + a_{n-1}x^{n-1} + \hdots a_n$ be a polynomial with integral coefficients, such that\
+$a_n \ne 0 (\mod p), \quad a_{n-1} = a_{n-2} = a_0 = 0 (\mod p), a_0 \ne 0 (\mod p^2)$. Then $a(x)$ is irreducible 
 over the field of rational. 
 \end{theorem}
+
+\begin{proof}
+Suppose $$f = gh,$$where
+\begin{eqnarray*}
+g &=& x^h + g_1 x^{h-1} + \hdots + g_{k-1}x + g_k\cr
+h &=& x^l + h_1 x^{l-1} + \hdots + h_{l-1} x + h_l
+\end{eqnarray*}
+Then $g$ and $h$ have integral coefficients since $f$ has. 
+Comparing coefficients, we set
+\begin{eqnarray*}
+a_n &=& g_k h_l \cr
+a_{n-1} &=& g_k h_{l-1} + g_{k-1} h_l \cr
+a_{n-2} &=& g_k h_{l-2} + g_{k-1} h_{l-1} + \hdots + g_{k-2}h_l \cr
+\hdots &\null & \hdots\cr
+a_{n-k} &=& g_k h_{l-k} + g_{k-1} h_{l-k+1} + \hdots + g_1 h_{l-1} + h_l\cr
+ \hdots &\null& \hdots,
+\end{eqnarray*}where the $h_i$ with possible negative subscripts are 0 and where 
+$$h_0 = 1.$$\\
+if now every $a_i$, other than $a_0$ is divisible by $p$ and $a_n$ not by $p^2$, we conclude from the first equation that either $g_k$ or $h_l$ is divisible by $p$ and the other is not. But when $g_k$ is divisible by $p$, we conclude
+from the following equations that $g_{k-1}, g_{k-2}, \hdots, g_1$ are divisible by $p$, and from the last equation that $h_l$ is also divisible by $p$ which is a contradiction from the assumption that $a_n$ is not divisible by $p^2$. 
+
+\end{proof}
 
 \begin{theorem}[Euler-Gauss: Fundamental Theorem of Algebra] Every polynomial p(x) of positive degree with complex coefficients has a complex root. 
 \end{theorem}
