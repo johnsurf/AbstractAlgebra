@@ -46,27 +46,27 @@ From the inequalities about and the limit of inequalities it follows that $f(x_0
 
 \begin{definition}
 A polynomial over a field $F$ is a {\it rational} and {\it integral} expression of the form
-\be f(x) = p_0 x^n + p_{1}x^{n-1} + ... + p_{n-1} x + p_n, \label{poly} \ee where the coefficients $ p_i  \in F, i = 1, 2, \hdots, n$ and  {\it rational} means free from fractional powers and {\it integral} means never in the denominator of a fraction. 
+\be f(x) = a_0 x^n + a_{1}x^{n-1} + ... + a_{n-1} x + a_n, \label{poly} \ee where the coefficients $ a_i  \in F, i = 1, 2, \hdots, n$ and  {\it rational} means free from fractional powers and {\it integral} means never in the denominator of a fraction. 
 A polynomial function is a function which can be written in the form of Eq. (\ref{poly}). 
 \end{definition}
 
-If $p_0 = 1$ we say the polynomial is in {\it monic} form. \\
+If $a_0 = 1$ we say the polynomial is in {\it monic} form. \\
 
-The roots $\{a_1, a_2, \hdots a_n\}$ of a polynomial are the values of $x$ such that $f(x) = 0$. The roots are in general complex numbers.
+The roots $\{\alpha_1, \alpha_2, \hdots \alpha_n\}$ of a polynomial are the values of $x$ such that $f(x=\alpha_i) = 0$. The roots are in general complex numbers.
 According to a theorem of Vi\`ete, the relationship between the roots and the coefficients for a monic polynomial is given by the 
 \begin{eqnarray*}
 f(x) &=&   x^n + p_{1} x^{n-1} + \hdots + p_{n-1} x + p_n \cr
-  &=& (x - a_1)(x-a_2)(x-a_3) \hdots (x- a_n).
+  &=& (x - \alpha_1)(x-\alpha_2)(x-\alpha_3) \hdots (x- \alpha_n).
   \end{eqnarray*}\\
   
   Expanding the product on the right-hand side we find the explicit relationships:\\
   
   \begin{eqnarray*}  
-  p_1 &=& - (a_1 + a_2 + \hdots + a_n)\cr
-  p_2 &=&   (a_1a_2 + a_1a_3 + \hdots + a_2a_3 +\hdots +a_{n-1}a_n)\cr
-  p_3 &=&  -(a_1a_2a_3 + a_1a_2a_4 + \hdots + a_2a_3a_4 +\hdots +a_{n-2}a_{n-1}a_n)\cr
+  p_1 &=& - (\alpha_1 + \alpha_2 + \hdots + \alpha_n)\cr
+  p_2 &=&   (\alpha_1\alpha_2 + \alpha_1\alpha_3 + \hdots + \alpha_2 \alpha_3 +\hdots +\alpha_{n-1} \alpha_n)\cr
+  p_3 &=&  -(\alpha_1\alpha_2 \alpha_3 + \alpha_1\alpha_2 \alpha_4 + \hdots + \alpha_2 \alpha_3 \alpha_4 +\hdots +\alpha_{n-2} \alpha_{n-1}\alpha_n)\cr
          &\vdots& \cr 
-  p_n &=&  -(1)^n(a_1 a_2 a_3 a_4 \hdots a_{n-1}a_n)
+  p_n &=&  -(1)^n(\alpha_1 \alpha_2 \alpha_3 \alpha_4 \hdots \alpha_{n-1} \alpha_n)
   \end{eqnarray*}
 
 These relationships are encapsulated in the following theorem
@@ -99,14 +99,14 @@ The sums of the similare powers of the roots of an equation can be expressed in 
 Consider the polynomial 
 \begin{eqnarray*} 
 f(x) &=& x^n + p_1 x^{n-1} + p_2 x^{n-2} \hdots + p_{n-1}x + p_n, \cr
-      &=& (x - a_1)(x- a_2)(x- a_3) \hdots (x- a_n) = 0.
+      &=& (x - \alpha_1)(x- \alpha_2)(x- \alpha_3) \hdots (x- \alpha_n) = 0.
 \end{eqnarray*}
 Define the following terms for the sums of the powers of the roots: 
 \[s_i = \sum_{j=1}^n\, \alpha_j^i, \quad i = 0, 1, 2, ... \]
 
 Given that $f(x)$ is a polynomial we can write the derivative of $f(x)$ as 
 \begin{eqnarray*}
- f'(x) &=& {f(x) \over x- a_1} + {f(x) \over x- a_1} + \hdots + {f(x) \over x- a_1} \cr 
+ f'(x) &=& {f(x) \over x- \alpha_1} + {f(x) \over x- \alpha_1} + \hdots + {f(x) \over x- \alpha_1} \cr 
 &=& nx^{n-1} + (n-1) p_1 x^{n-2} + (n-2)x^{n-3} + \hdots + 2p_{n-2} x + p_{n-1}
 \end{eqnarray*}
 
