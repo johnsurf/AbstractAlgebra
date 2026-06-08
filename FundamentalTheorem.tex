@@ -1,5 +1,10 @@
 \section{Fundamental Theorem of Algebra}
 
+{\bf Axiom I - Axiom of inequality for $\R$. } Among the real numbers, $\R$, there is a set called the positive numbers which satisfies the conditions: (i) for any number $a\in \R$ exactly one of the three alternatives holds; $a$ is positive, $a = 0$, or $-a$ is positive; (ii) any finite sum or produce of positive numbers is positive. \\
+
+{\bf Axiom C - Axiom of continuity. }  Suppose that an infinite sequence $x_1, x_2, \hdots, x_n\hdots $ is such that $x_{n+1} \ge x_n$ for all $n$, and there is a number $M\in \R$ such that $x_n \le M$ for all $n$. Then there is a number $L\le M$ such that $x_n\goes L$ as $n\goes\infty$ and $x_n\le L$ for all $n$. \\
+
+
 \begin{theorem}{(Nested Intervals Therorem):}
 Suppose that
 \[ I_n = \{ x: a_n \le x \le b_n\}, \quad n=1,2,...,\]
@@ -8,7 +13,7 @@ is a sequence of closed intervals such that $I_{n+1} \subset I_n$, for each $n$.
 
 \begin{proof}
 By hypothesis, we have $a_n \le a_{n+1}$ and $b_{n+1} \le b_n$. Since $a_n < b_n$ for every $n$, the sequence $\{a_n\}$ is nondecreasing and bounded from above by $b_1$. Similarly, the
-sequence $b_n $ is nonincreasing and bounded from below by $a_1$. Using Axiom C, we conclude that there are numbers $x_0$ and $x'_0$ such that $a_n \goes x_0, a_n\le x_0$, and
+sequence $b_n $ is non-increasing and bounded from below by $a_1$. Using Axiom C, we conclude that there are numbers $x_0$ and $x'_0$ such that $a_n \goes x_0, a_n\le x_0$, and
 $b_n \goes x'_0, b_n\ge x'_0$ as $\ninfty$. Using the fact that $b_n - a_n \goes 0$ as $\ninfty$, we find that $x_0 = x'_0$ and
 \[ a_n \le x_0 \le b_n\] for every $n$. Thus $x_0$ is in every $I_n$.
 
@@ -50,7 +55,8 @@ A polynomial over a field $F$ is a {\it rational} and {\it integral} expression 
 A polynomial function is a function which can be written in the form of Eq. (\ref{poly}). 
 \end{definition}
 
-If $a_0 = 1$ we say the polynomial is in {\it monic} form. \\
+If $a_0 = 1$ we say the polynomial is in {\it monic} form. It will often be convenient to adopt this convention; and in such cases we shall write the polynomial as 
+\[ f(x) = x^n + p_1 x^{n-1} + p_2 x^{n-2} + \hdots + p_{n-1} x + p_n.\]
 
 The roots $\{\alpha_1, \alpha_2, \hdots \alpha_n\}$ of a polynomial are the values of $x$ such that $f(x=\alpha_i) = 0$. The roots are in general complex numbers.
 According to a theorem of Vi\`ete, the relationship between the roots and the coefficients for a monic polynomial is given by the 
