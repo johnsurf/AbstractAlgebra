@@ -1,4 +1,27 @@
 \section{Subgroups and Cosets}
+
+{\bf Abstract Group}\\
+A set of elements $S$ forms a group if to any two elements $x$ and $y$ of $S$ taken in a particular order there is associated a unique third element of $S$, called their product and denoted by
+$xy$, which satisfies the following laws
+
+\begin{itemize}
+\item[~~(M2)] For any three elements $$x, y \mbox{ and } z: ~~ (xy)z = x(yz).$$ 
+\item[~~(M3)] There is an element called the {\it neutral element } and denoted by $e$ which has the property that $xe = ex = x$ for all elements $x$.
+\item[~~(M4)] Corresponding to each element $x$ there is an element $x^{-1}$ called the {\it inverse } of $x$ which has the property that 
+\[ xx^{-1} = x^{-1} x = e.\]
+\end{itemize}
+
+{\bf Subgroups }\\
+A non-empty subset $H$ of a group $G$ is a subgroup of $G$ if: 
+\begin{itemize}
+\item[(a)] Given any ordered pair $(h_1, h_2)$ of elements of $H$ the product $h_1 h_2$ as defined in $G$ is in $H$.
+\item[(b)] The neutral element of $G$ is in $H$.
+\item[(c)] Given any element $h$ in $H$, the inverse $h^{-1}$ as defined in $G$ is in $H$. 
+\end{itemize}
+This a subset of elements of $G$ is a subgroup, if and only if it forms a group, under the same group product. \\
+
+Note that $(b)$ is not needed, since if $h\in H, h^{-1} \in H$ by $(c)$ and so $h h^{-1} = e \in H$ by $(a)$. \\
+
 \begin{theorem}
 A necessary and sufficient condition for a non-empty subset $H$ to be a\\ subgroup of a group $G$ is that $gh^{-1} \in H$ for all $g, h \in H$.
 \end{theorem}
@@ -35,3 +58,176 @@ no element in common.
 We may similarly define \it  right cosets \rm of $G$ relative to $H$ as the equivalence classes under the relation given by $gk^{-1}\in H$. They are the complexes $Hg$.\\
 
 We normally will use left cosets and therefore will just refer to them as cosets. 
+
+\section{Quotient Group Associated with a Homomorphism}
+
+As we have already hinted, the subjects of invariant subgroups and homomorphisms of groups are closely connectedl there is in fact a 1-1 correspondence between subgroups of a given group $G$ and the essentially different 
+homomorphism which have $G$ ax the object space, so that the study of either tops is similar to that of the other. \\
+
+Suppose that $H$ is an invariant subgroup of $G$, so that the quotient group $G/H$ is defined. Consider the mapping $\theta: G \goes G/H$ defined by $g\theta = gH$, the coset containing $g$, which is of course an element of $G/H$.
+
+\begin{theorem}
+The mapping $\theta: G \goes G/H$ defined by $g\theta = gH$ is a homomorphism.
+\end{theorem}
+
+\begin{proof}
+\begin{eqnarray*}
+(gg')\theta &=& gg'H = gg' H H\cr
+                &=& gH g'H \cr
+                &=& (g\theta) (g'\theta)
+\end{eqnarray*}
+\end{proof}
+
+\begin{corollary}
+The kernel $\theta$ is $H$ and the image is $G/H$, so that $\theta$ is an epimorphism.
+\end{corollary}
+
+The homomorphism $\theta$ is called the Natural Homomorphism or the Canonical Homomorphism associated with $H$. It is essential that $H$ be an invariant subgroup, for otherwise $G/H$ is not defined and we cannot speak of the product of the cosets $(gH)(g'H)$.
+
+Any homomorphism $\theta: G\goes G'$ is closely related to the natural homomorphsim associated with an invariant subgroup of $G$. 
+
+\begin{theorem}
+The kernel of $\theta: G \goes G'$ is an invariant subgroup of $G$. 
+\end{theorem}
+
+If $h$ is in the kernel $H$ and $g$ is any element of $G$, we have
+\begin{eqnarray*}
+(g^{-1} h g)\theta  &=& (g^{-1}\theta) (h\theta) (g\theta)\cr
+&=& (g\theta)^{-1}) f (g\theta), \mbox{  where $f$ is the neutral element of $G'$}\cr
+&=& (g\theta)^{-1}(g\theta) = f
+\end{eqnarray*}
+
+\begin{theorem}
+The mapping defined by $gH \goes g\theta$ is a well-defined mapping of $G/H$ onto $G\theta$.
+\end{theorem}
+If $g_1$ and $g_2$ are in the same coset, then $g_1\theta = g_2\theta$. If $g_1$ and $g_2$ are in the same coset, then $g_2^{-1}g_1 \in H$. Hence
+$(g_2\theta)^{-1}(g_1\theta) = f$, the neutral element in $G'$, since $H$ is in the kernel of $\theta$. Therefore $g_2\theta = g_1\theta$. 
+
+Also  any element of $G\theta$ is the image of some $g\in G$ and so the mapping is onto $G\theta$, although not necessarily onto $G'$. 
+
+\begin{theorem}
+The mapping defined by $gH \goes g\theta$ is an isomorphism between $G/H$ and $G\theta$. 
+\end{theorem}
+We have that 
+\begin{eqnarray*}
+(g_1 H) (g_2 H) &=& g_1 g_2 H, \cr
+(g_1\theta) (g_2\theta) &=& (g_1 g_2)\theta, 
+\end{eqnarray*}
+because $\theta$ is a homomorphism and $g_1 g_2 H \goes (g_1 g_2)\theta$. 
+
+Since this mapping is onto $G\theta$, it is also an isomorphism provided it is 1-1, i.e., provided the kernel is the neutral element of $G/H$. Suppose
+$gH \goes f$. Then $g\theta \goes f$ and so $g\in H$, so that $gH = H$, the neutral element of $G/H$. \\
+
+Notice that the sets of elements of $G$ which map into the particular elements of $G\theta$ are the cosets of $G$ relative to the kernel $H$. \\
+
+We have proved that to any invariant subgroup $H$ of $G$ there is a natural homomorphism from $G$ onto $G/H$, and conversely that any homomorphism of G is  isomorphic to
+a natural homomorphism associated with its kernel. Therefore there is a 1-1 correspondence between the invariant subgroups and the essential different homomorphisms of $G$. By 
+essentially different homomorphisms we mean those having different kernels: two homomorphisms having the same kernel are both equivalent to the same natural homomorphism and therefore exhibit the same structure.\\ 
+
+The image space $G'$ is largely irrelevant : the subgroup $G\theta$ of $G'$ is isomorphic to $G/H$ but $G'$ may be larger. Also there is no reason why $G\theta$ should be invariant in $G'$. \\
+
+{\bf Lattice Isomorphism Theorems}
+ 
+\begin{theorem} [First Isomorphism Theorem:] Let $\phi$ be a group homomorphism from $G$ to $G'$. Then the mapping from $G/Ker(\phi)$ to $G\phi$ given by 
+$g Ker(\phi) \goes g\phi$ is an isomorphism.
+\end{theorem}
+\begin{example}Consider the homomorphism $\phi: \Z \goes \Z_4$ such that $x\phi = x\mod4$.
+In this case let $G$ be the group of integers (under addition) \[ G = \{..., -4, -3, -2, -1, 0, 1, 2, 3, 4, ...\}\] 
+and \[ G' = \Z_4 = \{ 0, 1, 2, 3\}. \]
+Also \[ Ker(\phi) = \{ ...-8, ,-4, 0, 4, 8, ...\} = \langle4\rangle \mbox{   (the cyclic subgroup generated by 4)} \] 
+So $G\phi = \{ 0, 1, 2, 3\}$. Note that $G\phi$ doesn't have to be the entire group $G'$. In this example it is the case that $G\phi = G'$.
+Then \[ G/ Ker(\phi) = \{ 0 + \langle4\rangle, 1 + \langle4\rangle, 2 + \langle4\rangle, 3+\langle4\rangle \} \mbox{   (four cosets)}\]
+Notice that we can create a mapping $\overline{\phi}$ that mapps $G/Ker(\phi)$ into $G\phi$ as follows: 
+\[ \overline{\phi}: G/Ker(\phi) \goes g\phi, \] where
+\begin{eqnarray*}
+\overline{\phi}(0+\langle4\rangle) &=& (0)\phi = 0\cr
+\overline{\phi}(1+\langle4\rangle) &=& (1)\phi = 1\cr
+\overline{\phi}(2+\langle4\rangle) &=& (2)\phi = 2\cr
+\overline{\phi}(3+\langle4\rangle) &=& (3)\phi = 3
+\end{eqnarray*}
+\end{example}
+
+
+\begin{theorem} [Second Isomorphism Theorem:] The Second Isomorphism Theorem: If  $S$
+ is a subgroup of $G$  and $N$  is a normal subgroup of $G$ , then the product $SN$ is a subgroup, and the quotient 
+$SN / N$  is isomorphic to  $S / (S \cap N$.\end{theorem}
+
+\begin{theorem}[Third Isomorphism Theorem:] Normal Subgroups of Quotients: If $N$ and $H$ are normal subgroups of $G$ (where $N \subseteq H$), then 
+$H/N$ is  is a normal subgroup of $G/N$. Furthermore, the second quotient is 
+isomorphic to the primary quotient: \[ (G / N )/  (H / N)  \cong G / H. \]
+\end{theorem}
+The Third Isomorphism Theorem is analogous to fractions:
+\[ {G / N \over H / N} \cong {G\over H}.\]
+
+\begin{theorem} [Fourth Isomorphism Theorem:]
+There is a direct, structure-preserving correspondence between the subgroups of a quotient group $G / N$
+ and the subgroups of $G$
+ that contain $N$.
+\end{theorem}
+
+\begin{theorem}
+The mapping $\phi: \Z\goes\Z_n$ defined by $m\phi = m\mod n$ is a homomorphism with kernel $\langle n \rangle$. By the 
+First Isomorphism Theorem, $\Z/\langle n\rangle \cong \Z_n$. 
+\end{theorem}
+
+If $\phi$ is a homomorphism from a finite group $G$ to $G'$, then $\|G\phi\|$ divides $\|G\}$ and $\|G'\|$. This follows from 
+the First Isomorphism Theorem and the fact that $G\phi$ is a subgroup of $G'$ and Lagrange's Theorem. 
+
+\begin{lemma}
+The inner automorphism $\theta_x$ given by $g \goes x^{-1} g x$ is the identity automorphism if and only if $x\in C$ where $C$ is the center. 
+\label{lemma1}\end{lemma}
+If $x\in C$, $x^{-1} g x = x^{-1} x g = g$ and so $\theta_x = I$, the identity. 
+
+If $\theta_x = I, x^{-1} g x = g \forall g \mbox{   and so  } x\in C$.
+
+\begin{lemma}
+The mapping $x \goes \theta_x$ of $G$ into the group of automorphisms of $G$ is a homomorphism
+\end{lemma}
+We already have that $\theta_{xy} = \theta_x\theta_y$ and so the result follows. 
+
+By Lemma(\ref{lemma1}) the kernel of this homomorphism is the center $C$. The image is the subgroup of inner automorphisms. Therefore we obtain
+\begin{theorem}
+The group of inner automorphisms of a group $G \cong G/C$, where $C$ is the center of $G$.
+\end{theorem}
+
+\section{  Relationship between Normal Subgroups and Their Images}
+Consider a group $G$ that has a normal subgroup $N$ and $H$ and that $H \subseteq N$. 
+\begin{theorem}
+Because $N\supseteq H$, both $N$ and $H$ are normal subgroups of $G$. Thus $G/N$ is the homomorphic image of $G/H$ under the natural homomorphsim
+$\pi: G/H \goes G/N$ defined by 
+$(xG)\pi = xN$. 
+\end{theorem}
+\begin{proof}
+
+1) Define a function $\phi: G\goes G/N$ by
+\[ x\phi = xN.\]
+This is the standard canonical projection map. It is a surjective group homomorphism with $ker(\phi) = N$. 
+
+2) We want to construct a map $\overline{\phi}: G/H \goes G/N$.
+Define $\overline{\phi}$ by:
+\[ (xH) \overline{\phi} = x\phi = xN.\]
+
+3) We must show that if $xH = yH$, then $(xH)\overline{\phi} = (yH)\overline{\phi}.$
+\begin{eqnarray*}
+xH &=& yH \goes y^{-1}x \in H.\cr
+H &\subseteq& N \mbox{  given}\cr
+y^{-1}x &\in& N\cr
+xN &=& N\cr
+(xH)\overline{\phi} = (yH)\overline{\phi}\cr
+\end{eqnarray*}
+The map is well-defined because $ H \subseteq ker(\phi)$. 
+\end{proof}
+
+4) $\overline{\phi}$ is a Homomorphism:
+\[ (xH) (yH) \overline{\phi} = (xyH)\overline{\phi} = xyN = (xN)(yN) = (xH)\overline{\phi} (yH)\overline{\phi}.\]
+
+5) $\overline{\phi}$ is Surjective:
+Let $yN \in G/N$. 
+Since $y\in G$, we can form the coset $yH \in G/H$:
+\[ (yH)\overline{\phi} = yN.\] Every element in the co-domain has a pre-image
+ 
+6) Apply the First Isomorphism Theorem
+By the First Isomorphism Theorem, the domain modulo the kernel is isomorphic to the image
+
+\[ (G/H)/ker(\overline{\phi}) \cong Im(\overline{\phi}) = G/N .\]
+Since $G/N$ is isomorphic to a quotient group of $G/H$, it is by definition a homomorphic image of $G/H$.\qed \\

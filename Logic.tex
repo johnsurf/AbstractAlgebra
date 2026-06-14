@@ -46,32 +46,3 @@ $$ x1= x \hbox{~and~} 1x = x \hbox{~for all numbers~} x.$$
 $$xx^{-1} = 1\hbox{~and~} x^{-1}x = 1.$$
 \end{itemize}
 \end{definition}
-
-\section{Mappings}
-\begin{definition}
-An injective function $f: X\rightarrow Y$ (also known as injection, or one-to-one function) is a function $f$ that maps distinct elements of its domain to distinct elements; that is, $f(x_1) = f(x_2$) implies $x_1 = x_2$. 
-Equivalently, $x_1 \ne x_2$ implies $f(x_1) \ne f(x_2)$ in the equivalent contrapositive statement.
-\end{definition}
-
-\begin{definition}
-A surjective function  $f: X\rightarrow Y$ (also known as surjection, or onto function) is a function $f$ that every element $y$ can be mapped from some element $x$ so that $f(x) = y$. 
-In other words, every element of the function's codomain is the image of at least one element of its domain. It is not required that $x$ be unique; the function $f$ 
-may map one or more elements of the set $X$ to the same element of the set $Y$.
-\end{definition}
-
-\begin{definition}{\bf Homorphisms and Mappings}:\\
-Monomorphism: 1-1, Epimorphism: onto, Isomorphism: 1-1 and onto.\\ Homomorphisms preserve structure (i.e. multiplication and addition in Groups and Rings). \\
-Homomorphisms that have the same object and image space are called Endomorphisms.\\ And Endomorphism that is also an Isomorphism is called and Automorphism.\\
-In a Group G, the mappings of G into itself, given by $g\rightarrow x^{-1} g x$, where $x$ is any fixed element of G, is an Automorphism, known as an Inner Automorphism.\\ 
-\end{definition}
-
-Suppose $f: A \rightarrow B$ and $g: B\rightarrow C$. Hence $(g\circ f) : A \rightarrow C$ exists. Show\\
-(a) If $f$ and $g$ are 1-1 (monomorphisms), then $g\circ f$ is 1-1:\\
-~~~Suppose $(g\circ f)(x) = (g\circ f)(y)$. Then $g(f(x)) = g(f(y))$. Because $g$ is 1-1, $f(x) = f(y)$ and because $f$ is 1-1, $x = y$. Therefore $(g\circ f)(x) = (g\circ f)(y)$, implies $x = y$; hence $g\circ f$ is 1-1. \\
-(b) If $f$ and $g$ are onto (epimorphisms), then $g\circ f$ is onto.\\
-~~~Suppose $c \in C$. Because $g$ is onto, there exists $b \in B$ for which $g(b) = c$. Because $f$ is onto, there exists $a\in A$ for which $f(a) = b$. Thus  $(g\circ f)(a) = g(f(a)) = g(b) = c$, Hence $g\circ f$ is onto. \\ \\
-(c) If $g\circ f$ is 1-1, then $f$ is 1-1.\\ 
-~~~Prove contrapositive, Suppose $f$ is  not 1-1., Then there exists distinct elements $x,y \in A$ for which $f(x) = f(y)$. Then $(g\circ f)(x) = g(f(x)) = g(f(y)) = (g\circ f)(y)$. Hence $g\circ f$ is not 1-1.Therefore if $g\circ f$ is 1-1, then $f$ must be 1-1.\\
-(d) If $g\circ f$ is onto, then $g$ is onto.\\
-~~~Prove contrapositive, If $a \in A$, then $(g\circ f)(a) = g(f(a)) \in g(B)$. Hence $(g\circ f)(A) \subseteq g(B)$. 
-Suppose $g$ is not onto. Then $g(B)$ is properly contained in $C$ and so $(g\circ f)(A)$ is properly contained in C; thus $g\circ f$ is not onto. Therefore if $g\circ f$ is onto, then $g$ must be onto.\\
