@@ -484,9 +484,15 @@ $(\sqrt{\triangle}^m$ is symmetric, since, if not, it would be an alternating fu
 \end{proof}
 
 \begin{theorem}
-Permutations act on products of functions homomorphically 
+Permutations are elements of the Symmetric Group and act on products of functions homomorphically 
 because the action naturally distributes over multiplication. 
 By definition, a permutation rearranges inputs, which respects function evaluation and standard pointwise multiplication. 
+The following operations define the action of the Symmetric Group:
+\begin{eqnarray*}
+\sigma \cdot (f + g) &=& \sigma\cdot f + \sigma\cdot g;\cr
+\sigma\cdot(fg) &=& (\sigma\cdot f)(\sigma \cdot g),\cr
+\tau\cdot (\sigma\cdot f) &=& (\tau\sigma)\cdot f
+\end{eqnarray*}for $\sigma, \tau \in S_n$ and $f, g\in F[x_1,\hdots, x_n)]$.  $S_n$ is the set of permutations on $n$ elements $[x_1, x_2, \hdots, x_n]$.
 \end{theorem}
 \begin{proof}
 {\bf 1. Define the Permutation Action A permutation} $\sigma$ acts on a function $f$  by precomposition: \[ (\sigma \cdot f)(x) = f(\sigma^{-1}(x)) \] 
@@ -532,13 +538,13 @@ Concentrating on prime numbers, and supposing that $\phi$ is a multiple-valued f
 The group of $\phi$ cannot contain all the circular substitutions of the third order, for if it did, then this group would coincide with the alternating group, and $\phi$ would be two-valued. Let
 $\sigma = (x_\alpha, x_\beta, x_\gamma)$ be such a substitutions not contained in the group of $\phi$ and suppose $\sigma\phi = \phi_j$. From Eq. (\ref{two-valued}),
 since $S_1 + S_2\sqrt{\triangle}$ is unaltered by $\sigma$, we have
-\[ \phi^p = \phi_j^p,\] hence $\phi_j = \omega \phi$, where $\omega$ is a $p^{th}$ root of unity. Operating again twise in succession with $\sigma$ we obtain
+\[ \phi^p = \phi_j^p,\] hence $\phi_j = \omega \phi$, where $\omega$ is a $p^{th}$ root of unity. Operating again twice in succession with $\sigma$ we obtain
 
 \begin{eqnarray*}
 \sigma \phi &=& \omega \phi,\cr
 \sigma^2 \phi &=& \omega\sigma\phi = \omega^2 \phi,\cr
 \sigma^3 \phi &=& \omega^2 \sigma \phi = \omega^3 \phi,\cr
-\end{eqnarray*}whence, since $\sigma^3 = 1$ (three cycle), we have $\omega^3 = 1$, and therefore $p=3$.
+\end{eqnarray*}whence, since $\sigma^3 = 1$ (three cycle), we have $\omega^3 = 1$, and therefore $p=3$.\\
 
 Again, when the number of elements is greater than 4, there are circular substitutions of the fifth order, and those cannot all be contained in the group of $\phi$ (or else it will be two-valued and belong to the Alternating Group). Let $\tau$ be one of those not contained in this group and $\tau \phi = \phi_j$. We have, as before, from Eq. (\ref{two-valued}), by applying this substitution
 (which does not affect the right-hand side),

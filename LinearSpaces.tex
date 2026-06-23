@@ -112,7 +112,7 @@ a_{m1}x^1 &+  ~a_{m2}x^2 & + \hdots  & +  a_{mn}x^n = 0 \\
 \label{HomogenousSystem}
 \end{equation}
 
-Any set of numbers $x^1, x^2, ..., x^n$ which satisfy Eq. (\ref{HomogenousSystem}) are now taken to be the components of an $n$-dimensional vector $\mathfrak{r} = \{x^1, x^2, ..., x^n\}$. 
+Any set of numbers $x^1, x^2, ..., x^n$ which satisfy Eq. (\ref{HomogenousSystem}) are now taken to be the components of an $n$-dimensional vector $\r = \{x^1, x^2, ..., x^n\}$. 
 We call such a vector a {\elevenit vector solution} of the system (\ref{HomogenousSystem}). The totality of vector solutions of the system of equations (\ref{HomogenousSystem}) forms a
 vector space.
 
@@ -130,19 +130,19 @@ If the number of equations in the system of homogenous equations (\ref{Homogenou
 \end{theorem}
 
 \begin{theorem}
-All the solutions of a non-homogenous system of equations (\ref{LinearSystem}) are of the form $z = \mathfrak{r} + \eta$, where $\mathfrak{r}$ is a fixed solution of the non-homogenous system (\ref{LinearSystem})
+All the solutions of a non-homogenous system of equations (\ref{LinearSystem}) are of the form $z = \r + \eta$, where $\r$ is a fixed solution of the non-homogenous system (\ref{LinearSystem})
 and $\eta$ runs though all solutions of the corresponding homogenous system (\ref{HomogenousSystem}). 
 \end{theorem}
 
 Let $s$ be the maximal number of linearly independent rows of the matrix row vectors. Let us assume that the rows of the homogenous system are ordered so that the first $s$ rows are independent to 
 start with. This involves no loss of generality since it does not affect that rank. The $i$-th equation of this system is, by definition of the scalar product of two vectors, equivalent to the vector equation
-$$ \a_i \cdot \mathfrak{r} = 0,$$ where we set $\mathfrak{r} = \{x^1, x^2, ..., x^n\}$.
+$$ \a_i \cdot \r = 0,$$ where we set $\r = \{x^1, x^2, ..., x^n\}$.
 
 Every system of $n$ numbers $x^1, x^2, ..., x^n$ satisfying the first $s$ equation of (the re-ordered) (\ref{HomogenousSystem}), satisfies all of the equations of (\ref{HomogenousSystem}). Because
 the first $s$-rows are linearly independent, all the rows satisfy a relation of the form
 $$\a_k = \lambda^k_1 \a_1 + \lambda^k_2 \a_2 + ...  + \lambda^k_s \a_s, \hbox{~for~} 1\le k \le m.$$ If we apply the distributive law on the right, we obtain
-$$\a_k \cdot \mathfrak{r} =   \lambda^k_1 (\a_1\cdot \mathfrak{r}) + \lambda^k_2 (\a_2 \cdot \mathfrak{r})+ ...  + \lambda^k_s (\a_s\cdot \mathfrak{r}).$$ Since $\a_i \cdot \mathfrak{r} = 0$ for $i = 1,2, ..., s$ the right hand side 
-of this last equation becomes $0$, so that $$\a_k \cdot \mathfrak{r} = 0, \quad k = 1,2, ..., m,$$ and in particular for $k = s+1, s+2, ..., m$ as was to be proved.\\
+$$\a_k \cdot \r =   \lambda^k_1 (\a_1\cdot \r) + \lambda^k_2 (\a_2 \cdot \r)+ ...  + \lambda^k_s (\a_s\cdot \r).$$ Since $\a_i \cdot \r = 0$ for $i = 1,2, ..., s$ the right hand side 
+of this last equation becomes $0$, so that $$\a_k \cdot \r = 0, \quad k = 1,2, ..., m,$$ and in particular for $k = s+1, s+2, ..., m$ as was to be proved.\\
 
 The vector space of all the solutions of the first $s$ equations of (\ref{HomogenousSystem}) is thus identical with the space of solutions of the entire system (\ref{HomogenousSystem}). It dimension is this $n-r$
 since $r$ is the rank of the matrix of coefficients in (\ref{MatrixSystem}). It thus follows that the rank of the matrix of the first $s$ equations, i.e of the matrix which consists only of the first $s$ rows of (\ref{HomogenousSystem})
@@ -163,9 +163,9 @@ With any given vector space $L$ of $\R_n$, we can always associate a system of h
 \end{theorem}\
 
 Let $\a_1, \a_2, ..., \a_p$ be a basis of $L$, where we set $\a_i = \{\a_{i1}, \a_{i2}, ..., \a_{in}\}$. If in addition we set 
-$$\mathfrak{r} = \{ x^1, x^2, ..., x^n\}$$ then the equations 
+$$\r = \{ x^1, x^2, ..., x^n\}$$ then the equations 
 
-\begin{equation}\a_i \cdot \mathfrak{r} = 0, \quad i = 1, 2, ..., p,\label{10}\end{equation}
+\begin{equation}\a_i \cdot \r = 0, \quad i = 1, 2, ..., p,\label{10}\end{equation}
 
 form a system of homogenous linear equations in the unknowns $x^1, x^2, ..., x^n$ whose matrix is
 
@@ -188,7 +188,7 @@ $\a_1, \a_2, ... \a_p$. Thus, for $i=1, 2, ..., p$, we have
 $$\b_1 \cdot \a_i = 0, ~~\b_2 \cdot \a_2 = 0, ~~..., ~~\b_{n-p} \cdot \a_i = 0.$$
 
 Now just as for $L$, the totality of all vectors orthogonal to $L'$ consists of all the vector solutions of the equations
-\begin{equation}\b_1 \cdot \mathfrak{r} = 0, ~~\b_2 \cdot \mathfrak{r} = 0, ~~..., ~~\b_{n-p} \cdot \mathfrak{r} = 0.\label{11}\end{equation}
+\begin{equation}\b_1 \cdot \r = 0, ~~\b_2 \cdot \r = 0, ~~..., ~~\b_{n-p} \cdot \r = 0.\label{11}\end{equation}
  
  Thus the $\a_i, i =1,2, ..., p$ are orthogonal to $L'$. But the vectors which are orthogonal to $L'$ form a vector space $L''$ of dimension $n - (n-p) = p$.Since the vectors $\a_1, \a_2, ..., \a_p$ are in $L''$ and are 
  linearly independent, then form a basis of $L''$. Therefore $L''$ is identical with $L$. Thus the vectors of $L$ are precisely the vector solutions of equations (\ref{11}), i.e, of a certain system of $n-p$ linear homogenous equations.

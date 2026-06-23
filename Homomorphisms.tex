@@ -17,12 +17,16 @@ In a Group G, the mappings of G into itself, given by $g\rightarrow x^{-1} g x$,
 \end{definition}
 
 Suppose $f: A \rightarrow B$ and $g: B\rightarrow C$. Hence $(g\circ f) : A \rightarrow C$ exists. Show\\
+
 (a) If $f$ and $g$ are 1-1 (monomorphisms), then $g\circ f$ is 1-1:\\
 ~~~Suppose $(g\circ f)(x) = (g\circ f)(y)$. Then $g(f(x)) = g(f(y))$. Because $g$ is 1-1, $f(x) = f(y)$ and because $f$ is 1-1, $x = y$. Therefore $(g\circ f)(x) = (g\circ f)(y)$, implies $x = y$; hence $g\circ f$ is 1-1. \\
+
 (b) If $f$ and $g$ are onto (epimorphisms), then $g\circ f$ is onto.\\
 ~~~Suppose $c \in C$. Because $g$ is onto, there exists $b \in B$ for which $g(b) = c$. Because $f$ is onto, there exists $a\in A$ for which $f(a) = b$. Thus  $(g\circ f)(a) = g(f(a)) = g(b) = c$, Hence $g\circ f$ is onto. \\ \\
+
 (c) If $g\circ f$ is 1-1, then $f$ is 1-1.\\ 
 ~~~Prove contrapositive, Suppose $f$ is  not 1-1., Then there exists distinct elements $x,y \in A$ for which $f(x) = f(y)$. Then $(g\circ f)(x) = g(f(x)) = g(f(y)) = (g\circ f)(y)$. Hence $g\circ f$ is not 1-1.Therefore if $g\circ f$ is 1-1, then $f$ must be 1-1.\\
+
 (d) If $g\circ f$ is onto, then $g$ is onto.\\
 ~~~Prove contrapositive, If $a \in A$, then $(g\circ f)(a) = g(f(a)) \in g(B)$. Hence $(g\circ f)(A) \subseteq g(B)$. 
 Suppose $g$ is not onto. Then $g(B)$ is properly contained in $C$ and so $(g\circ f)(A)$ is properly contained in C; thus $g\circ f$ is not onto. Therefore if $g\circ f$ is onto, then $g$ must be onto.\\

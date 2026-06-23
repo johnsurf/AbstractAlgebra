@@ -1,31 +1,31 @@
 \section{Reciprocal Vector Space (3-dimensions)}
-Take three non-coplanar vectors ${\bf a}, {\bf b}, {\bf c}$ which form a right-handed system of vectors and form the vector scalar product whose magnitude is the volume, $V$, of the parallelapiped with edges given by ${\bf a}, {\bf b}, {\bf c}$ 
-\[ V = {\bf a}\cdot{\bf b} \times {\bf c}. \] The set of vectors ${\bf a'}, {\bf b'}, {\bf c'}$ which are reciprocal to ${\bf a}, {\bf b}, {\bf c}$  is given by
+Take three non-coplanar vectors $\a, \b, \c$ which form a right-handed system of vectors and form the vector scalar product whose magnitude is the volume, $V$, of the parallelapiped with edges given by $\a, \b, \c$ 
+\[ V = \a\cdot\b \times \c. \] The set of vectors $\a', \b', \c'$ which are reciprocal to $\a, \b, \c$  is given by
 
 \begin{eqnarray*}
-{\bf a'}&=& { {\bf b} \times{\bf c}\over {\bf a}\cdot{\bf b} \times {\bf c}} \\   
-{\bf b'}&=& { {\bf c} \times{\bf a}\over {\bf a}\cdot{\bf b} \times {\bf c}} \\
-{\bf c'}&=& { {\bf a} \times{\bf b}\over {\bf a}\cdot{\bf b} \times {\bf c}} \\
+\a'&=& { \b \times\c\over \a\cdot\b \times \c} \\   
+\b'&=& { \c \times\a\over \a\cdot\b \times \c} \\
+\c'&=& { \a \times\b\over \a\cdot\b \times \c} \\
 \end{eqnarray*}
 
-The reciprocal basis ${\bf a'}, {\bf b'}, {\bf c'}$ satisfy the following identities
+The reciprocal basis $\a', \b', \c'$ satisfy the following identities
 \begin{eqnarray*}
-{\bf a}\cdot {\bf a'}&=& 1, \quad {\bf b}\cdot {\bf a'} = 0, \quad {\bf c}\cdot {\bf a'} =0 \\   
-{\bf b}\cdot {\bf b'}&=& 1, \quad {\bf a}\cdot {\bf b'} = 0, \quad {\bf c}\cdot {\bf b'} =0  \\
-{\bf c}\cdot {\bf c'}&=& 1,  \quad {\bf a}\cdot {\bf c'} = 0, \quad {\bf b}\cdot {\bf c'} =0 \\
+\a\cdot \a'&=& 1, \quad \b\cdot \a' = 0, \quad \c\cdot \a' =0 \\   
+\b\cdot \b'&=& 1, \quad \a\cdot \b' = 0, \quad \c\cdot \b' =0  \\
+\c\cdot \c'&=& 1,  \quad \a\cdot \c' = 0, \quad \b\cdot \c' =0 \\
 \end{eqnarray*}
  
 \begin{theorem}[Reciprocal Basis has Reciprocal Volume = 1/V]
-\[ {\bf a'}\cdot{\bf b'} \times {\bf c'} = {1\over V}  \]
+\[ \a'\cdot\b' \times \c' = {1\over V}  \]
 \end{theorem}
 \begin{proof}
 \begin{eqnarray*}
-{\bf a'}&=& { {\bf b} \times{\bf c}\over V} \\   
-{\bf b'}&=& { {\bf c} \times{\bf a}\over V} \\
-{\bf c'}&=& { {\bf a} \times{\bf b}\over V} \\
+\a'&=& { \b \times\c\over V} \\   
+\b'&=& { \c \times\a\over V} \\
+\c'&=& { \a \times\b\over V} \\
 \end{eqnarray*}
 \begin{eqnarray*}
-{\bf a'}\cdot{\bf b'} \times {\bf c'}  &=& {({\bf b}\times {\bf c})\cdot({\bf c}\times{\bf a})\times({\bf a}\times {\bf b})\over V^3} = {({\bf a}\times {\bf b})\cdot ({\bf b}\times {\bf c})\times({\bf c}\times{\bf a}) \over V^3} \\
-                                                       &=& {({\bf a}\cdot {\bf b} \times {\bf c})^2\over V^3} = {V^2\over V^3} = {1\over V}\qed
+\a'\cdot\b' \times \c'  &=& {(\b\times \c)\cdot(\c\times\a)\times(\a\times \b)\over V^3} = {(\a\times \b)\cdot (\b\times \c)\times(\c\times\a) \over V^3} \\
+                                                       &=& {(\a\cdot \b \times \c)^2\over V^3} = {V^2\over V^3} = {1\over V}\qed
 \end{eqnarray*}
 \end{proof}
