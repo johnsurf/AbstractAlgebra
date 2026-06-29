@@ -1,13 +1,34 @@
 \section{Invariant Subgroups}
 
+Invariant Subgroups as also known as Normal Subgroups. \\
+
+Consider a subgroup $H$ of $G$. For $g, g' \in G$ let $x = gH$ and $y = g'H$ be the corresponding cosets of $g$ and $g'$. For $H$ to be an Invariant Subgroup of $G$ we require
+that $xy$ to be in the same coset as $gg'H$ or \[(gH) (g'H) \in gg'H.\] 
+
+To obtain the basic relation defining Invariant Subgroups, premultiply both sides by $g^{-1}$:
+\begin{eqnarray*}
+g^{-1} (gH) (g'H) &\in& g^{-1}gg'H, \cr
+H (g' H) &\in& g'H. \cr
+\end{eqnarray*} 
+In the right most $H$ choose the neutral element as $e$ 
+\begin{eqnarray*}
+Hg' e &\in& g'H \cr
+Hg'   &\in& g' H \cr
+\end{eqnarray*}  If $Hg'\in g'H$ for any $g'\in G$ we also must have that (changing $g'$ to $g$) that $Hg \in gH$. Since $g^{-1} \in G$ we also have 
+\[ Hg^{-1} \in g^{-1} H.\] and therefore
+\begin{eqnarray*}
+ (gH)g^{-1}g &\in& gg^{-1} Hg,\cr
+ gH &\in& Hg,
+ \end{eqnarray*}
+ Therefore we have $gH \in Hg$ and $Hg \in gH$ and so \[ gH = Hg,\] leading up to the following definition of an Invariant or Normal Subgroup: 
 \begin{definition}
 $H$ is an invariant subgroup of $G$ if it is a subgroup and if the left and right cosets of $H$ in $G$ coincide; i.e., if 
 \[ gH = Hg \quad \forall g \in G.\]
 \end{definition}
 
-Invariant subgroups are often called normal subgroups or self-conjugate subgroups. 
+Invariant subgroups are often called normal subgroups or self-conjugate subgroups. \\
 
-If the left coset $gH$ is also a right coset, then it contains  $g (= eg)$ and so must be the right coset $Hg$. Hence is every left coset is a right coset (or vice versa) $H$ is invariant.\\
+If the left coset $gH$ is also a right coset, then it contains  $g (= eg)$ and so must be the right coset $Hg$. Hence if every left coset is a right coset (or vice versa) $H$ is invariant.\\
 
 Let us show that this condition is sufficient.
 \begin{theorem}
@@ -20,7 +41,7 @@ If $H$ is invariant in $G$ then $(gH) (g'H) = g g' H$ for all $g,g' \in G$.
  &=& gg'H^2 = gg'H \mbox{ since } H^2 = H \mbox{ as } H \mbox{ is a subgroup.}
 \end{eqnarray*}
 \end{proof}
-Note that is would have been sufficient to prove that \[ (gH)(g'H) \subseteq gg'H,\] 
+Note we have already shown that it is sufficient to prove that \[ (gH)(g'H) \subseteq gg'H,\] in order to show that $H$ is an Invariant Subgroup. 
 
 \begin{theorem}
 A subgroup $H$ is an invariant subgroup of $G$ is and only if $g^{-1}Hg = H$ for all $g\in G$. 
@@ -74,22 +95,3 @@ is normal in the group.
 $H$ is an invariant subgroup of $G$ if the conjugacy class of subgroups of $G$ which contains $H$ consists of just $H$ itself: i.e., if the only subgroup
 conjugate to $H$ is $H$. 
 \end{theorem}
-
-\section{Quotient groups}
-\begin{theorem}
-If $H$ is an invariant subgroup of $G$, the cosets of $H$ in $G$ form a group under the group product given by
-\[ (gH) (g'H) = gg'H.\]
-\end{theorem}
-The product is well defined and unique, and is also a coset. \\
-
-It is associative, since 
-\[ ((gH)(g'H)) (g'' H) = gg'g''H = (gH)( (g'H)(g''H)).\]
-
-The coset $H = (eH)$ is a unity since
-\[ (gH) (eH) = geH =gH \mbox{   and  } (eH)(gH) = egH = gH.\]
-
-The coset $gH$ has an inverse $g^{-1}H$, since
-\[ (gH)(g^{-1}H) = gg^{-1}H = eH = H \mbox{   and   } (g^{-1}H)(gH) = H\] similarly.
-
-
-The quotient group formed by the cosets of $H$ and $G$ is called the {\it Quotient Group of $H$ in $G$}, or sometimes the {\it Factor Group of $G$ relative to $H$}.

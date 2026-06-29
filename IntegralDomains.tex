@@ -1,0 +1,15 @@
+\section{Integral Domain}
+An integral domain is a commutative ring with a unity that has no zero divisors: $xy = 0 \rightarrow x = 0 \mbox{  or  } y = 0$. 
+
+\begin{theorem} The absence of zero divisors is equivalent to the Cancellation Law. \\
+
+If $xy = 0 \rightarrow x = 0 \mbox{  or  } y = 0$, then \[ xy = xz \rightarrow y = z \mbox{  or  } x = 0,\] and conversely.
+\end{theorem}
+\begin{proof}
+Suppose first that there are no zero divisors, Then if 
+\[ xy = xz,  ~xy - xz = 0 \mbox{  and so  } x(y - z) = 0.\]
+Hence either $x=0$ or $y-z = 0$ by hypothesis, i.e., $x = 0$ or $y = z$. \\
+
+Conversely let the Cancellation Law be true and suppose that $xy = 0$. Then since $x0 = 0, xy = x0$ and so by the Cancellation Law
+$x = 0 \mbox{  or  } y = 0$. 
+\end{proof}

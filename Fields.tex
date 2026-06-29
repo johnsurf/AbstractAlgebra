@@ -10,3 +10,21 @@ Let $a \in I$ and  $a\ne 0$. Then $a a^{-1} = 1 \in I$ and so $f.1 = f \in I$ fo
 If $F$ is any field, then the smallest subfield of $F$ that contains the identify element 1 is called the {\elevenit prime subfield}\/ of $F$. If $F$ is a finite field, then its prime subfield is isomorphic to $\Z_p$, where $p = \char(F)$ for some prime $p$. When we want to emphasize $\Z/p\Z$ with its field structure, we denote it by $\F_p$. The prime subfield of $\Z_p$ which is isomorphic to $\Z/p\Z$ is $\F_p$. The only prime fields are the fields of residues modulo $p$ and the field of rationals.\\
 
 The prime subfield of a field $F$ is the intersection of all subfields of $F$. The intersection of any two subfields is a field and similarly for all the other subfields. Also the intersection of all subfields has no proper subfields, since any such would be subfields of R and hence must contain the intersection which is impossible. Hence the intersection is a prime subfield. $F$ cannot contain two distinct prime subfields, since their intersection would also be a subfield and hence must be identical with both. 
+
+\begin{theorem}
+a Field has no proper homomorphic images
+\end{theorem}
+\begin{proof}
+It is sufficient to show that a field, considered as a ring, can have no proper ideals. 
+\end{proof}
+
+\begin{theorem}
+Any non-empty subset $I$ of polynomials $F[x]$ which contains the sum and difference of any two, and all the multiples of any one of its members, consists either: 1) of 0 alone; or 2) of the set of multiples $q(x) a(x)$ of any non-zero member 
+$a(x)$ of the least degree.  \label{PolynomialIdeal}
+\end{theorem}
+\begin{proof}
+Unless $I = 0$, it contains a non-zero polynomial $a(x)$ of least degree $d(a)$ and, with $a(x)$, all its multiples $q(x)a(x)$.  In this case, if $b(x)$ is any polynomial in $I$, using the division algorithm there exists some polynomial 
+$r(x) = b(x) - q(x) a(x)$ which has degree less than $d(a)$. But by hypothesis $I$ contains $r(x)$ and by construction no non-zero polynomial of degree less than $d(a)$. Hence $r(x)$ is the zero polynomial and $b(x) = q(x) a(x)$ \qed
+\end{proof}
+
+Using the above result of Thm. (\ref{PolynomialIdeal}) we have in the domain $F[x]$ of polynomials $f(x)$ over $F$ every ideal is a principal ideal. 

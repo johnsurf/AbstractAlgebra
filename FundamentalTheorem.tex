@@ -269,11 +269,11 @@ $a_n \ne 0 (\mod p), \quad a_{n-1} = a_{n-2} = a_0 = 0 (\mod p), a_0 \ne 0 (\mod
 over the field of rational. 
 \end{theorem}
 
-\begin{proof}
-Suppose $$f = gh,$$where
+\begin{proof}[Proof 1]
+Suppose $$a(x) = gh,$$where
 \begin{eqnarray*}
-g &=& x^h + g_1 x^{h-1} + \hdots + g_{k-1}x + g_k\cr
-h &=& x^l + h_1 x^{l-1} + \hdots + h_{l-1} x + h_l
+g &=& g_0 x^h + g_1 x^{h-1} + \hdots + g_{k-1}x + g_k\cr
+h &=& h_0 x^l + h_1 x^{l-1} + \hdots + h_{l-1} x + h_l
 \end{eqnarray*}
 Then $g$ and $h$ have integral coefficients since $f$ has. 
 Comparing coefficients, we set
@@ -288,8 +288,26 @@ a_{l} &=& g_k h_{l-k} + g_{k-1} h_{l-k+1} + \hdots + g_1 h_{l-1} + h_l\cr
 $$h_0= 1.$$\\
 if now every $a_i$, other than $a_0$ is divisible by $p$ and $a_n$ not by $p^2$, we conclude from the first equation that either $g_k$ or $h_l$ is divisible by $p$ and the other is not. But when $g_k$ is divisible by $p$, we conclude
 from the following equations that $g_{k-1}, g_{k-2}, \hdots, g_1$ are divisible by $p$, and from the last equation that $h_l$ is also divisible by $p$ which is a contradiction from the assumption that $a_n$ is not divisible by $p^2$. 
-
 \end{proof}
+
+\begin{proof}[Proof 2]
+In any possible factorization ($n = m + k$)
+\[ a(x) = bc = (b_n x^n + b_{n-1} x^{n-1} + \hdots + b_1x + b_0) (c_k x^k + c_{k-1} x^{k-1} + \hdots + c_1 x + c_0) \] we may assume that both factors have integral coefficients. 
+Since $a_0 = b_0 c_0$ the hypothesis $a_0 \not\equiv 0 \pmod{p^2}$ means that not both $b_0$ and $c_0$ are divisible by $p$. Suppose $b_0 \not\equiv 0 \pmod{p}$, while $c_0 \equiv 0 \pmod{p}$.  
+ But $b_m c_k = a_n \not\equiv 0 \pmod{p}$, so $c_k \not\equiv 0 \pmod{p}$.
+Pick the smallest $r\le k$ for which $c_r \not\equiv 0 \pmod{p}$, with 
+$c_{r-1} \equiv \hdots \equiv c_0 \equiv 0 \pmod{p}$. Then 
+\[ a_r = b_0 c_r + b_1 c_{r-1} + \hdots + b_r c_0 = b_0 c_r \pmod{p}.\]
+But $\b_0 \not\equiv 0 \pmod{p}$ and $c_r \not\equiv 0 \pmod{p}$ give $a_r \not\equiv 0 \pmod{p}$, for $p$ is a prime. By the hypothesis, the only coefficient $a_r$ for which this is possible is $a_n$, therefore $r = n$ : the degree of the second of the proposed factors must be $n$ (the same as degree of $a(x)$, so that $a(x)$ is irreducible. \qed
+\end{proof}
+
+This criterion can be applied to the cyclotomic polynomial 
+\be \phi(x) = {x^p - 1\over x - 1}  = x^{p-1} + x^{p-2} + \hdots + x + 1. \label{cyclotomic} \ee
+This is the polynomial whose roots are the primitive $p$-th roots of unity. The Eisenstein criterion does not apply to Eq. (\ref{cyclotomic}) as it stands, but a simple change of variables $y = x -1 $ does the trick, for the 
+binomial expansion gives 
+\[ {x^p - 1\over x - 1}  = {(y+1)^p - 1\over y} = y^{p-1} + p y^{p-2} + {p(p-1)\over 1\cdot 2} y ^{p-3} + \hdots  + p.\]
+The binomial coefficients which appear on the right are all integers divisible by the prime $p$, for $p$ occurs in each numerator as a factor and can never be cancelled out by the smaller integers in the denominator. The polynomial in $y$ satisfies the hypothesis of the Eisenstein criterion and hence is irreducible. Therefore the original cyclotomic polynomial, Eq. (\ref{cyclotomic}), $\phi(x)$ is irreducible. 
+
 
 \begin{theorem}[Euler-Gauss: Fundamental Theorem of Algebra] Every polynomial p(x) of positive degree with complex coefficients has a complex root. 
 \end{theorem}
