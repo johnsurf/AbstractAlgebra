@@ -1,53 +1,20 @@
 \section{Determinants and Their Properties}
 
-\begin{definition}
-$n$-dimensional Affine Space (Vector Space) $\R_n$. An ordered $n$-tuple of real numbers, i.e., a system of $(x_1, x_2, ..., x_n)$ of $n$ real numbers in a definite order, is called a point ($n$ a positive integer). The numbers
-$x_1,x_2, ...,x_n$ are called the coordinates of the point; in particular $x_1$ is called its first, $x_2$ its second, ..., $x_n$ its $n$-th coordinate. Two points $P=(x_1,x_2,...,x_n)$ and $Q = (y_1,y_2,...,y_n)$ are said to 
-be the {\elevenit same} or to coincide if and only if $x_1 = y_1, x_2 = y_2, ..., x_n = y_n$. The totality of all $n$-tuples of real numbers is called $n$-dimensional Affine Space and is denoted by $\R_n$.
-\end{definition}
-
-\begin{definition}
-In the abstract vector space $V$ the finite set of vectors
-$\x_1, \x_2, \hdots, \x_n$ is said to be linear dependent if scalars $\lambda_1, \lambda_2, \hdots, \lambda_n$ exist, not all zero, such that 
-\[ \lambda_1 \x_1 + \lambda_2 \x_2 + \hdots + \lambda_n\x_n = \o.\] If no such scalars exist, i.e., if 
-\[ \lambda_1 \x_1 + \lambda_2 \x_2 + \hdots + \lambda_n\x_n = \o \implies \lambda_i  = 0 ~\forall ~i = 1,2, \hdots, n\] then the set is linearly independent.  
-\end{definition}
-
 Consider a set of vectors in an $n$-dimensional Vector Space: $V = \{ \a_1, \a_2, ...,\a_n\}$ in $\R^n$.
+\begin{definition}[Determinant]
 The Determinant $D(\a_1,\a_2,...,\a_n)$ has the following properties
 \begin{itemize}
 \item[i)] Invariance property: $D(\a_1,\a_2,...,\a_n)$ is to remain unchanged if some $\a_i$ is replaced by $\a_i+\a_j ~~(i \ne j)$;
 \item[ii)] Homogeneity property: $D(\a_1,\a_2,...,\a_n)$ is to go over into $\lambda D(\a_1,\a_2,...,\a_n)$ if $\a_i$ is replaced by $\lambda \a_i$;
 \item[iii)] the Normalization: $D(\e_1, \e_2,..., \e_n) = 1$.
 \end{itemize} The determinant is the unique function of vectors $\{ \a_1, \a_2, ...,\a_n\}$ that satisfy the above properties \cite{Schreier and Sperner}.\\
-
-{\bf Conventions}: We adopt the Range and Summation Conventions:
-\begin{definition}
-{\bf Range Convention.} {\it When a small Latin suffix (superscript or subscript) occurs unrepeated in a term, it is understood to take all the values
-$1,2,...,n$, where n is the number of dimensions of the space.}
 \end{definition}
 
-\begin{definition}
-{\bf Summation Convention.} {\it When a small Latin suffix is repeated in a term, summation with respect to that suffix is understood, the range of summation
-being $1,2,...,n$.}
-\end{definition}
-
-{\bf Kronecker delta}:
-\[ \delta^s_r = \begin{cases} 1 & \mbox{if } s = r \\0 & \mbox{if } r \ne s\end{cases} \]
-Also, the another form of the Kronecker delta is $\delta_{rs}$ which satisfies the same cases as above. \\
-
-{\bf Permutation Symbol}: Consider a set $\sigma$ of $\sigma_1, \sigma_2, ..., \sigma_n$ numbers taken from the set $\{1,2,...,n\}$. Let
-\[ \epsilon_{\sigma_1\sigma_2...\sigma_n} =
-\begin{cases}
-+1 & \mbox{if }\sigma \mbox{ is an even permutation of $\{1, 2, ..., n\}$}\\
--1 & \mbox{if }\sigma \mbox{ is an odd permutation of $\{1, 2, ..., n\}$}\\
-0 & \mbox{if }\sigma \mbox{ has any duplicates}
-\end{cases} \]
-
+\begin{definition}[Expansion of Determinant]
 Let the $S_n$ be the set of all permutation of the numbers $\{1,2,...,n\}$. In the case of $n$-by-$n$ matrix $A$ we obtain the complete
 development of the determinant of $A$ as follows:
 \begin{equation}
-\det |A| = \sum_{\sigma \in S_{n}} \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1} a_{2 \sigma_2} ... a_{n \sigma_n} \label{detA} =
+D(\a_1,\a_2,...,\a_n) = \det |A| = \sum_{\sigma \in S_{n}} \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{1 \sigma_1} a_{2 \sigma_2} ... a_{n \sigma_n} \label{detA} =
 \begin{vmatrix}
 a_{11} & a_{12} & \hdots & a_{1n} \\
 a_{21} & a_{22} & \hdots & a_{2n} \\
@@ -61,6 +28,7 @@ If the rows are permuted by $\rho \in S_n$, we find
 \begin{equation}
 \epsilon_{ \rho_1 \rho_2 ... \rho_{n}}\det |A| = \sum_{\sigma \in S_{n}} \epsilon_{ \sigma_1 \sigma_2 ... \sigma_{n}} a_{\rho_1 \sigma_1} a_{\rho_2 \sigma_2} ... a_{\rho_n \sigma_n} \label{detA}
 \end{equation}
+\end{definition}
 
 {\bf Cofactor} of an element $a_{rs}$,
 
