@@ -49,13 +49,22 @@ From the theorem of continuous function on a sequence of points in a closed inte
 From the inequalities about and the limit of inequalities it follows that $f(x_0) \le c$ and $f(x_0) \ge c$ so that $f(x_0) = c$.
 \end{proof}
 
+\begin{theorem}[Extreme Value Theorem for real-valued functions of two real variables:]
+Let $D$ be the {\bf closed disk} or radius $r>0$ and centered at the origin, i.e, 
+\[ D = \{(x_1,  x_2) \in \R^2 | x_1^2 + x_2^2 \le r\}. \]
+Let $f: D \goes \R$ be a continuous function on the closed disk $D \subset \R^2$. Then $f$ is bounded and attains its minimum and maximum values on $D$. In other words, there exists points
+$x_m, x_M \in D$ such that \[ f(x_m) \le f(x) \le f(x_M) \] for every possible choice of point $x \in D$. \label{ExtremeValue}
+\end{theorem}
+
 \begin{definition}
 A polynomial over a field $F$ is a {\it rational} and {\it integral} expression of the form
-\be f(x) = a_0 x^n + a_{1}x^{n-1} + ... + a_{n-1} x + a_n, \label{poly} \ee where the coefficients $ a_i  \in F, i = 1, 2, \hdots, n$ and  {\it rational} means free from fractional powers and {\it integral} means never in the denominator of a fraction. 
+\be f(x) = a_n x^n + a_{n-1}x^{n-1} + ... + a_{1} x + a_0, \label{poly} \ee where the coefficients $ a_i  \in F, i = 1, 2, \hdots, n$ and  {\it rational} means free from fractional powers and {\it integral} means never in the denominator of a fraction. 
 A polynomial function is a function which can be written in the form of Eq. (\ref{poly}). 
 \end{definition}
 
-If $a_0 = 1$ we say the polynomial is in {\it monic} form. It will often be convenient to adopt this convention; and in such cases we shall write the polynomial as 
+% CHECK FORM OF ALL POLYNOMIALS FROM HERE ON
+
+If $a_n = 1$ we say the polynomial is in {\it monic} form. It will often be convenient to adopt this convention; and in such cases we shall write the polynomial as 
 \[ f(x) = x^n + p_1 x^{n-1} + p_2 x^{n-2} + \hdots + p_{n-1} x + p_n.\]
 
 The roots $\{\alpha_1, \alpha_2, \hdots \alpha_n\}$ of a polynomial are the values of $x$ such that $f(x=\alpha_i) = 0$. The roots are in general complex numbers.
@@ -309,7 +318,50 @@ binomial expansion gives
 The binomial coefficients which appear on the right are all integers divisible by the prime $p$, for $p$ occurs in each numerator as a factor and can never be cancelled out by the smaller integers in the denominator. The polynomial in $y$ satisfies the hypothesis of the Eisenstein criterion and hence is irreducible. Therefore the original cyclotomic polynomial, Eq. (\ref{cyclotomic}), $\phi(x)$ is irreducible. 
 
 
-\begin{theorem}[Euler-Gauss: Fundamental Theorem of Algebra] Every polynomial p(x) of positive degree with complex coefficients has a complex root. 
+
+\begin{theorem}[Euler-Gauss: Fundamental Theorem of Algebra] Every polynomial $f(x) =  a_n x^n + a_{n-1}x^{n-1} + \hdots + a_1 x + a_0$ of positive degree with complex coefficients has a complex root. 
+\label{Fundamental}
 \end{theorem}
 
+We can regard $(x, y) \goes |f(x + iy)|$ as a function $\R^2 \goes \R$.
+We denote this function by $|f(\cdot)|$ or $|f|$. Since polynomials and the square root function are continuous, then $|f|$ is also continuous.\\
 
+\begin{lemma}
+Let $f : \C \goes \C$ be any polynomial function. Then there exists a point $z_0 \in \C$ where the function $|f|$ attains a minimum value in $\R$. 
+\label{LemmaMinimum}
+\end{lemma}
+
+\begin{proof}
+If $f$ is a constant polynomial function, then the statement of Lemma (\ref{LemmaMinimum}) is trivial, so we may take $z_0 = 0$. \\
+If $f$ is not constant, then the degree of the polynomial defining $f$ is at least one. In this case, we can denote $f$ expliciitly as Eq. (\ref{poly}) with $a_n \ne 0$. Now assume that $z\ne 0$, and set $A = max\{ |a_0|, |a_1|, \hdots, a_{n-1}|\}$.
+We can obtain a lower bound for $|f(z)$ as follows: 
+\begin{eqnarray*}
+| f(z) | &=& |a_n| |z^n| | 1 + { a_{n-1}\over a_n z} + \hdots + {a_0 \over a_n z^n} |\cr
+&\ge& |a_n| |z^n| | \left( 1 - {A\over |a_n|} \sum_{k=1}^\infty \, {1\over |z|^k } \right) =   |a_n| |z^n| | \left( 1 - {A\over |a_n|} {1\over |z| - 1}\right)
+\end{eqnarray*}
+
+For all $z \in \C$ such that $|z|| \ge 2$, we can further simplify this expression to 
+\[ |f(z)| \ge |a_n| |z^n| \left( 1 - {2A\over |a_n| |z|| } \right). \]
+
+It follows from this inequality that there is an $ r > 0 $ such that $ |f(z)| >  |f(0)| $, 
+for all $z\in \C$ satisfying $|z| > r$. Let $D \subset \R^2$ be the disk of radius $r$ centered at 0, and define a function $g : D \goes \R$, by
+\[ g(x,y) = |f(x+iy)|. \]
+
+Since $g$ is continuous, we can apply Thm (\ref{ExtremeValue}) in order to obtain a point $(x_0, y_0) \in D$ such that $g$ attains its minimum at $(x_0, y_0)$. By the choice of $r$ we have that for $z\in C \ D, |f(z)| > |g(0,0)| \ge |g(x_0, y_0)|$. Therefore $|f|$ attains its minimum at $z = x_0 + i y_0$. 
+\end{proof}
+
+\begin{proof}[Proof of Thm (\ref{Fundamental}):]
+We rely on the fact that the function $|f(x)|$ attains its minimum value by Lemma (\ref{LemmaMinimum}). Let $z_0 \in \C$ be a point where the minimum is attained. We will show that if $f(z_0) \ne 0$, then $z_0$ is not a minimum value, thus proving that the minimum value of $|f(z)|$ is zero and therefore $f(z_0) = 0$. \\
+
+If $f(z_0) \ne 0$, then we can define a new function $g : \C \goes \C$ by setting
+\[ g(z) = {f(z+ z_0)\over f(z_0)}, \mbox{ for all } z \in \C. \]
+Not that $g$ is a polynomial of degree $n$, and that the minimum of $|f|$ is attained at $z_0$ if and only if the minimum of $| g |$ is attained at $z=0$. Moreover, it is clear that $g(0) = 1$. 
+Therefore $g$ is a polynomial of the form 
+\[ g(z) = b_n z^n + \hdots + b_k z^k + 1,\] with $n\ge 1$ and $b_k \ne 0$ for some $1\le k \le n$. Let $b_k = |b_k| e^{i\theta}$, and consider $z$ of the form 
+\be z = r |b_k|^ {-1/k} \, e^{i(\pi - \theta)/k}, \label{zfunction}\ee
+with $r > 0$. For $z$ of this form we have 
+\[ g(z) = 1 - r^k + r^{k+1} h(r),\] with $h$ a polynomial. Then for $r<1$, we have by the triangle inequality that 
+\[ |g(z) | \le 1 - r^k + r^{k+1}| h(r) |.\]
+For $r>0$ sufficiently small we have $r | h(r) | < 1$, by the continuity of the function $r h(r)$ and the fact that it vanishes at $r=0$. Hence we find that
+\[ | g(z) | \le 1 - r^k(1- r|h(r)|) < 1,\] for some $z$ having the form given in Eq. (\ref{zfunction}) with $ r \in (0, r_0)$ and $r>0$ sufficiently small.  But then the minimum of $|g| : \C \goes \R$ cannot possibly be equal to 1. \qed 
+\end{proof}
