@@ -1,0 +1,213 @@
+\section{Elementary Symmetric Functions}
+
+% CHECK FORM OF ALL POLYNOMIALS FROM HERE ON
+
+If $a_n = 1$ we say the polynomial is in {\it monic} form. It will often be convenient to adopt this convention; and in such cases we shall write the polynomial as 
+\[ f(x) = x^n + p_1 x^{n-1} + p_2 x^{n-2} + \hdots + p_{n-1} x + p_n.\]
+
+The roots $\{\alpha_1, \alpha_2, \hdots \alpha_n\}$ of a polynomial are the values of $x$ such that $f(x=\alpha_i) = 0$. The roots are in general complex numbers.
+According to a theorem of Vi\`ete, the relationship between the roots and the coefficients for a monic polynomial is given by the 
+\begin{eqnarray*}
+f(x) &=&   x^n + p_{1} x^{n-1} + \hdots + p_{n-1} x + p_n \cr
+  &=& (x - \alpha_1)(x-\alpha_2)(x-\alpha_3) \hdots (x- \alpha_n).
+  \end{eqnarray*}\\
+  
+  Expanding the product on the right-hand side we find the explicit relationships:\\
+  
+  \begin{eqnarray*}  
+  p_1 &=& - (\alpha_1 + \alpha_2 + \hdots + \alpha_n)\cr
+  p_2 &=&   (\alpha_1\alpha_2 + \alpha_1\alpha_3 + \hdots + \alpha_2 \alpha_3 +\hdots +\alpha_{n-1} \alpha_n)\cr
+  p_3 &=&  -(\alpha_1\alpha_2 \alpha_3 + \alpha_1\alpha_2 \alpha_4 + \hdots + \alpha_2 \alpha_3 \alpha_4 +\hdots +\alpha_{n-2} \alpha_{n-1}\alpha_n)\cr
+         &\vdots& \cr 
+  p_n &=&  -(1)^n(\alpha_1 \alpha_2 \alpha_3 \alpha_4 \hdots \alpha_{n-1} \alpha_n)
+  \end{eqnarray*}
+
+These relationships are encapsulated in the following theorem
+\begin{theorem}
+In every algebraic equation, the coefficient of whose highest term is unity, the coefficient $p_1$ of the second term with its sign changed is equal to the sum of the roots. \\
+
+The coefficient $p_2$ of the third terms is equal to the sum of the products of the roots taken two by two. \\
+
+The coefficient of the fourth term with its sign changed is equal to the sum of the products of the roots taken three by three; and so on, the signs of the coefficients 
+being taken alternately negative and positive, and the number of roots multiplied together in each term of the corresponding function of the roots increasing by unity
+till finally that function is reached with consists of the produces of the $n$ roots. 
+\end{theorem}
+
+\begin{definition}
+The Elementary Symmetric functions $c_1, c_2, c_3, \hdots c_n$ are defined as functions of $n$ indeterminants $x_1, x_2,  x_3, \hdots, x_n$ as follows
+\be \begin{array}{lll}  
+  s(x_1) & =   x_1 + x_2 + \hdots + x_n & = c_1\cr
+  s(x_1x_2)  &   =   x_1x_2 + x_1x_3 + \hdots + x_2x_3 +\hdots + x_{n-1}x_n & = c_2\cr
+  s(x_1x_2,x_3) &=  x_1x_2x_3 + x_1x_2x_4 + \hdots + x_2x_3x_4  +\hdots + x_{n-2}x_{n-1}x_n &=  c_3\cr
+\hfill{ \hdots} \hfill      &\hfill{\hdots\hdots\hdots}\hfill& \hfill{\hdots}\hfill\cr 
+  s(x_1x_2\hdots x_n)  &=  x_1x_2x_3 x_4 \hdots x_{n-1}x_n & = c_n\cr
+  \end{array}
+  \ee
+\end{definition}
+
+\begin{theorem}
+The sums of the similare powers of the roots of an equation can be expressed in terms of the coefficients (the elementary symmetric functions). 
+\end{theorem}
+\begin{proof}
+Consider the polynomial 
+\begin{eqnarray*} 
+f(x) &=& x^n + p_1 x^{n-1} + p_2 x^{n-2} \hdots + p_{n-1}x + p_n, \cr
+      &=& (x - \alpha_1)(x- \alpha_2)(x- \alpha_3) \hdots (x- \alpha_n) = 0.
+\end{eqnarray*}
+Define the following terms for the sums of the powers of the roots: 
+\[s_i = \sum_{j=1}^n\, \alpha_j^i, \quad i = 0, 1, 2, ... \]
+
+Given that $f(x)$ is a polynomial we can write the derivative of $f(x)$ as 
+\begin{eqnarray*}
+ f'(x) &=& {f(x) \over x- \alpha_1} + {f(x) \over x- \alpha_1} + \hdots + {f(x) \over x- \alpha_1} \cr 
+&=& nx^{n-1} + (n-1) p_1 x^{n-2} + (n-2)x^{n-3} + \hdots + 2p_{n-2} x + p_{n-1}
+\end{eqnarray*}
+
+Using the method of Synthetic Division to divide $f(x)$ by the monomial $(x-a)$ we write out the sequence of computations as follows;
+
+\[
+\begin{array}{l r | r | r | r}
+{f(x)\over x - a } & =  x^{n-1} + a   &  x^{n-2} + a^2&  x^{n-3} + a^3&x^{n-4} + \hdots + a^{n-2} \\
+                          &                + p_1&        + a p_1   &     + a^2 p_1    & +  a^{n-2} p_1   \\
+                           &                         &       + p_2     &      + a p_2     &  +  a^{n-3} p_2  \\
+                           &                         &                      &     + p_3           &  + \hdots            \\
+                           &                         &                      &                         &  + a p_{n-2}      \\
+                           &                         &                      &                         &  + p_{n-1}         \\
+\end{array}
+\]
+
+By replacing $a$ by each of the quantities $a_1, a_2, ...a_n$ in succession and adding and using $s_p = \sum a^p$ we obtain
+the following expression for the derivative of $f(x)$:
+\[
+\begin{array}{l r | r | r | r}
+f'(x)  & =  x^{n-1} + s_1   &  x^{n-2} + s_2&  x^{n-3} + s_3&x^{n-4} + \hdots + s_{n-2} \\
+                          &                + n p_1&        + s_1 p_1   &     + s_2 p_1    & +  s_{n-2} p_1   \\
+                           &                         &       + n p_2     &      + s p_2     &  +  s_{n-3} p_2  \\
+                           &                         &                      &     + np_3           &  + \hdots            \\
+                           &                         &                      &                         &  + s p_{n-2}      \\
+                           &                         &                      &                         &  + n p_{n-1}         \\
+\end{array}
+\]
+
+Therefore we obtain the following relationships between the $s_i$'s and the coefficients $p_i$:
+
+\begin{eqnarray*}
+s_1 + p &=& 0 \cr
+s_2 + p_1s_1 + 2p_2 &=& 0 \cr
+s_3 + p_1s_2 + p_2 s_1 + 3 p_3&=& 0 \cr
+s_4 + p_1s_3 + p_2 s_3 + p_3 s_1 + 4 p_4&=& 0 \cr
+\hdots\hdots\hdots\hdots\cr
+s_{n-1} + p_1s_{n-2} + p_2 s_{n-3} + \hdots + p_{n-2} s_1 + (n-1) p_{n-1}&=& 0 \cr
+\end{eqnarray*}
+
+We now proceed to extend our results to the sums of all positive powers of the roots, $s_n, s_{n+1}, \hdots, s_m$ by multiplying the 
+polynomial by $x^{m-n}$ and using the $s_0 = n$, we obtain
+\[ x^{m-n}f(x) = x^m + p_1^{m-1} + p_2 x^{m-2} + \hdots+ p_n x^{m-n},\]
+By replacing $x$ by the roots $a_1, a_2, \hdots, a_n$ in succession and adding we have, 
+\[ s_m + p_1 s_{m-1} + p_2 s_{m-2} + \hdots + p_n s_{m-n} = 0.\]
+Letting $m$ have the values $m=n, n+1, n+2, \hdots$ successively and noting that $s_0 = n$, we obtain the following equations
+\begin{eqnarray*}
+s_n + p_1s_{n-1} + p_2 s_{n-2} + \hdots + np_n &=& 0\cr
+s_{n+1} + p_1s_n + p_2 s_{n-1} + \hdots + p_n s_1 &=& 0\cr
+s_{n+2} + p_1s_{n+1} + p_2 s_n  + \hdots + p_n s_2 &=& 0\cr
+\hdots\hdots\hdots && 0
+\end{eqnarray*}
+
+By transforming the equation $f(x) = 0$ into one whose roots are the reciprocals of $a_1, a_2, a_3, \hdots, a_n$, and applying the above
+formulas we can also express all the negative powers of the roots. 
+
+\end{proof}
+
+\begin{theorem}
+Every rational symmetric function of $x_1, x_2, \hdots, x_n$ is rationally expressible in terms of the elementary symmetric functions. 
+\end{theorem}
+
+\begin{proof}
+It is sufficient to prove this theorem for integral functions only, since fractional symmetric functions can be reduced to a single fraction whose numerator and denominator are 
+both integral symmetric functions. Every integral function of $a_1, a_2, a_3, \hdots a_n$ is the sum of a number of terms of the form $Na_1^p a_2^q a_3^r\hdots$, where $N$ is 
+a numerical constant; and if this function be symmetrical we can write it under the form $N\sum a_1^p a_2^q a_3^r\hdots$, all the terms being of the same type. Therefore if we can prove that this 
+quantity be expressed rationally in terms of the coefficients, the theorem will be demonstrated.\\
+
+Let us begin with the symmetric function \be\sum\, a_1^p a_2^ q = s_p s_q - s_{p+q}.\label{Symmetric2}\ee Which can be proven by multiplying $s_p$ and $s_q$, where 
+\begin{eqnarray*}
+s_p &=& a_1^p + a_2^p + a_3^p +\hdots + a_n^p, \cr
+s_q &=& a_1^q + a_2^q + a_3^q +\hdots + a_n^q, 
+\end{eqnarray*}
+Therefore 
+\begin{eqnarray*}
+s_p s_q &=& a_1^{p+q} + a_2^{p+q} + a_3^{p+q} +\hdots + a_n^{p+q}+a_1^pa+2^q + a_1^pa+3^q + \hdots, \mbox{  or  }\cr
+s_p s_q &=& s_{p+q} + \sum\,a_1^q a_2^q, 
+\end{eqnarray*}and finally
+\[ \sum\, a_1^p a_2^p = s_p s_q - s_{p+q}.\]\\
+
+We proceed now to prove a similar expression for the triple function, 
+\be\sum\, a_1^p a_2^q a_3^r = s_p s_q s_r - s_{q+r} s_p - s_{r+p} s_q - s_{p+q} s_r + 2s_{p+q+r}. \label{Symmetric3} \ee
+
+Multiplying together $\sum\, a_1^p a_2^q \mbox{  and  } s_r$, where 
+\begin{eqnarray*}
+\sum\, a_1^p a_2^q &=& a_1^p a_2^q + a_1^q a_q^p + + a_1^p a_3^q + \hdots,\cr
+ s_r  &=& a_1^r + a_2^r + a_3^r + \hdots + a_n^r
+\end{eqnarray*}
+we obtain an expression consisting of three different parts of the forms
+$\sum\, a_1^{p+r} a_2^q, \quad \sum\, a_1^{q+r} a_2^p,\mbox{    and   } \sum\,a_1^p a_2^q a_3^r$, a formula connecting double and triple symmetric functions. 
+However, by Eq(\ref{Symmetric2}):
+\begin{eqnarray*}
+\sum\, a_1^{p+r} a_2^q &=& s_{p+r} s_q - s_{p+q+r},\cr
+\sum\, a_1^{q+r} a_2^p &=& s_{q+r} s_p - s_{p+q+r},\cr
+\sum\, a_1^p a_2^q &=& s_p s_q - s_{p+q},\cr
+\end{eqnarray*}
+Substituting these values we find the triple function expressed as in Eq(\ref{Symmetric3}).\\
+
+In the same manner the quadriple function $\sum\, a_1^p a_2^q a_3^r a_4^s$, can be made to depend on the triple function $\sum\, a_1^p a_2^q a_3^r$, and ultimately on $s_1, s_2, s_3, \hdots$. Finally every rational 
+symmetric function of the roots may be expressed in terms of the elementary symmetric functions (the coefficients of a polynomial). \\
+
+The formulas Eq.(\ref{Symmetric2}) and Eq.(\ref{Symmetric3}) require modification when any of the exponents become equal. \\
+
+Thus if $p = q,~~ a_1^p a_2^q = a_2^p a_1^q$, and the terms in Eq.(\ref{Symmetric2}) become equal to two and two; therefore $\sum\, a_1^p a_2^q = 2\sum\, a_1^p a_2^p$ and 
+\[ \sum\, a_1^p a_2^p = \half(s_p^2 - s_{2p}). \]\\
+
+Similarly, if $p = q = r$, the six terms obtained by interchanging the roots in $a_1^p a_2^q a_3^r$ become equal and therefore
+\[ \sum\, a_1^p a_2^p a_3^p = {1\over 2\cdot3}\left( s_p^3 - 3s_p s_{2p} + 2s_{3p} \right). \]\\
+
+And in general, if $m$ exponents become equal, each term is repeated $m!$ times.  
+\end{proof}
+
+\begin{theorem}[Theorems related to Symmetric Functions] The sum of the exponents of all the roots in any term of any symmetric function of the roots
+is equal to the sum of the suffices in each term of the corresponding value in terms of the coefficients.
+\end{theorem}
+
+The sum of the exponents is of course the same for every term of the symmetric function, and may be called the degree in all the roots of that function. In other words
+the suffix for each coefficient is equal to the degree in the roots of the corresponding function of the roots; hence in any product of any powers of the coefficients the sum of the
+suffices must equal to the degree in all the roots of the corresponding function of the roots. 
+
+\begin{theorem}
+When an equation is written with binomial coefficients, the expression in terms of the coefficients for any symmetric function of the roots, which is a function 
+of their differences only, is such that the algebraic sum of the numerical factors of all the terms in it is equal to zero. 
+\end{theorem}
+
+\begin{theorem}[Division Algorithm for Polynomials]
+If $F$ is any field, and $a(x) \ne 0$ and $b(x)$ are any two polynomials over $F$, then we can find polynomials $q(x)$ and $r(x)$ such that
+\[ b(x) = q(x)a(x) + r(x),\] where $r(x)$ is either zero or has a degree less than that of $a(x)$. 
+\end{theorem}
+
+\begin{theorem}
+In $F[x]$, any two polynomials $a$ and $b$ have a {\it greatest common divisor (GCD)} $d$ satisfying (i) $d | a$ and $d | b$, (ii) $c | a$ and $c | b$ imply that $c | d$. Moreover, (iii) $d$ is a linear combination $d = sa + tb$ of $a$ and $b$. 
+\end{theorem}
+
+The procedure for determining the GCD of $a(x)$ and $b(x)$ is given in  Algorithm (\ref{Euclid}): 
+
+\begin{algorithm}
+\caption{Polynomial Euclidean Algorithm}
+\begin{algorithmic}[1]
+\Procedure{PolyGCD}{$a(x), b(x)$}
+\While{$b(x) \neq 0$}
+\State $r(x) \gets a(x) \bmod b(x)$
+\State $a(x) \gets b(x)$
+\State $b(x) \gets r(x)$
+\EndWhile
+\State \textbf{return} $a(x)$
+\EndProcedure
+\end{algorithmic}\label{Euclid}
+\end{algorithm}
+
+
