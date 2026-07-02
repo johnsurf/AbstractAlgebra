@@ -15,6 +15,7 @@ In the abstract vector space $V$ the finite set of vectors
 $\x_1, \x_2, \hdots, \x_n$ is said to be linear dependent if scalars $\lambda_1, \lambda_2, \hdots, \lambda_n$ exist, not all zero, such that 
 \[ \lambda_1 \x_1 + \lambda_2 \x_2 + \hdots + \lambda_n\x_n = \o.\] If no such scalars exist, i.e., if 
 \[ \lambda_1 \x_1 + \lambda_2 \x_2 + \hdots + \lambda_n\x_n = \o \implies \lambda_i  = 0 ~\forall ~i = 1,2, \hdots, n\] then the set is linearly independent.  
+\label{LinearDependence}
 \end{definition}
 
 {\bf Conventions}: We adopt the Range and Summation Conventions:
@@ -87,7 +88,7 @@ Hence we are left with the $\x_i$'s and the process must stop before or exactly 
 
 \begin{theorem}[Steinitz Exchange Lemma]
 Let $U$ and $W$ be finite subsets of a vector space $V$ and let $U$ be a set of linearly independent vectors and let $W$ span $V$. 
-If $\{\x_1, \x_2, \hdots, \x_p\} \in U$ is a linearly independent set, and $\{\y_1, \y_2, \hdots, \y_m\} \in W$ spans $V$, then $p\le m$. \label{SubBasis}
+If $\{\x_1, \x_2, \hdots, \x_p\} \in U$ is a linearly independent set, and $\{\y_1, \y_2, \hdots, \y_m\} \in W$ spans $V$, then $p\le m$. \label{TH2_1}
 \end{theorem}
 
 \begin{proof}
@@ -107,7 +108,7 @@ If $\e_1, \e_2, \hdots, \e_n$ and $\f_1, \f_2, \hdots, f_m$ are both basis for $
 \end{theorem}
 
 \begin{proof}
-Both sets are linearly independent and both span $V$. Using Thm. (\ref{SubBasis}), since the $\e_i$'s are linearly independent and the $\f_i$'s span $V$,we have $n\le m$. Since the $\e_i$'s span $V$ and the $\f_i$'s are linearly 
+Both sets are linearly independent and both span $V$. Using Thm. (\ref{TH2_1}), since the $\e_i$'s are linearly independent and the $\f_i$'s span $V$,we have $n\le m$. Since the $\e_i$'s span $V$ and the $\f_i$'s are linearly 
 independent, $m\le n$. Therefore $m = n$. 
 \end{proof}
 
@@ -115,9 +116,197 @@ If $V$ possesses a basis, then all the same number of elements. We say that $V$ 
 $V$ possesses no finite basis, then we say that $V$ is {\twelveit infinite dimensional}. 
 
 \begin{theorem}
-If $V$ has dimension $n$, there cannot exist a set of more than $n$ linearly independent vectors in $V$. 
+If $V$ has dimension $n$, there cannot exist a set of more than $n$ linearly independent vectors in $V$. Any set of more than $n$ linear combinations of $n$ given vectors is always linearly dependent.\label{Th2_2}
+\end{theorem}
+
+\begin{theorem}
+The maximal number of linearly independent vectors in $\R_n$ is $n$\label{Th2_3}
 \end{theorem}
 
 \begin{theorem}
 If $V$ has dimension $n$, there cannot exist a set of less than $n$ vectors which span $V$. 
+\end{theorem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{definition}
+Vectors are directed segments. The vector in $\R_n$ whose components are $a_1, a_2,...,a_n$ is denoted by $$\a = \{a_1, a_2, ..., a_n\}\hbox{~(braces)}.$$
+The zero vector in $\R_n$ is denoted as $$\o = \{0,0,...,0\},$$ with $n$ components each 0. 
+\end{definition}
+
+\begin{definition}We call $p$ vectors $\a_1, \a_2, ..., \a_p$ {\bf linearly dependent} if there are $p$ numbers $\lambda_1, \lambda_2,...,\lambda_p$ not all $0$, such that 
+$$\lambda_1 \a_1 + \lambda_2 \a_2 +...+ \lambda_p \a_p = \o\hbox{~ (the zero vector)}.$$
+\end{definition}
+
+If no such $p$ numbers exist, then the $p$ vectors $\a_1, \a_2, ...,\a_p$ are called {\bf linearly independent}.
+
+\begin{theorem} 
+If a subset of the $p$ vectors $\a_1, \a_2,...,\a_p$ is linearly dependent, then the set of $p$ vectors is itself linearly dependent.\label{Th1_1}
+\end{theorem}
+
+Suppose the first $r$ vectors $\a_1, \a_2, ..., \a_r, (r < p) $are linearly dependent. Then there are $r$ numbers $\lambda_1, \lambda_2, ..., \lambda_r$ not all zero such that 
+$$\lambda_1 \a_1 + \lambda_2 \a_2 + ... + \lambda_r \a_r = \o.$$ Setting $\lambda_{r+1}, \lambda_{r+2}, ..., \lambda_p$ to zero we have
+$$\lambda_1 \a_1 + \lambda_2 \a_2 + ... + \lambda_r \a_r + \lambda_{r+1}\a_{r+1} +... + \lambda_p \a_p = \o.$$ where the numbers $\lambda_1, \lambda_2, ..., \lambda_p$ are not all zero. Therefore the 
+$p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly dependent. 
+
+\begin{theorem}
+If the $p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, then so is every subset of these $p$ vectors. \label{Th1_2}
+\end{theorem}
+
+For otherwise, by Theorem \ref{Th1_1}, the $p$ vectors would be linearly dependent.
+
+\begin{theorem}
+If the $p$ vectors $\a_1, \a_2, ..., \a_p$ are linearly dependent and if $p>1$, then at least one of these vectors
+is a linear combination of the others.\label{Th1_3}
+\end{theorem}
+
+For, there are numbers $\lambda_i$, which do not all vanish such that $$\lambda_1 \a_1 + \lambda_2 \a_2 +...+ \lambda_p \a_p = \o.$$ Suppose $\lambda_p \ne 0$. The we can solve for $\a_p$,
+$$\a_p = -{\lambda_1\over \lambda_p}\a_1 -{\lambda_2\over \lambda_p}\a_2 - ... - {\lambda_{p-1}\over \lambda_p} \a_{p-1},$$ i.e. $\a_p$ is a linear combination of the vectors $\a_1, \a_2, ..., \a_{p-1}$.  
+
+\begin{theorem}
+If one of the vectors $\a_1, \a_2, ..., \a_p$ is a linear combination of the others, then vectors $\a_1,\a_2,...,\a_p$ are linearly dependent.\label{Th1_4}
+\end{theorem}
+
+Suppose $$\a_1 = \lambda_2 \a_2 + \lambda_3 \a_3 +... + \lambda_p \a_p.$$ Then we have that 
+$$\a_1 - \lambda_2 \a_2 - \lambda_3 \a_3 -... - \lambda_p \a_p = \o,$$ and since the coefficient of $\a_1$ is not zero, the vectors $\a_1, \a_2, ... , \a_p$ are linearly dependent. 
+
+\begin{theorem}
+If the vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, and if the vectors $\a_1, \a_2,...\a_p,\b$ are linearly dependent, then $\b$ is a linear
+combination of $\a_1, \a_2, ..., \a_p$.\label{Th1_5}
+\end{theorem}
+
+We have a relation of the form $$\lambda_1 \a_1 + \lambda_2 \a_2 +... + \lambda_p \a_p + \lambda_{p+1} \b =\o,$$ where not all the $\lambda_i$ vanish. Now
+$\lambda_{p+1}$ cannot be 0 because the last term would drop out and then all the other $\lambda_i$ would vanish because of the linear independence of the $\a_i$ vectors. Therefore
+$\lambda_{p+1} \ne 0$ and so we have 
+$$\b = -{\lambda_1\over \lambda_{p+1}}\a_1 -{\lambda_2\over \lambda_{p+1}}\a_2 - ... - {\lambda_p\over \lambda_{p+1}} \a_p.$$
+
+
+\begin{theorem}
+If the vectors $\a_1, \a_2, ..., \a_p$ are linearly independent, and if $\b$ is a not a linear combination of $\a_1, \a_2, ..., \a_p$, then the vectors
+$\a_1, \a_2,...\a_p,\b$ are linearly independent.\label{Th1_6}
+\end{theorem}
+
+Theorem \ref{Th1_6} follows from Theorem \ref{Th1_5},\\
+
+Let $L$ be a {\elevenit non-empty} set of vectors of $\R_n$ with the properties:
+\begin{itemize}
+\item[1.] If $\a$ is a vector of the set $L$, then $\lambda \a$ belongs to $L$ for every real $\lambda$.
+\item[2.] If $\a$ and $\b$ are two (not necessarily distinct) vectors of the set $L$, then the vector $\a +\b$ also belongs to $L$.
+\end{itemize}
+Such a set of vectors, satisfying 1. and 2., is  called a {\bf vector space} in $\R_n$.
+
+%\begin{theorem} {\bf Steinitz replacement theorem}. Let $\a_1, \a_2, ..., \a_p$ be any $p$ vectors, and let $L$ be the vector space spanned by them. Let $\b_1, \b_2, ..., \b_q$ be any $q$ linearly independent vectors of 
+%$L$. Then we may replace a certain set of $q$ vectors from among the vectors $\a_1, \a_2, ..., \a_p$ by the vectors $\b_1, \b_2, ...,\b_q$ so that the remaining vectors of $\a_1, \a_2, ..., \a_p$ together with the vectors $\b_1, \b_2, ..., \b_q$ span the entire vector space $L$.\label{Th2_1}
+%\end{theorem}
+
+%\begin{proof}
+%Use mathematical induction.
+%\end{proof}
+
+%\begin{theorem}
+%Any set of more than $p$ linear combinations of $p$ given vectors is always linearly dependent.\label{Th2_2}
+%\end{theorem}
+
+%\begin{theorem}
+%The maximal number of linearly independent vectors in $\R_n$ is $n$\label{Th2_3}
+%\end{theorem}
+
+\begin{definition}{\bf Dimension and Basis}\\
+Let $L$ be any vector space in $\R_n$. The maximal number of linearly independent vectors is $\le n$. Let $p$ be this maximal number of independent vectors in $L$. We call $p$ the {\bf dimension} of $L$. Thus,
+$$0 \le p \le n.$$
+
+We call any system of $p$ linearly independent vectors of $L$, such as $\a_1, \a_2, ..., \a_p$ a {\bf basis} of $L$.
+\end{definition}
+
+\begin{theorem}
+Every vector of $L$ can be represented in exactly one way as a linear combination of the basis vectors $\a_1, \a_2, ..., \a_p$.\label{Th2_4}
+\end{theorem}
+
+\begin{theorem}
+The dimension of the vector space spanned by the vectors $\a_1, \a_2, ...,\a_p$ is equal to the maximal number of linearly independent vectors among $\a_1, \a_2, ..., \a_p$.\label{Th2_5}
+\end{theorem}
+
+\begin{theorem}
+Any $k ~ (k\le p)$ linearly independent vectors $$\b_1, \b_2, ..., \b_k$$
+ of $L$ can be extended to form a basis of $L$ by suitably adjoining to them $p-k$ other vectors $\a_{k+1}, \a_{k+2}, ..., \a_p$.\label{Th2_6}
+\end{theorem}
+
+Let $L'$ and $L''$ be any two vector spaces in $\R_n$. By the {\bf intersection} $D$ of $L'$ and $L''$ we mean the set of all those vectors belonging to both $L'$ and $L''$.\\
+
+If we form the totality $S$ of all vectors of the form $\a' + \a''$, where $\a'$ belongs to $L'$ and $\a''$ belongs to $L''$. $S$ is called the {\bf sum} of $L'$ and $L''$.
+
+\begin{theorem}
+If the dimensions of the vector spaces $L', L'', D,$ and $S$ are respectively $p', p'', d$ and $s$, then $$p' + p'' = d + s.$$\label{Th2_7}
+\end{theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Subspaces }
+
+We define a {\twelveit vector subspace } of $M$ of a  vector space $V$ to be a subset of $V$ which is closed under addition and scalar multiplication : if $\x$ and $\y$ are in $M$ then so is $\x + \y$ and so is $\lambda \x$ for any scalar $\lambda$. 
+
+\begin{theorem}
+If $V$ has a finite dimension $n$ and $M$ is a non-trivial subspace of $V$, then $M$ has finite dimension $m$ where $0 < m < n$. \label{finiteSubspace}
+\end{theorem}
+
+\begin{theorem}[Basis Reduction Theorem]
+If $V = span(\v_1, \hdots, \v_m)$, then either $(\v_1, \hdots, \v_m)$ is a basis of $V$ or some $\v_i$ can be removed to obtain a basis of $V$. 
+\end{theorem}
+\begin{proof}
+Suppose $V = span(\v_1, \hdots, \v_m)$. We start with the list $S = (\v_1, \hdots, \v_m)$, and sequentially run through all vectors $\v_k$ for $k = 1,2,\hdots,m$ to determine whether to keep or remove them from $S$:
+\begin{itemize}
+\item[]{\bf Step 1.} If $\v_1 = \o$, then remove $\v_1$ from $S$. Otherwise, leave $S$ unchanged.
+\item[]{\bf Step k.} If $\v_k \in span(\v_1, \hdots, \v_{k-1})$, then remove $\v_k$ from $S$. Otherwise, leave $S$ unchanged. 
+\end{itemize}
+The final list $S$ still spans $V$ since, at each step, a vector was only discarded if it was already in the span of the previous vectors. The process also ensures that no vector is in the span of the previous vectors. 
+Hence by Linear Dependence [see Definition (\ref{LinearDependence})] the final list is linearly independent. Therefore, the final list $S$ is a basis of $V$. 
+\end{proof}
+
+\begin{theorem}[Basis Extension Theorem]
+If $M$ is a subspace of $V$, where $V$ is finite dimensional, then any basis of $M$ is contained in a basis of $V$. 
+\end{theorem}
+\begin{proof}
+Suppose $V$ is finite dimensional and that $(\v_1, \hdots, \v_m)$ is linearly independent. Since $V$ is finite dimensional, there exists a finite set of vectors $(\w_1,\hdots,\w_n$ that span $V$. We want to adjoin some of the 
+$\w_k$ to $(\v_1, \hdots, \v_m)$ in order to create a basis of $V$.
+\begin{itemize}
+\item[]{\bf Step 1.} If $\w_l \in span(\v_1, \hdots, \v_m)$, then $S = (\v_1, \hdots, \v_m$. Otherwise, $S = (\v_1, \hdots, \v_m, \w_l)$.
+\item[]{\bf Step k.} If $\w_k \in span(S)$, then leave $S$ unchanged. Otherwise adjoin $\w_k$ to $S$. 
+\end{itemize}
+After each step, the list $S$ is still linearly independent because we only adjoined $\w_k$ if it was not in the span of the previous vectors. After $n$ steps, $\w_k\in span(S)$ for all $k = 1, 2, \hdots, n$. Since $\w_1, \hdots, \w_n)$  was a spanning set, $S$ spans $V$ so that $S$ is indeed a basis of $V$. 
+\end{proof}
+
+\begin{theorem}
+If $M$ and $N$ are subspaces of a finite dimensional vector space $V$, then 
+\[ \dim M + \dim N = \dim (M\cap N) + \dim(M + N).\] 
+\end{theorem}
+
+{\bf The range and null space of a linear transformation}\\
+
+If $\theta: V \goes W$ is a linear transformation, where $V$ and $W$ are not necessarily finite dimensional, the image of $\theta$ is called the {\twelveit range} of $\theta$ and the kernel is called the {\twelveit null space}. The range and null space image and kernel of $\theta$ considered as a group homomorphism, the are subgroups of $W$ and $V$ respectively. 
+
+\begin{theorem}
+The range $R$ of $\theta: V \goes W$ is a vector subspace of $W$. 
+\end{theorem}
+
+\begin{proof}
+By Thm (\ref{image}) the range is a subgroup of $W$. If $\y \in R$, so that $ \y = \theta \x$ for some $\x \in V$, $\theta(\lambda \x = \lambda \y$ and so $\lambda \y \in R$ for any scalar $\lambda$. Hence $R$ is a subspace. 
+\end{proof}
+
+\begin{theorem}
+The null space $N$ of $\theta: V \goes W$ is a vector subspace of $V$. 
+\end{theorem}
+
+\begin{proof}
+By Thm. (\ref{kernel}) the null space is a subgroup. If $\x \in N$, so that $\theta \x = \o$, then $\theta(\lambda\x) = \lambda \o = \o$, and hence $\lambda \x \in N$. Therefore $N$ is a subspace. 
+\end{proof}
+
+If $V$ and $W$ are finite dimensional, and \[ \dim V = n, \quad \dim W - m,\]  we see by Thm (\ref{finiteSubspace}) that the range $R$ has finite dimension $\le m$, and the null space $N$ finite dimension $\le n$. The dimension of $R$ is 
+called the {\twelveit rank of } $\theta$ and that of $N$ is called the {\twelveit nullity  of } $\theta$. These are denoted by $r(\theta)$ and $\nu(\theta)$ respectively. \\
+
+Therefore $0 \le r(\theta) \le m$ and $0 \le \nu(\theta) \le n$. If $\theta$ is the zero transformation, $r(\theta) = 0$ and $\nu(\theta) = n$, whereas if $\theta$ is an isomorphism $\r(\theta) = n$ and $\nu(\theta) = 0$. \\
+
+In both cases rank plus nullity is $n$. and this result is generally true. 
+
+\begin{theorem}[Rank / Nullity Theorem] If $\theta : V \goes W$ is a linear transformation between finite dimensional vector spaces with $\dim V = n$, then 
+\[ r(\theta) + \nu(\theta) = n.\]
 \end{theorem}
