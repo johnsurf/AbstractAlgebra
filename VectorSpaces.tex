@@ -309,7 +309,7 @@ In both cases rank plus nullity is $n$. and this result is generally true.
 \begin{theorem}[Grassmann dimension formula]
 If $M$ and $N$ are subspaces of a finite dimensional vector space $V$, then 
 \[ \dim(M + N) = \dim M + \dim N - \dim (M\cap N).\] 
-\end{theorem}
+\label{Grassmann}\end{theorem}
 
 \begin{proof}
 Let $\dim M = \mu$, $\dim N = \nu$, $\dim (M\cap N) = \rho$, which are all finite. Take $\z_1, \hdots, \z_\rho$ as the basis of $M\cap N$. Since $M\cap N$ is a subspace of both $M$ and $N$, it can be extended as follows to a basis for both $M$ and $N$: 
@@ -330,3 +330,5 @@ Therefore $\z_1, \hdots, \z_\rho, \quad \x_1, \hdots, \x_{\mu - \rho}, \quad \y_
 \[ \dim(M+N) = \rho + \mu - \rho + \nu - \rho = \mu + \nu - \rho, \mbox{ or}\] 
 \[ \dim(M + N) = \dim M + \dim N - \dim (M\cap N). \qed\]  
 \end{proof}
+
+Thm (\ref{Grassmann}) is basically Inclusion-Exclusion for vector spaces. The main reason this is the case is that it is possible to build a sequence of vector spaces where the Euler characteristic (alternating sum of dimensions) vanishes, which is directly related to the Inclusion-Exclusion formula. The two principles are the same idea showing up in different contexts: counting elements versus measuring linear independence.  
