@@ -275,11 +275,6 @@ $\w_k$ to $(\v_1, \hdots, \v_m)$ in order to create a basis of $V$.
 After each step, the list $S$ is still linearly independent because we only adjoined $\w_k$ if it was not in the span of the previous vectors. After $n$ steps, $\w_k\in span(S)$ for all $k = 1, 2, \hdots, n$. Since $\w_1, \hdots, \w_n)$  was a spanning set, $S$ spans $V$ so that $S$ is indeed a basis of $V$. 
 \end{proof}
 
-\begin{theorem}
-If $M$ and $N$ are subspaces of a finite dimensional vector space $V$, then 
-\[ \dim M + \dim N = \dim (M\cap N) + \dim(M + N).\] 
-\end{theorem}
-
 {\bf The range and null space of a linear transformation}\\
 
 If $\theta: V \goes W$ is a linear transformation, where $V$ and $W$ are not necessarily finite dimensional, the image of $\theta$ is called the {\twelveit range} of $\theta$ and the kernel is called the {\twelveit null space}. The range and null space image and kernel of $\theta$ considered as a group homomorphism, the are subgroups of $W$ and $V$ respectively. 
@@ -310,3 +305,28 @@ In both cases rank plus nullity is $n$. and this result is generally true.
 \begin{theorem}[Rank / Nullity Theorem] If $\theta : V \goes W$ is a linear transformation between finite dimensional vector spaces with $\dim V = n$, then 
 \[ r(\theta) + \nu(\theta) = n.\]
 \end{theorem}
+
+\begin{theorem}[Grassmann dimension formula]
+If $M$ and $N$ are subspaces of a finite dimensional vector space $V$, then 
+\[ \dim(M + N) = \dim M + \dim N - \dim (M\cap N).\] 
+\end{theorem}
+
+\begin{proof}
+Let $\dim M = \mu$, $\dim N = \nu$, $\dim (M\cap N) = \rho$, which are all finite. Take $\z_1, \hdots, \z_\rho$ as the basis of $M\cap N$. Since $M\cap N$ is a subspace of both $M$ and $N$, it can be extended as follows to a basis for both $M$ and $N$: 
+\begin{eqnarray*}
+\z_1, \hdots, \z_\rho, \quad \x_1, \hdots, \x_{\mu - \rho} &\mbox{ of }& M \mbox{ and }\cr
+\z_1, \hdots, \z_\rho, \quad \y_1, \hdots, \y_{\nu - \rho} &\mbox{ of }& N
+\end{eqnarray*}
+We now prove that 
+\[ \z_1, \hdots, \z_\rho, \quad \x_1, \hdots \x_{\mu - \rho}, \quad \y_1, \hdots, \y_{\nu - \rho} \] is a basis of $M + N$. 
+
+Any element of $M$ is a linear combination of $\z_1, \hdots, \z_\rho, \x_1, \hdots, \x_{\mu - \rho}$ and any element of $N$ is a linear combination of $\z_1, \hdots, \z_\rho, \y_1, \hdots, \y_{\nu - \rho}$. Therefore, any element of $M + N$ is a linear combination of the $\z$'s, $\x$'s and $\y$'s, and so this set spans $M + N$. 
+
+Now suppose that \[ \sum_{i = 1}^\rho\, \alpha_i \z_i + \sum_{j = 1}^{\mu - \rho}\, \beta_j \x_i + \sum_{k = 1}^{\nu - \rho}\, \gamma_k \y_k = \o.\] Then   
+\[      \sum_{k = 1}^{\nu - \rho}\, \gamma_k \y_k =  - \sum_{i = 1}^\rho\, \alpha_i \z_i - \sum_{j = 1}^{\mu - \rho}\, \beta_j \x_i  \in M,\] and also in $N$, and so is in $M\cap N$.
+Therefore  $\displaystyle \sum_{k = 1}^{\nu - \rho}\, \gamma_k \y_k  = \sum_{i=1}^\rho \delta_i \z_i $ since $\z_1, \hdots, \z_\rho$ are a basis for $M\cap N$. But the $\y_i$'s and $\z_i$'s together form a linearly independent set, being a basis of $N$, and therefore all the $\gamma_i$'s are zero. Similarly all the $\beta_i$'s are zero, and so $\displaystyle \sum_{i = 1}^\rho \, \alpha_i \z_i = \o$ and all the $\alpha_i$'s are zero because $\z_1,\hdots,\z_\rho$ are linearly independent. \\
+
+Therefore $\z_1, \hdots, \z_\rho, \quad \x_1, \hdots, \x_{\mu - \rho}, \quad \y_1, \hdots, \y_{\nu - \rho}$ are linearly independent and hence form a basis of $M + N$ and we have
+\[ \dim(M+N) = \rho + \mu - \rho + \nu - \rho = \mu + \nu - \rho, \mbox{ or}\] 
+\[ \dim(M + N) = \dim M + \dim N - \dim (M\cap N). \qed\]  
+\end{proof}
