@@ -1,14 +1,19 @@
 \section{Cauchy's 1815 Theorem}
 
-Cauchy's 1815 theorem says that if a function of $n$ variables takes more than two distinct values when you permute the variables, then it must take at least p distinct values, where $p$ is the largest prime less than or equal to $n$. 
-The number of distinct values always divides $n$ factorial. Symmetric functions take one value, and the only way to get exactly two are the alternating functions, like the Vandermonde product.\\
+Cauchy's 1815 theorem says that if a function of $n$ variables takes more than two distinct values when you permute the variables, then it must take at least $p$ distinct values, where $p$ is the largest prime less than or equal to $n$. 
+The number of distinct values always divides $n$ factorial. Symmetric functions take one value, and the only way to get exactly two are by use of the alternating functions, like the Vandermonde product.
 
-Proof of Cauchy's theorem on the values of a function of $n$ variables.
-Cauchy's theorem: For a function of n variables, the number of distinct values under all permutations of the variables is either 1, 2, or at least $p$, where $p$ is the largest prime less than or equal to $n$. The proof starts from the fact that $n!$ is divisible by this number $R$ of distinct values. Assume R is bigger than 2 but less than $p$. 
-Then consider a $p$-cycle - a permutation of order  $p$. 
-Powers of that cycle would produce p different values of the function unless it leaves the value fixed. But with only $R < p$ distinct values total, by pigeonhole, two powers give the same value, which forces the p-cycle itself to fix every value.
-Once p-cycles fix everything, you can build a 3-cycle as a product of two such p-cycles, so 3-cycles also fix values. But a 3-cycle is a product of two transpositions. If transpositions don't change values, the function is symmetric and $R=1$. If they do change values, they pair them up, so you get exactly two values - like the sign of a permutation. 
-You can't get three or more without hitting at least p. That's the proof.\\
+\begin{theorem}[Cauchy's theorem:] For a function of n variables, the number of distinct values under all permutations of the variables is either 1, 2, or at least $p$, where $p$ is the largest prime less than or equal to $n$. 
+\end{theorem}
+\begin{proof}
+Let $R$ be the number of distinct values of a function $f(x_1,\hdots,x_n)$. 
+Then $n!$ is divisible $R$. Assume $R$ is bigger than 2 but less than $p$. 
+Consider a $p$-cycle - a permutation of order  $p$. 
+Powers of that cycle would produce $p$ different values of the function unless it leaves the value fixed. But with only $R < p$ distinct values total,
+by the pigeonhole principle, at least two powers give the same value, which forces the $p$-cycle itself to fix every value.
+Once $p$-cycles fix everything, you can build a 3-cycle as a product of two such $p$-cycles, so 3-cycles also fix values. But a 3-cycle is a product of two transpositions. If transpositions don't change values, the function is symmetric and $R=1$. If they do change values, they pair them up, so you get exactly two values - like the sign of a permutation. 
+You can't get three or more without hitting at least $p$. 
+\end{proof}
 
 So, since the number of distinct values is less than the order of the $p$-cycle, by the pigeonhole principle, two powers of the p-cycle must produce the same value of the function. Subtracting those exponents shows the $p$-cycle itself must fix the value of the function. The pigeonhole principle is applied in the key lemma showing that if the number of distinct values $R$ satisfies $2 < R < p$ (where $p$ is the largest prime $\le n$), we reach a contradiction.\\
 
