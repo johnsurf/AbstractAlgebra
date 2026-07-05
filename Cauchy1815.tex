@@ -1,68 +1,70 @@
+%\newpage
 \section{Cauchy's 1815 Theorem}
 
 Cauchy's 1815 theorem says that if a function of $n$ variables takes more than two distinct values when you permute the variables, then it must take at least $p$ distinct values, where $p$ is the largest prime less than or equal to $n$. 
 The number of distinct values always divides $n$ factorial. Symmetric functions take one value, and the only way to get exactly two are by use of the alternating functions, like the Vandermonde product.
 
-\begin{theorem}[Cauchy's theorem:] For a function of n variables, the number of distinct values under all permutations of the variables is either 1, 2, or at least $p$, where $p$ is the largest prime less than or equal to $n$. 
+\begin{theorem}[Cauchy's theorem:] For a function of n variables, $f=f(x_1,\hdots,x_n)$, the number of distinct values under all permutations of the variables is either 1, 2, or at least $p$, where $p$ is the largest prime less than or equal to $n$. 
 \end{theorem}
 \begin{proof}
-Let $R$ be the number of distinct values of a function $f(x_1,\hdots,x_n)$. 
-Then $n!$ is divisible $R$. Assume $R$ is bigger than 2 but less than $p$. 
-Consider a $p$-cycle - a permutation of order  $p$. 
-Powers of that cycle would produce $p$ different values of the function unless it leaves the value fixed. But with only $R < p$ distinct values total,
-by the pigeonhole principle, at least two powers give the same value, which forces the $p$-cycle itself to fix every value.
-Once $p$-cycles fix everything, you can build a 3-cycle as a product of two such $p$-cycles, so 3-cycles also fix values. But a 3-cycle is a product of two transpositions. If transpositions don't change values, the function is symmetric and $R=1$. If they do change values, they pair them up, so you get exactly two values - like the sign of a permutation. 
-You can't get three or more without hitting at least $p$. 
-\end{proof}
-
-So, since the number of distinct values is less than the order of the $p$-cycle, by the pigeonhole principle, two powers of the p-cycle must produce the same value of the function. Subtracting those exponents shows the $p$-cycle itself must fix the value of the function. The pigeonhole principle is applied in the key lemma showing that if the number of distinct values $R$ satisfies $2 < R < p$ (where $p$ is the largest prime $\le n$), we reach a contradiction.\\
-
-Let $f$ be a function of $n$ (distinct) variables. 
-Permuting the variables produces up to $n!$ possible inputs, but $f$ takes only $R$ distinct values under these permutations. It is known that $R$ divides $n!$.
-Assume for contradiction that $2 < R < p$. Fix a $p$-cycle $\sigma$ (a cyclic permutation of order $p$ on $p$ of the variables, fixing the rest). Consider the sequence of function values obtained by applying successive powers of $\sigma$ to a fixed initial tuple of variables:
+Let $f$ be a function of $n$ (distinct) variables $f=f(x_1,\hdots,x_n)$. 
+Permuting the variables produces up to $n!$ possible inputs,  but we assume $f$ to take only $R$ distinct values under these permutations. 
+By Lagrange's theorem  $n!$ is divisible $R$. Assume for contradiction purposes that $2 < R < p$. 
+Consider a $p$-cycle $\sigma$ (a cyclic permutation of order $p$ on $p$ of the variables, fixing the rest).  
+The sequence of function values obtained by applying successive powers of $\sigma$ to a fixed initial ntuple of variables:
 \[ f(x), ~f(\sigma(x)), ~f(\sigma^2(x)), \hdots, ~f(\sigma^{p-1}(x)).\]
-There are exactly $p$ such values (since $\sigma^p$ is the identity).\\
+There are at most $p$ distinct values in the above list (since $\sigma^p$ is the identity).
+Let \[ v_k = f(\sigma^k(x))  \mbox{ for } k = 0, 1, ..., p-1,\] stand for these $p$ values  and lest us apply the {\bf Pigeonhole Principle}
+(i.e., if you have more pigeons than pigeonholes, at least one hole has more than one pigeon). 
+These $p$ values are drawn from the set of $R$ assumed distinct possible values that $f$ can ever take, and we assume $R < p$. 
+These values satisfy the cyclic relation: $v_{k+1} = f(\sigma^{k+1}(x))$ is obtained from $v_k$ by applying $\sigma \pmod{p}$.
+By the pigeonhole principle at least two of these $p$ values must be equal.
+\[ v_r = v_s \mbox{ for some } 0 \le s < r \le p-1. \]
+Let $d = r - s$ (so $1 \le d \le p-1$).\\
 
-{\bf Application of the Pigeonhole Principle}\\
-These $p$ values are drawn from the set of only $R$ distinct possible values that $f$ can ever take, and we have $R < p$. 
-By the pigeonhole principle (if you have more pigeons than pigeonholes, at least one hole has more than one pigeon), at least two of these $p$ values must be equal.
-Say: $ f(\sigma^r(x)) = f(\sigma^s(x))$ with $0 \le s < r \le p-1$.
-Then, applying an appropriate power of $\sigma$ shows that $f$ must be invariant under $\sigma$ itself: $f(\sigma(x)) = f(x)$ for the initial tuple (and thus, by relabeling, for suitable choices, under any such $p$-cycle).\\
+Now apply powers of $\sigma$ repeatedly. 
+Because $\sigma$ shifts the indices cyclically (i.e., applying $\sigma$ moves $v_k$ to $v_{(k+1)\pmod{p}}$),
+the assumption $v_r = v_s$ means the sequence is periodic with a smaller step. 
+The equality propagates under shifts:
+Apply $\sigma$ any number of times to both sides of $v_r = v_s$.
+This gives:
+$v_{r + m} = v_{s + m \pmod{p}}$ for any integer $m$.
+In other words, shifting the indices by the same amount preserves the equality.
+The index differences are multiples of $d$:
+The indices where we know equalities hold are exactly the index positions that differ by multiples of $d \pmod{p}$.
+That is, for any integer $m$:
+$v_k = v_{(k + m - d)  \pmod{p}}$, whenever the equality chain reaches there.\\
 
-{\bf Why This Matters in the Proof}\\
+Primality of $p$ makes $d$ a generator:
+Crucially because $p$ is prime and $d$ is between 1 and $p -1$, we have $\gcd(d, p) = 1$.
+Therefore, $d$ has a multiplicative inverse modulo $p$, and the multiples
+\[ \{ 0\cdot d, 1\cdot d, 2\cdot d,  \hdots,  (p-1)\cdot d \} \pmod{p} \]
+hit every residue class modulo $p$ exactly once and we cycle through all residues modulo $p$. 
+Starting from any fixed index $k$, we can reach any other index $l$ by adding a suitable multiple of $d$ modulo $p$.
+Therefore $v_k = v_l \mbox{ for all } k, l$.
+In group theory terms: the subgroup generated by $d$ modulo $p$ is the entire cyclic group $\Z/p\Z$. Therefore entire orbit of $f(\sigma^k x)$ for $k = 0, 1, 2, \hdots, p-1$  collapses to a single value. \\
+
+{\bf Conclusion}:\\
+
+The shifts by multiples of $d$ generate the entire cyclic group of order $p$.
+It follows that all the $v_k$ are equal (the orbit collapses to a single value).
+In particular, $v_0 = v_1$, i.e., $f(x) = f(\sigma(x))$.
+Since the initial  ntuple $x$ was arbitrary, this holds for every starting assignment: $\sigma$ leaves $f$ invariant (does not change its value).
+By choosing different $p$-cycles (or by conjugacy/relabeling of variables), this applies to all $p$-cycles in $S_n$.\\
 
 This implies that all $p$-cycles leave $f$ invariant (fix every value).
 One can then construct a 3-cycle as a product (or commutator) of two such $p$-cycles. Thus, 3-cycles also fix values.
 A 3-cycle is a product of two transpositions. 
 Analysis of transpositions then shows that either $f$ is fully symmetric $(R = 1)$ or it takes exactly two values (like the sign/alternating case, e.g., Vandermonde product).
-But we assumed $R > 2$, a contradiction.\\
+But we assumed $R > 2$, a contradiction. You can't get three or more without hitting at least $p$ values.  \qed
+
+\end{proof}
+
 
 Thus, no such $R$ with $2 < R < p$ is possible. The pigeonhole step forces $p$-cycles (and then smaller cycles) to preserve values, collapsing the possibilities to $R = 1$ or $2$.
-This is the heart of Cauchy's 1815 argument (sometimes phrased in terms of "forms" or "arrangements" of the variables). 
-Modern presentations often frame it in terms of the action of the symmetric group $S_n$ on the values, with stabilizers and orbits, 
+This is the heart of Cauchy's 1815 argument (sometimes phrased in terms of``forms'' or ``arrangement'' of the variables). 
+Modern presentations often frame it in terms of the action of the symmetric group $S_n$ on the values, with stabilizers and orbits (see the {\bf Orbit-Stabilizer Theorem}) 
 but the core pigeonhole idea on powers of a cycle remains the same.\\
-
-The implication that all values of $f$ are equal follows from the fact that $p$ is prime and the cyclic shifting action of the powers of $\sigma$.
-Fix a $p$-cycle $\sigma$ (a cyclic permutation of prime length $p$ on $p$ of the variables, fixing the others). 
-For an arbitrary initial assignment of values to the $n$ variables, denote the tuple as $x$.
-Consider the $p$ values in the orbit under powers of $\sigma$:
-
-Let \[ v_k = f(\sigma^k (x))  \mbox{ for } k = 0, 1, ..., p-1.\]
-
-These are $p$ numbers, each equal to one of the $R$ possible distinct values that $f$ ever takes under any permutation. 
-Since $R < p$, by the pigeonhole principle, at least two must coincide:
-\[ v_r = v_s \mbox{ for some } 0 \le s < r \le p-1. \]
-Let $d = r - s$ (so $1 \le d le p-1$).
-Now apply powers of $\sigma$ repeatedly. 
-Because $\sigma$ shifts the indices cyclically (i.e., applying $\sigma$ moves $v_k$ to $v_{k+1} \pmod{p}$),
-the assumption $v_r = v_s$ means the sequence is periodic with a smaller step.
-Crucially: $p$ is prime, so $\gcd(d, p) = 1$. 
-Therefore, as you add multiples of $d$ modulo $p$, you cycle through all residues modulo $p$. 
-In other words, the shifts by multiples of $d$ generate the entire cyclic group of order $p$.
-It follows that all the $v_k$ are equal (the orbit collapses to a single value).
-In particular, $v_0 = v_1$, i.e., $f(x) = f(\sigma(x))$.
-Since the initial tuple $x$ was arbitrary, this holds for every starting assignment: $\sigma$ leaves $f$ invariant (does not change its value).
-By choosing different $p$-cycles (or by conjugacy/relabeling of variables), this applies to all $p$-cycles in $S_n$.\\
 
 {\bf Why Primality of p Is Essential}\\
 If $p$ were composite, say $d$ shares a common factor with $p$, the multiples of $d \pmod{p}$ would only generate a proper subgroup, 
@@ -70,32 +72,4 @@ and you might only force equality within cosets rather than full invariance unde
 The primality ensures the generated subgroup is the whole group, forcing full invariance.
 This is the precise bridge from the pigeonhole collision to invariance under the full $p$-cycle. 
 Once you have invariance under all $p$-cycles, the rest of the proof proceeds by constructing smaller cycles (e.g., 3-cycles) as products/commutators and analyzing transpositions.\\
-
-Here's exactly why $v_r = v_s$ forces all the $v_k$ (for $k = 0 \mbox{ to } p-1$) to be equal.\\
-
-The values satisfy the cyclic relation:
-$v_{k+1} = f(\sigma^{k+1}(x))$ is obtained from $v_k$ by applying $\sigma \pmod{p}$.
-So the sequence is periodic with period $p$ under shifts of +1.
-We have $v_r = v_s$ with $s < r$, and let $d = r - s$ (so $1 \le d \le p-1$).\\
-
-The equality propagates under shifts:
-Apply $\sigma$ any number of times to both sides of $v_r = v_s$.
-This gives:
-$v_{r + m} = v_{s + m \pmod{p}}$ for any integer $m$.
-In other words, shifting the indices by the same amount preserves the equality.
-The differences are multiples of $d$:
-The indices where we know equalities hold are exactly the positions that differ by multiples of $d \pmod{p}$.
-That is, for any integer $m$:
-$v_k = v_{(k + m - d)  \pmod{p}}$, whenever the equality chain reaches there.\\
-
-Primality of $p$ makes $d$ a generator:
-Since $p$ is prime and $d$ is between 1 and $p -1$, we have $\gcd(d, p) = 1$.
-Therefore, $d$ has a multiplicative inverse modulo $p$, and the multiples
-\[ \{ 0\cdot d, 1\cdot d, 2\cdot d,  \hdots,  (p-1)\cdot d \} \pmod{p} \]
-hit every residue class modulo $p$ exactly once.
-In group theory terms: the subgroup generated by $d$ modulo $p$ is the entire cyclic group $\Z/p\Z$.\\
-
-{\bf Conclusion}:\\
-Starting from any fixed index $k$, we can reach any other index $l$ by adding a suitable multiple of $d$ modulo $p$.
-Therefore $v_k = v_l \mbox{ for all } k, l$.
-Therefore entire orbit collapses to a single value.
+%\newpage
