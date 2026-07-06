@@ -1,0 +1,44 @@
+\section{Cyclotomic Polynomials}
+
+\begin{definition}
+The cyclotomic polynomial $\phi(x)$ for non-trivial $p$-th roots of unity (other than $x = 1$) is given by
+\[ \phi(x) = {(x^p - 1)\over x - 1} = x^{p-1} + x^{p - 2} + \hdots x + 1. \]
+\end{definition}
+
+\begin{theorem}
+$\phi(x)$ is an irreducible polynomial.
+
+\end{theorem}
+\begin{proof} As it stands,  the Eisenstein criterion for irreducibility doesn't apply. 
+However a change of variable $y = x - 1$ and the binomial expansion changes the form into 
+\[ {(x^p - 1)\over x - 1}  = {((y+1)^p - 1)\over y}  = y^{p-1} + p y^{p-2} + {p(p-1)\over 1\cdot2} y^{p-3}  + \hdots + p.\]
+The binomial coefficients which appear on the right hand side are all integers divisible by the prime $p$, for $p$ occurs in each numerator as a factor, and can never be cancelled out by the smaller integers in the denominator.
+The polynomial in $y$ therefore satisfies the Eisenstein criterion and is therefore irreducible -- which means that the original equation for $\phi(x)$ is irreducible.  \qed
+\end{proof}
+
+\begin{theorem}
+A polynomial $f(x) = x^p - a = 0$  of prime degree $p$ over a field $K$ is either irreducible over $K$ or has a root in $K$.
+\end{theorem}
+
+\begin{proof}[Proof 1]
+Adjoin to $K$ a primitive $p$-th root of unity $\xi$ and the a root $u$ of $x^p - a$. The resulting extension $K(\xi, u)$ contains the $p$ roots 
+$u, \xi u, \xi^2 u, \hdots, \xi^{p-1} u$ of the polynomial $x^p - a$, hence is the root field of this polynomial, which has the factorization
+\[ x^p - a = (x-u)(x-\xi u)(x - \xi^2 u) \hdots (x-\xi^{p-1} u). \]
+Suppose that $x^p -a$ has over $K$ a proper factor $g(x)$ of positive degree $m < p$. This factor $g(x)$ is then a product of $m$ of the linear factors of $x^p - a$ over $K(\xi,u)$, 
+so that the constant term $b$ in $g(x)$ is a product of the roots $\xi^i u$. Therefore $b = \xi^k u^m$, for some integer $k$, and 
+\[ b^p = (\xi^k u^m)^p = (\xi^p)^k (u^p)^m = (u^p)^m = a^m. \]
+From this we can find in $K$ a $p$-th root of $a$, for $m<p$ is relatively prime to $p$ and there exists integers $s$ and $t$ with $sm + tp = 1$, so that  
+\[ b^p = a^m = a^{1 -tp} = a/a^{tp}, \]
+and
+$a = (b^s a^t)^p$. The assumed reducibility of $x^p -a$ over $K$ therefore yields a root $(b^s a^t)$ of $x^p - a$ in K. \qed
+\end{proof}
+
+\begin{proof}[Proof 2]
+Let $\alpha$  be a root of $f(x) = x^p - a$ (assume irreducible or not). Let $K = \Q(\alpha)$.
+Assume we're working over $\Q$ (or $\Z$ by Gauss's lemma for monic polynomials).
+\begin{itemize}
+\item[]Since $p$ prime, $[K:\Q] =1 \mbox{ or } p$.
+\item[]If =1, $\alpha \in \Q$, so rational root.
+\item[]Hence if no rational root, $[K:\Q]=p$, so minimum polynomial has degree $p$, so $f$ (monic) is the minimum polynomial, hence irreducible.
+\end{itemize}
+\end{proof}
