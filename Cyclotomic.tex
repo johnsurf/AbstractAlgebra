@@ -24,7 +24,7 @@ A polynomial $f(x) = x^p - a = 0$  of prime degree $p$ over a field $K$ is eithe
 Adjoin to $K$ a primitive $p$-th root of unity $\xi$ and the a root $u$ of $x^p - a$. The resulting extension $K(\xi, u)$ contains the $p$ roots 
 $u, \xi u, \xi^2 u, \hdots, \xi^{p-1} u$ of the polynomial $x^p - a$, hence is the root field of this polynomial, which has the factorization
 \[ x^p - a = (x-u)(x-\xi u)(x - \xi^2 u) \hdots (x-\xi^{p-1} u). \]
-Suppose that $x^p -a$ has over $K$ a proper factor $g(x)$ of positive degree $m < p$. This factor $g(x)$ is then a product of $m$ of the linear factors of $x^p - a$ over $K(\xi,u)$, 
+Suppose that $x^p -a$ has a proper factor $g(x)$ over $K$ of positive degree $m < p$. This factor $g(x)$ is then a product of $m$ of the linear factors of $x^p - a$ over $K(\xi,u)$, 
 so that the constant term $b$ in $g(x)$ is a product of the roots $\xi^i u$. Therefore $b = \xi^k u^m$, for some integer $k$, and 
 \[ b^p = (\xi^k u^m)^p = (\xi^p)^k (u^p)^m = (u^p)^m = a^m. \]
 From this we can find in $K$ a $p$-th root of $a$, for $m<p$ is relatively prime to $p$ and there exists integers $s$ and $t$ with $sm + tp = 1$, so that  
@@ -33,9 +33,9 @@ and
 $a = (b^s a^t)^p$. The assumed reducibility of $x^p -a$ over $K$ therefore yields a root $(b^s a^t)$ of $x^p - a$ in K. \qed
 \end{proof}
 
-\begin{proof}[Proof 2]
+\begin{proof}[Proof 2] {\it based on the Rational Root Theorem}
 Let $\alpha$  be a root of $f(x) = x^p - a$ (assume irreducible or not). Let $K = \Q(\alpha)$.
-Assume we're working over $\Q$ (or $\Z$ by Gauss's lemma for monic polynomials).
+(Assume we're working over $\Q$ or $\Z$ by Gauss's lemma for monic polynomials).
 \begin{itemize}
 \item[]Since $p$ prime, $[K:\Q] =1 \mbox{ or } p$.
 \item[]If =1, $\alpha \in \Q$, so rational root.
