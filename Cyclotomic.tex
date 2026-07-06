@@ -16,11 +16,21 @@ The binomial coefficients which appear on the right hand side are all integers d
 The polynomial in $y$ therefore satisfies the Eisenstein criterion and is therefore irreducible -- which means that the original equation for $\phi(x)$ is irreducible.  \qed
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}[Irreducibility of $x^p - a = 0$]
 A polynomial $f(x) = x^p - a = 0$  of prime degree $p$ over a field $K$ is either irreducible over $K$ or has a root in $K$.
 \end{theorem}
 
-\begin{proof}[Proof 1]
+\begin{proof}[Proof 1] {\it based on the Rational Root Theorem}
+Let $\alpha$  be a root of $f(x) = x^p - a$ (assume irreducible or not). Let $K = \Q(\alpha)$.
+(Assume we're working over $\Q$ or $\Z$ by Gauss's lemma for monic polynomials).
+\begin{itemize}
+\item[]Since $p$ prime, $[K:\Q] =1 \mbox{ or } p$.
+\item[]If =1, $\alpha \in \Q$, so rational root.
+\item[]Hence if no rational root, $[K:\Q]=p$, so minimum polynomial has degree $p$, so $f$ (monic) is the minimum polynomial, hence irreducible.
+\end{itemize}
+\end{proof}
+
+\begin{proof}[Proof 2]
 Adjoin to $K$ a primitive $p$-th root of unity $\xi$ and the a root $u$ of $x^p - a$. The resulting extension $K(\xi, u)$ contains the $p$ roots 
 $u, \xi u, \xi^2 u, \hdots, \xi^{p-1} u$ of the polynomial $x^p - a$, hence is the root field of this polynomial, which has the factorization
 \[ x^p - a = (x-u)(x-\xi u)(x - \xi^2 u) \hdots (x-\xi^{p-1} u). \]
@@ -33,12 +43,26 @@ and
 $a = (b^s a^t)^p$. The assumed reducibility of $x^p -a$ over $K$ therefore yields a root $(b^s a^t)$ of $x^p - a$ in K. \qed
 \end{proof}
 
-\begin{proof}[Proof 2] {\it based on the Rational Root Theorem}
-Let $\alpha$  be a root of $f(x) = x^p - a$ (assume irreducible or not). Let $K = \Q(\alpha)$.
-(Assume we're working over $\Q$ or $\Z$ by Gauss's lemma for monic polynomials).
-\begin{itemize}
-\item[]Since $p$ prime, $[K:\Q] =1 \mbox{ or } p$.
-\item[]If =1, $\alpha \in \Q$, so rational root.
-\item[]Hence if no rational root, $[K:\Q]=p$, so minimum polynomial has degree $p$, so $f$ (monic) is the minimum polynomial, hence irreducible.
-\end{itemize}
+\begin{theorem}[Abel's Version os the Irreducibility of $x^p - F$]
+If the equations 
+\begin{eqnarray}
+f_1 x^{p-1} + f_2 x^{p-2} + \hdots + f_p &=& 0 \cr
+x^p - F &=& 0
+\end{eqnarray}
+where $p$ is a prime number, are simultaneously satisfied, either $f_1, f_2, f_3, \hdots, f_p$ all vanish, or else one of the roots of $x^p - F = 0$ can be expressed rationally in terms of $f_1, f_2, \hdots, f_p$ and $F$.
+\end{theorem}
+
+\begin{proof}
+For, suppose the coefficients $f_1, f_2, \hdots, f_p$ don't vanish. 
+The the two equations will have a greatest common divisor (GCD) of the form
+\[ g(x) = x^\rho + g_1 x^{\rho - 1} + g_2 x^{\rho - 2} + \hdots + g_\rho = 0, \]the coefficients of which are 
+rational functions of $F, f_1, f_2, \hdots, f_p$.
+Now if $x_1$ be any one of the roots common to both equations, the other roots will be of the form 
+\[ \xi^\alpha x_1, \xi^\beta x_1, \hdots. \mbox{ where } \xi^\rho -1 = 0; \]
+from which 
+\[ g_\rho = x_1^\rho \xi^{\alpha+\beta}\hdots = \xi^\tau x_1^\rho. \] The rest of the 
+proof  with small changes follows Proof 2 above -- since $p$ is a prime number, we can find two numbers $m$ and $n$, of which one is negative, such that 
+$mp + n\rho = 1$. Also, 
+\[ g_\rho^n = \xi^{n\tau}x_1^{n\rho} = \xi^{n\tau} x_1^{(1-m\rho)}, \] and so 
+\[ \xi^{n\tau}x_1 = g_\rho^n F^m, \] and therefore $\xi^{n\tau}x_1$, which is a root of $x^p - F = 0$, is expressed rationally in terms of $F, f_1, f_2, \hdots, f_p$.   
 \end{proof}
