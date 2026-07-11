@@ -1,0 +1,30 @@
+\section{Abel's Method of Rationalizing a Ratio} As an application of Sylvester's Resultant, let us apply the theorem to the case of two polynomials which are related to Abel's Proof of the 
+insolubility of the quintic equation in terms of radicals. In particular let us examine Abel's method of rationalizing a polynomial function of radicals.
+Let 
+\begin{align*}
+f(x)  &= x^{p} - R\\
+g(x) &=  a_{p-1} x^{p-1}  + a_{p-2} x^{p-2} + \hdots + a_2 x^2 + a_1 x   + a_0,  \\
+\end{align*} where $R$ is not a $p$th power of an element in the field of coefficients. 
+$f(x)$ and $g(x)$ will have a common root if the Sylvester Resultant formed by these two functions vanishes. 
+The roots of $f(x) = 0$ take the form $z_k = \omega^k R^{1\over p}$ and we're assuming that $R^{1\over p}$ is an irrationality in the domain containing the coefficients. 
+Also with respect to Abel's rationalization method 
+we need to show that 
+\be \prod_{k=0}^{p-1}\, g(z_k) = G(z^p)  = G(R)  \mbox{  where $G(R)$ is rational in the domain of the coefficients of } g(x).\ee
+Using $f(x)$ and $g(x)$ we construct the Sylvester Resultant
+\[\det(M) = \prod_{k=0}^{p-1}\, g(z_k)  =
+\det \begin{bmatrix}
+1     & 0 & \cdots  & -R                   &            &    \\
+ 0    &  1 & \ddots & \cdots               & \ddots  &    \\
+ \vdots  &  & \ddots & \cdots               & \ddots  &    \\
+ 0      &  \hdots   &            & 1                       & \cdots  & -R\\
+a_{p-1} &     & \cdots & ~~~~~~a_0 &             & \\
+       &     & \ddots & \cdots                & \ddots & \\
+       &     &            &a_{p-1}                     & \cdots &a_0 \\
+\end{bmatrix}.\]
+
+Since the roots of $f(x) = x^p - R $ are exactly $z_k = \omega^k R^{1\over p}$, substituting them into the formula yields 
+\[ \det(M) =  \prod_{k=0}^{p-1}\, g(z_k) .\] 
+Because computing the determinant $\det(M)$ only involves additions, subtractions, and multiplication of the matrix entries, the 
+final polynomial expression outputted by the determinant can only contain powers of combinations of the terms in the matrix M. 
+Therefore the resulting polynomial must be a function of $x^p = R$ and the coefficients and must therefore be a rational expression. 
+The above is a demonstration of Abel's method of Rationalization. 

@@ -1,0 +1,50 @@
+\section{Synthetic Division}
+Let $f(x) = a_n x^n + a_{n-1} x^{n-1} + \hdots + a_1 x + a_0$ and consider dividing this polynomial 
+by a linear factor $(x-h)$. This division can certainly be performed by long division, but a more compact 
+method is to use Synthetic Division which is outlined below. Let the quotient when \[f(x) = a_n x^n + a_{n-1} x^{n-1} + \hdots + a_1 x + a_0\] is divided by $(x-h)$ be given by 
+\[Q(x) = b_{n-1} x^{n-1} + b_{n-2} x^{n-2} + \hdots + b_1 x + b_0.\]
+
+We then can represent $f(x)$ with the following identity:
+\[ f(x) = (x-h)Q(x) + R,\] with quotient $Q(x)$ and remainder $R$.  The right-hand side of this identity can be grouped according to terms which multiply the same power of $x$ as follows:  
+
+\[
+\begin{array}{r | r | r | r | r | r | r}
+ b_{n-1} x^n & b_{n-2} x^{n-1}  &       b_{n-3} x^{n-2}     &  b_{n-4} x^{n-3}        & \hdots      & b_0 x   & R \\
+               &- h b_{n-1} x^{n-1}   &   - h b_{n-2}x^{n-2}    &     - h b_{n-3}x^{n-3}  & \hdots     &  - hb_1x &  -h b_0 \\
+\end{array}
+\]
+Equating the coefficients of $x$ on both sides of the we get the following recursive relationships:
+
+\begin{eqnarray*}
+b_{n-1}   &=& a_n \\
+b_{n-2}   &=& h b_{n-1} + a_{n-1} \\
+b_{n-3}   &=& h b_{n-2} + a_{n-2} \\
+\hdots     &=& \hdots \\
+b_1         &=& h b_2 + a_2 \\
+b_0         &=& h b_1 + a_ 1\\
+R             &=& h b_0 + a_0 \\
+\end{eqnarray*}
+
+These recursive relations can be represented in the following table (known as Synthetic Division):
+\[
+\begin{array}{r|rrrrrr}
+h & a_n & a_{n-1} & \hdots & a_2 &  a_1 & a_0 \\
+  & & h b_{n-1}     & \hdots & h b_2 &h b_1 & h b_0 \\
+\cline{1-7}
+ & b_{n-1} & b_{n-2} & \hdots & b_1 & b_0 & R
+\end{array}
+\]
+
+As an example let us use Synthetic division to perform the following division: 
+\[ {2x^3 -7x^2 + 5 \over x-3} \]
+Synthetic division give us
+{\polyhornerscheme[x=3]{2x^3-7x^2+5}}
+
+We can read the terms in the Quotient and Remainder from the terms below the horizontal line in the above. 
+\begin{eqnarray*}
+ 2x^3 - 7x^2 + 5 &=& (x-3)(2x^2 -x -3) -4  \mbox{  with quotient } Q(x)  \mbox{ and remainder } R \mbox{ given by:}\\
+ Q(x) &=& 2x^2 - x - 3 \\
+ R   &=& -4
+ \end{eqnarray*}
+ 
+\section{Rational Roots}

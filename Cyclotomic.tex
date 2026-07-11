@@ -43,11 +43,11 @@ and
 $a = (b^s a^t)^p$. The assumed reducibility of $x^p -a$ over $K$ therefore yields a root $(b^s a^t)$ of $x^p - a$ in K. \qed
 \end{proof}
 
-\begin{theorem}[Abel's Version os the Irreducibility of $x^p - F$]
+\begin{theorem}[Abel's Version of the Irreducibility of $x^p - F$]
 If the equations 
 \begin{eqnarray}
 f_1 x^{p-1} + f_2 x^{p-2} + \hdots + f_p &=& 0 \cr
-x^p - F &=& 0
+x^p - F &=& 0,\label{Abel}
 \end{eqnarray}
 where $p$ is a prime number, are simultaneously satisfied, either $f_1, f_2, f_3, \hdots, f_p$ all vanish, or else one of the roots of $x^p - F = 0$ can be expressed rationally in terms of $f_1, f_2, \hdots, f_p$ and $F$.
 \end{theorem}
@@ -55,14 +55,13 @@ where $p$ is a prime number, are simultaneously satisfied, either $f_1, f_2, f_3
 \begin{proof}
 For, suppose the coefficients $f_1, f_2, \hdots, f_p$ don't vanish. 
 The the two equations will have a greatest common divisor (GCD) of the form
-\[ g(x) = x^\rho + g_1 x^{\rho - 1} + g_2 x^{\rho - 2} + \hdots + g_\rho = 0, \]the coefficients of which are 
+\[ g(x) = x^k + g_1 x^{k - 1} + g_2 x^{k - 2} + \hdots + g_k = 0, \]the coefficients of which are 
 rational functions of $F, f_1, f_2, \hdots, f_p$.
-Now if $x_1$ be any one of the roots common to both equations, the other roots will be of the form 
-\[ \xi^\alpha x_1, \xi^\beta x_1, \hdots. \mbox{ where } \xi^\rho -1 = 0; \]
-from which 
-\[ g_\rho = x_1^\rho \xi^{\alpha+\beta}\hdots = \xi^\tau x_1^\rho. \] The rest of the 
-proof  with small changes follows Proof 2 above -- since $p$ is a prime number, we can find two numbers $m$ and $n$, of which one is negative, such that 
-$mp + n\rho = 1$. Also, 
-\[ g_\rho^n = \xi^{n\tau}x_1^{n\rho} = \xi^{n\tau} x_1^{(1-m\rho)}, \] and so 
-\[ \xi^{n\tau}x_1 = g_\rho^n F^m, \] and therefore $\xi^{n\tau}x_1$, which is a root of $x^p - F = 0$, is expressed rationally in terms of $F, f_1, f_2, \hdots, f_p$.   
+Now If $x_1$ be any one of the roots common to equations (\ref{Abel}), the other roots will be of the form 
+\[ \omega^\alpha x_1, \omega^\beta x_1, \dots, \mbox{  where } \omega^p =  1. \] and hence
+\[ g_k = x_1^k \omega^{\alpha + \beta} \hdots = \omega^\pi x_1^k.\]
+Since $p$ is a prime number we can find two numbers $m$ and $n$ of which one is negative, such that $mp + nk = 1$. Also 
+\[ g_k^n = \omega^{n\pi} x_1^{\pi k} = \omega^{n\pi} x_1^{1-nk},\] and therefore
+\[ \omega^{n\pi} x_1 = g_k^n F^m,\] therefore 
+$ \omega^{n\pi} x_1$, which is a root of Eq. (\ref{Abel}) is expressed rationally in terms of $F, f_1, f_2, \hdots f_k$. 
 \end{proof}
