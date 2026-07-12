@@ -48,3 +48,25 @@ We can read the terms in the Quotient and Remainder from the terms below the hor
  \end{eqnarray*}
  
 \section{Rational Roots}
+
+\begin{theorem}
+If the equation with integral coefficients 
+\be a_n x^n + a_{n-1} x^{n-1} + \hdots + a_0 = 0 \label{RationalRoot}\ee
+has a rational root $r/s$, where $r$ and $s$ are integers without a common divisor other than unity, then $r$ is a divisor of $a_0$ and $s$ is a divisor of $a_n$.
+\end{theorem}
+
+\begin{proof}
+If $x$ in Eq. (\ref{RationalRoot}) is replaced by $r/s$ and the denominator is cleared of factors of $s$, then we obtain the following
+\[ a_n r^n + a_{n-1}r^{n-1} s + a_{n-2} r^{n-2} s^ 2 + \hdots  + a_1 r s^{n-1} = - a_0 s^n.\]
+And since $r$ and $s$ are relatively prime, it follows that $r$ is a divisor or $a_0$, as was to be proved. 
+\end{proof}
+
+\begin{corollary}
+if the coefficients in the equation 
+\[ x^n + p_1 x^{n-1} + p_2 x^{n-2} + \hdots + p_n = 0\] 
+are integers, then every rational root of the equation is an integer and a divisor of the constant term $p_n$. 
+\end{corollary}
+
+\begin{proof}
+This corollary follows since $s$ can have only the values $\pm 1$ if $a_n = 1$.  
+\end{proof}

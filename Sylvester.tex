@@ -120,3 +120,71 @@ Similarly, ({\it ii}) follows because to replace each $g_i$ by $t^ig_i$ and each
 multiplying the $i$th row by $t^{m+i}$ for $i=1,2,...,m$ and by $t^i$ for $i=m+1,...,m+n$, and the $j$th column by $t^{-j}$\/. The overall 
 effect it to multiply the determiant $R_{m,n}(g,f)$ by $t^K$ where $K = mn+\sum_{i=1}^{m+n} i - \sum_{j=1}^{m+n} j = mn$.\qed 
 \end{proof}
+
+\section{Application to Clearing Denominators or Irrationalities}
+
+Sylvester's dialytic elimination method (and the resulting dialytic resolvent) can be used as an alternate approach to clear denominators and eliminate variables,
+yielding the same final polynomial equations as Abel's method of multiplying conjugate algebraic expressions to clear denominators of radical expressions and roots of unity.
+While Niels Henrik Abel's famous 1826 paper on the impossibility of solving the general quintic equation relied on multiplying by algebraic conjugates to clear 
+denominators systematically, James Joseph Sylvester's later dialytic method (developed in the 1840s) reformulates the elimination problem into linear algebra. 
+Instead of constructing field extensions and tracking field conjugates, Sylvester's approach creates a system of linear equations by treating powers of the variable as independent unknowns, solving it via a single determinant
+
+{\bf 1. Formulated the Algebraic Elimination} 
+Suppose Abel's method encounters an expression involving an algebraic denominator, such as \(y = \frac{A(x)}{B(x)}\), where \(x\) is a root of a known polynomial \(P(x) = 0\). 
+Abel would clear the denominator by finding the algebraic conjugates of \(B(x)\) relative to the roots of \(P(x)\) and multiplying them.\\
+
+To use Sylvester's resolvent instead, we rewrite the relationship as a system of two polynomial equations sharing a common root \(x\):\(P(x) = 0\)
+(The base polynomial equation)\(R(x, y) = y \cdot B(x) - A(x) = 0\) (The relation defining \(y\))
+Our goal is to eliminate \(x\) entirely to find a polynomial equation purely in terms of \(y\).\\
+
+{\bf 2. Construct the Dialytic Matrix}
+Sylvester's method eliminates \(x\) by generating a set of linearly independent equations. 
+If \(P(x)\) has degree \(n\) and \(R(x, y)\) has degree \(m\) with respect to \(x\), we multiply \(P(x)\) by successive powers of \(x\) up to \(x^{m-1}\), 
+and multiply \(R(x, y)\) by powers of \(x\) up to \(x^{n-1}\).
+This creates a system of \(n + m\) equations:\(x^{k}\cdot P(x)=0\quad \text{for\ }k=0,1,\dots ,m-1\)\(x^{j}\cdot R(x,y)=0\quad \text{for\ }j=0,1,\dots ,n-1\)
+We treat each power of \(x\) (from \(x^{0}\) up to \(x^{n+m-1}\)) as a distinct, independent linear variable.\\
+
+{\bf 3. Compute the Sylvester Resolvent}
+For a non-trivial solution to exist for this linear system, the determinant of the coefficients must equal zero. 
+This determinant is the Sylvester Resultant (or Sylvester Resolvent), denoted as \(\text{Res}(P, R, x)\). The matrix takes the form: \\ \\
+\(\text{Res}(P,R,x)=\det \left(
+\begin{matrix}p_{n}&p_{n-1}&\dots &p_{0}&0&\dots &0\\ 0&p_{n}&p_{n-1}&\dots &p_{0}&\dots &0\\ 
+\vdots &&\ddots &&&\ddots &\vdots \\ 
+r_{m}(y)&r_{m-1}(y)&\dots &r_{0}(y)&0&\dots &0\\ 
+0&r_{m}(y)&r_{m-1}(y)&\dots &r_{0}(y)&\dots &0\\ \vdots &&\ddots &&&\ddots &\vdots 
+\end{matrix}\right)=0\) \\
+
+Evaluating this determinant yields a pure polynomial equation \(Q(y) = 0\), completely clearing the denominator without ever needing to calculate explicit field conjugates or Galois orbits.\\
+
+%Comparison of Methods
+%FeatureAbel's Conjugate Multiplication (1826)Sylvester's Dialytic Resolvent (1840s)Mathematical BasisField theory and symmetric polynomials [1].Linear algebra and matrix determinants.Computational MechanismMultiplies the expression by all \(\prod (y \cdot B(x_i) - A(x_i))\) for every conjugate root \(x_{i}\) [1].Builds a coefficient matrix and evaluates its determinant.Root Knowledge RequiredConceptually requires tracking the structural behavior of all roots of \(P(x)\) [1].Requires only the explicit polynomial coefficients of \(P(x)\) and \(R(x)\).Algorithmic ComplexityScaling can become highly tedious and symbolically complex for large degrees.Well-suited for modern computer algebra systems and symbolic computation.✅ 
+{\bf Conclusion}
+Sylvester's dialytic resolvent acts as a perfect mathematical alternative to Abel's conjugate multiplication for clearing denominators. 
+By framing the algebraic relation as a simultaneous polynomial system, Sylvester bypasses the need to explicitly compute field conjugates, instead achieving the exact same polynomial reduction through the evaluation of a single matrix determinant.
+
+To see exactly how Sylvester's method serves as a direct alternative, we can look at a representative reduction from Niels Henrik Abel's work.
+In his 1826 impossibility proof, Abel builds algebraic functions of increasing``orders'' by adjoining radicals. 
+He routinely deals with expressions where a new variable \(y\) is a rational function of a root \(x\), where \(x\) satisfies a lower-degree base polynomial equation.
+Let's isolate a core algebraic step typical of Abel's paper: reducing an expression where \(y\) is defined by a denominator containing a quadratic root \(x\), where \(x\) satisfies the base cubic equation:\(P(x)=x^{3}+ax+b=0\)
+Suppose the relationship defining the new variable \(y\) is given by the rational function:\(y=\frac{1}{x^{2}+x}\) \\
+
+{\bf 1. Formulate the Two Polynomials}
+To clear the denominator using Sylvester's method instead of multiplying by algebraic conjugates, 
+we first transform the rational function into a second polynomial equation, \(R(x, y) = 0\), grouped by powers of \(x\):\(y(x^{2}+x)-1=0\implies R(x,y)=yx^{2}+yx-1=0\)Now we have a system of two polynomial equations sharing the common 
+root \(x\):\(P(x) = 1x^3 + 0x^2 + ax + b = 0\)  
+(Degree \(n = 3\))\(R(x, y) = yx^2 + yx - 1 = 0\) (Degree \(m = 2\) with respect to \(x\)) \\
+
+{\bf 2. Set Up the Rows of the Sylvester Matrix}
+The Sylvester matrix will have a total dimension of \((n + m) \times (n + m)\), which means a \(5 \times 5\) matrix. 
+We shift the coefficients of each polynomial across the columns:Rows 1 \& 2 (from \(P(x)\)): Multiply \(P(x)\) by \(x^{1}\) and \(x^{0}\).
+Rows 3, 4, \& 5 (from \(R(x,y)\)): Multiply \(R(x,y)\) by \(x^{2}\), \(x^{1}\), and \(x^{0}\).
+The columns correspond to the descending independent powers of \(x\): \(\left(\begin{matrix}x^{4}&x^{3}&x^{2}&x^{1}&x^{0}\end{matrix}\right)\). \\
+
+{\bf 3. The Explicit Sylvester Matrix}
+\(\mathbf{S}=\left(\begin{matrix}1&0&a&b&0\\ 0&1&0&a&b\\ y&y&-1&0&0\\ 0&y&y&-1&0\\ 0&0&y&y&-1\end{matrix}\right)\) \\
+
+{\bf 4. Clearing the Denominator}
+To completely eliminate \(x\) and clear the denominator, you take the determinant of this matrix and set it to zero (\(\det(\mathbf{S}) = 0\)).Evaluating this \(5 \times 5\) determinant 
+yields a pure polynomial equation in terms of \(y\), \(a\), and \(b\). 
+This polynomial gives you the exact same result Abel would get by finding the other conjugate roots of the cubic equation and computing:
+\((y(x_{1}^{2}+x_{1})-1)(y(x_{2}^{2}+x_{2})-1)(y(x_{3}^{2}+x_{3})-1)=0\)
