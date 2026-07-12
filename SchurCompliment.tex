@@ -1,0 +1,20 @@
+
+{\bf Schur's complement}:
+Suppose p, q are nonnegative integers, and suppose $A$, $B$, $C$, $D$ are respectively $p$-by-$p$, $p$-by-$q$, $q$-by-$p$, and $q$-by-$q$ matrices of complex numbers. Let
+\begin{equation}
+{\displaystyle M=\left[{\begin{matrix}A&B\\C&D\end{matrix}}\right]}
+\end{equation} so that M is a ($p$ + $q$)-by-($p$ + $q$) matrix.\\
+
+If $D$ is invertible, then the Schur complement of the block $D$ of the matrix $M$ is the $p$-by-$p$ matrix defined by
+\begin{equation}
+{\displaystyle M/D:=A - BD^{-1}C.}\label{M/D}
+\end{equation}
+and $$\det M = \det D \det (A - BD^{-1}C).$$
+
+If $A$ is invertible, the Schur complement of the block $A$ of the matrix $M$ is the $q$-by-$q$ matrix defined by
+\begin{equation}
+{\displaystyle M/A:=D - CA^{-1}B.}\label{M/A}
+\end{equation}
+and $$\det M = \det A \det (D - CA^{-1}B).$$
+
+In the case that $A$ or $D$ is singular, substituting a generalized inverse for the inverses on $M/A$ and $M/D$ yields the generalized Schur complement.\\

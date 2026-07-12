@@ -147,12 +147,12 @@ We treat each power of \(x\) (from \(x^{0}\) up to \(x^{n+m-1}\)) as a distinct,
 {\bf 3. Compute the Sylvester Resolvent}
 For a non-trivial solution to exist for this linear system, the determinant of the coefficients must equal zero. 
 This determinant is the Sylvester Resultant (or Sylvester Resolvent), denoted as \(\text{Res}(P, R, x)\). The matrix takes the form: \\ \\
-\(\text{Res}(P,R,x)=\det \left(
+\[\text{Res}(P,R,x)=\det \left(
 \begin{matrix}p_{n}&p_{n-1}&\dots &p_{0}&0&\dots &0\\ 0&p_{n}&p_{n-1}&\dots &p_{0}&\dots &0\\ 
 \vdots &&\ddots &&&\ddots &\vdots \\ 
 r_{m}(y)&r_{m-1}(y)&\dots &r_{0}(y)&0&\dots &0\\ 
 0&r_{m}(y)&r_{m-1}(y)&\dots &r_{0}(y)&\dots &0\\ \vdots &&\ddots &&&\ddots &\vdots 
-\end{matrix}\right)=0\) \\
+\end{matrix}\right)=0\] \\
 
 Evaluating this determinant yields a pure polynomial equation \(Q(y) = 0\), completely clearing the denominator without ever needing to calculate explicit field conjugates or Galois orbits.\\
 
