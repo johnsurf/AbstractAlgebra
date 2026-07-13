@@ -1,5 +1,31 @@
-\section{Roots of Unity Filters}
+\section{Roots of Unity}
 
+Let $r$ denote an $n$th root of unity. If there is no positive integer $m < n$ such that $r^m = 1$, then we say that $r$ is a primitive root $n$th root of unity.
+
+\begin{theorem}
+Let $R = \cos(2\pi/n) + i \sin(2\pi/n)$. The number $R^k ,~(1 \le k \le n)$ is a primitive $n$th roof of unity, if and only if, the integers $k$ and $n$ are relatively prime. 
+\end{theorem}
+
+\begin{proof}
+First assume that $k$ and $n$ have a common factor $d$. Then $n = sd,  k = td$. Then 
+\[ (R^k)^s = (R^{td})^s = (R^{sd})^t = (R^n)^t = 1.\]
+Since $s< n$, and $(R^k)^s = 1$, it follows that $R^k$ is not a primitive root of unity. \\
+
+We next assume that $k$ and $n$ are relatively prime, and show that $(R^k)^n$ cannot have the value $1$ if $m < n$. We use De Moivre's theorem to write
+\[ (R^k)^m = \cos{2km\pi\over n} + i \sin{2km\pi\over n}.\]
+If the latter quantity is equal to $1$, then $2km\pi/n$ must be a multiple of $2\pi$,  say $(2 km\pi/n) = 2h\pi$. Therefore $km$ must be divisible by $n$. But this is impossible since $k$ has no
+factor in common with $n$ and $m < n$ by assumption. Therefore $(R^k)^m \not= 1$ if $m < n$. Therefore $R^k$ is a primitive root of unity if $k$ and $n$ are relatively prime. 
+\end{proof}
+
+\section{Root of Unity Filters}
+
+\begin{theorem}
+For any polynomial or convergent series \(F(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + \dots\), 
+you can filter out the sum of every $n$-th coefficient $(a_0 + a_n + a_{2n} + \dots)$ 
+using the $n$-th roots of unity:
+\[\sum _{k=0}^{\infty }a_{kn}=\frac{1}{n}\sum _{j=0}^{n-1}F(\omega ^{j})\]
+where \(\omega = e^{\frac{2\pi i}{n}}\) is a primitive n-th root of unity.
+\end{theorem}
 
 To see exactly why this cancellation happens, we can analyze the sum using the geometric series formula.
 Let the sum be \(S = \sum_{k=0}^{n-1} (\omega^m)^k\), where \(\omega = e^{\frac{2\pi i}{n}}\).\\
@@ -50,23 +76,42 @@ Applying the filter to this product involves substituting each root of unity \(\
 Construct the Generating Function: Represent the event or choice as a polynomial, where powers indicate the "value" and coefficients indicate the number of combinations.
 Evaluate at Roots of Unity: Calculate \(P(\omega^j)\) for \(j = 0, 1, \dots, n-1\).
 Exploit the Product Rule: Because P(x) is a product, \(P(\omega^j)\) becomes the product of the individual evaluated factors:
-\(P(\omega^j) = F_1(\omega^j) \cdot F_2(\omega^j) \cdot \dots \cdot F_m(\omega^j)\)
-Average the Results: Sum these products and divide by n to isolate the terms matching your modulo condition. [1, 2, 3]\\
+\(P(\omega^j) = F_1(\omega^j) \cdot F_2(\omega^j) \cdot \dots \cdot F_m(\omega^j)\) \\
 
-Example: Divisibility of Subset Sums
-Suppose you want to find the number of subsets of the set \(\{1, 2, 3\}\) whose sum of elements is divisible by 2.
 
-Generating Function: Each element can be either included (x) or not included (1). The polynomial for the whole set is the product:
-P(x) = (1+x)(1+x?)(1+x?) [1]
-Apply the Filter (mod 2): Since we want the sum to be divisible by 2, we use the 2nd roots of unity, which are 1 and -1. [1]
-Evaluate and Add:
- P(1) = (1+1)(1+1?)(1+1?) = 2 ? 2 ? 2 = 8
-  P(-1) = (1-1)(1+(-1)?)(1+(-1)?) = 0 ? 2 ? 0 = 0\\
+%Average the Results: Sum these products and divide by n to isolate the terms matching your modulo condition. [1, 2, 3]\\
+
+%Example: Divisibility of Subset Sums
+%Suppose you want to find the number of subsets of the set \(\{1, 2, 3\}\) whose sum of elements is divisible by 2.
+
+%Generating Function: Each element can be either included (x) or not included (1). The polynomial for the whole set is the product:
+%P(x) = (1+x)(1+x^2)(1+x^3) [1]
+%Apply the Filter (mod 2): Since we want the sum to be divisible by 2, we use the 2nd roots of unity, which are 1 and -1. [1]
+%Evaluate and Add:
+ %P(1) = (1+1)(1+1?)(1+1?) = 2 ? 2 ? 2 = 8
+  %P(-1) = (1-1)(1+(-1)?)(1+(-1)?) = 0 ? 2 ? 0 = 0\\
   
- Average:
- \(\frac{P(1) + P(-1)}{2} = \frac{8 + 0}{2} = 4\)\\
+ %Average:
+ %\(\frac{P(1) + P(-1)}{2} = \frac{8 + 0}{2} = 4\)\\
 
-There are 4 valid subsets whose sum is divisible by 2: \(\{\emptyset\}, \{2\}, \{1,3\}, \{1,2,3\}\).\\
+%There are 4 valid subsets whose sum is divisible by 2: \(\{\emptyset\}, \{2\}, \{1,3\}, \{1,2,3\}\).\\
 
 %Resources
 %For a clear, visual explanation of how the roots of unity filter isolates terms in a product, check out this video:
+
+{\bf Product of a polynomial over all the roots of unity}
+
+When evaluating the product of a polynomial \(P(x)\) evaluated over all \(n\)-th roots of unity, 
+the result is given by the algebraic formula:
+\[P(x_1) \cdot P(x_2) \cdots P(x_n) = P(1) \cdot P(\omega) \cdots P(\omega^{n-1}) = P(n, x^n) \quad \text{(or often simply } (-1)^n P(0)^n \text{)}\]
+This can be heavily simplified to \(x^{mn} - a^n\) for specific forms of polynomials, such as \(P(x) = x^m - a\).
+To calculate this for an arbitrary polynomial \(P(x) = a_m x^m + a_{m-1} x^{m-1} + \dots + a_0\), 
+you can utilize resultants or rely on specific properties of roots of unity, which are formally known to be roots of the polynomial \(x^n - 1\). 
+The resulting product depends on the degree of the polynomial and whether the roots include primitive components.
+
+Notice that
+\begin{eqnarray*}
+y^p - x^p &=& \prod_{i=0}^{p-1} (y - \omega^i x) \mbox{ therefore} \cr
+\prod_{i = 0}^{p-1} f(\omega^i x) &=& Res_y(y^p - x^p, f(y)),
+\end{eqnarray*} Where $Res_y(h,g)$ is Sylvester's Resolvent for two polynomials $h(x)$ and $g(x)$. 
+%Where  ???????? is the resultant of the polynomials in  ??. The above is just a particular case of the so called Poisson product formula. You can then compute the resultant using for instance Sylvester's determinant formula.
