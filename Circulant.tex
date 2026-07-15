@@ -1,0 +1,94 @@
+\section{Circulant Matrices}
+
+{\bf 1. The Structure of a Circulant Matrix}
+An \(n \times n\) circulant matrix \(C\) is completely defined by its first row vectors  \((c_0, c_1, \dots, c_{n-1})\). 
+Each subsequent row is a right circular shift of the preceding row:
+\[C=\left(\begin{matrix}c_{0}&c_{1}&c_{2}&\dots &c_{n-1}\\ c_{n-1}&c_{0}&c_{1}&\dots &c_{n-2}\\ c_{n-2}&c_{n-1}&c_{0}&\dots &c_{n-3}\\ \vdots &\vdots &\vdots &\ddots &\vdots \\ c_{1}&c_{2}&c_{3}&\dots &c_{0}\end{matrix}\right)\]
+We can express \(C\) as a polynomial combination of a fundamental cyclic shift matrix 
+\(P\): \[P=\left(\begin{matrix}0&1&0&\dots &0\\ 0&0&1&\dots &0\\ \vdots &\vdots &\vdots &\ddots &\vdots \\ 0&0&0&\dots &1\\ 1&0&0&\dots &0\end{matrix}\right)\]
+Because shifting \(n\) times returns the matrix back to the identity (\(P^n = I\)), the characteristic equation of this shift operator is \(P^n - I = 0\). 
+Consequently, its eigenvalues must satisfy \(\lambda^n = 1\), which explicitly forces the \(n\)-th roots of unity into the equation.
+Any circulant matrix can be built directly out of \(P\):\(C=c_{0}I+c_{1}P+c_{2}P^{2}+\dots +c_{n-1}P^{n-1}\) \\
+
+{\bf 2. Roots of Unity as Eigenvectors}
+Let \(\omega \) be the primitive \(n\)-th root of unity: \(\omega =e^{\frac{2\pi i}{n}}\)
+The distinct \(n\)-th roots of unity are given by \(\omega^0, \omega^1, \omega^2, \dots, \omega^{n-1}\).
+If we construct a test vector \(v_{k}\) using the powers of the \(k\)-th root of unity:
+\[v_{k}=\left(\begin{matrix}1\\ \omega ^{k}\\ \omega ^{2k}\\ \vdots \\ \omega ^{(n-1)k}\end{matrix}\right)\]
+Multiplying the shift matrix \(P\) by this vector shifts every element up by one position, moving the bottom element to the top:
+\[Pv_{k}=\left(\begin{matrix}\omega ^{k}\\ \omega ^{2k}\\ \vdots \\ \omega ^{(n-1)k}\\ 1\end{matrix}\right)=\omega^{k}\left(\begin{matrix}1\\ \omega ^{k}\\ \vdots \\ \omega ^{(n-2)k}\\ \omega ^{-k}\end{matrix}\right)\]
+Because \(\omega^n = 1,\)  we know that \(\omega^{-k} = \omega^{(n-1)k}\). Substituting this back in reveals that \(v_{k}\) is an exact eigenvector of \(P\):\(Pv_{k}=\omega ^{k}v_{k}\) \\
+
+{\bf 3. Calculating the Eigenvalues of \(C\)}
+Because \(C\) is a polynomial in terms of \(P\), it shares the exact same eigenvectors (\(v_{k}\)) as \(P\). 
+We can calculate the corresponding eigenvalues (\(\lambda _{k}\)) of the circulant matrix by applying the polynomial equation directly to the roots:
+
+\[ Cv_{k} = \left(\sum _{j=0}^{n-1}c_{j}P^{j}\right)v_{k} = \left(\sum _{j=0}^{n-1}c_{j}(\omega ^{k})^{j}\right)v_{k}\] \[\lambda _{k} = c_{0}+c_{1}\omega ^{k}+c_{2}\omega ^{2k}+\dots +c_{n-1}\omega ^{(n-1)k} \]
+
+This structure shows that every eigenvalue \(\lambda _{k}\) of a circulant matrix is simply the evaluation of the row's coefficients mapped against the \(n\)-th roots of unity.\\
+
+{4. Diagonalization via the DFT Matrix}
+By stacking all \(n\) eigenvectors together as columns, we form a unitary change-of-basis matrix \(F\), universally known as the Vandermonde / Discrete Fourier Transform (DFT) matrix:
+\[F = \frac{1}{\sqrt{n}} 
+\left(\begin{matrix}1&1&1&\dots &1\\ 
+1&\omega &\omega ^{2}&\dots &\omega ^{n-1}\\ 
+1&\omega ^{2}&\omega ^{4}&\dots &\omega ^{2(n-1)}\\ 
+\vdots &\vdots &\vdots &\ddots &\vdots \\ 
+1&\omega ^{n-1}&\omega ^{2(n-1)}&\dots &\omega ^{(n-1)(n-1)}
+\end{matrix}\right)\]
+Using this matrix, any circulant matrix \(C\) can be completely diagonalized:
+\[C=F^{\dag }\Lambda F\]
+Where \(F^{\dag }\)
+is the conjugate transpose of \(F\), and \[\Lambda = \text{diag}(\lambda_0, \lambda_1, \dots, \lambda_{n-1})\] is the diagonal matrix containing the eigenvalues computed from the roots of unity.\\
+
+{\bf Eigenvalues and Determinant of a Circulant}
+Any circulant matrix $C$ can be completely diagonalized using the Fourier matrix. If the first row of $C$ is given by the vector 
+\[c = [c_0, c_1, \dots, c_{n-1}],\] 
+its eigenvalues \(\lambda _{j}\) are simply the Discrete Fourier Transform (DFT) of the vector c:
+\[\lambda _{j}=\sum _{k=0}^{n-1}c_{k}e^{-i2\pi \frac{jk}{n}}\]
+Because of this, the determinant of a circulant matrix is the product of all its eigenvalues:
+\[\det (C)=\prod _{j=0}^{n-1}\lambda _{j}.\]
+
+{\bf How Circulants Connect with Abel's method of Rationalization} Abel's method of rationalization is used to eliminate radical expressions from denominators of a ratio of polynomials $P(x)/Q(x)$ and relies on multiplying an algebraic 
+$Q(x)$ expression by its ``conjugates'' $Q(\omega x), Q(\omega^2 x), \hdots, Q(\omega^{n-1} x)$ over a radical extension field, for $\omega$ a primitve $n$-th root of unity\\
+
+{\it Roots of Unity}: In an \(n\times n\) circulant determinant, the eigenvalues of the matrix are given by evaluating a polynomial at the \(n\)-th primitive roots of unity (\(\omega ^{k}\)).\\
+
+{\it The Product Rule}: The determinant of a circulant matrix equals the product of all its eigenvalues:
+\[\det (C)=\prod _{k=0}^{n-1}(c_{0}+c_{1}\omega ^{k}+c_{2}\omega ^{2k}+\dots +c_{n-1}\omega ^{(n-1)k})\] 
+
+{\it Rationalization}: In Abel's method, if you want to rationalize a denominator containing a radical like \(\sqrt[n]{a}\), you treat \(\sqrt[n]{a}\) as the variable \(x\) in a polynomial.
+By mapping the denominator's coefficients into a circulant matrix, the resulting determinant calculates the product of the expression across all its field conjugates.
+Because this product covers every root of unity, all the complex and irrational radical terms cancel out,
+leaving a completely rationalized, pure integer or polynomial value as the final determinant. \\ 
+
+{\bf Summary of Rationalizing Denominators in Abel's Ratio $P(x)/Q(x)$}\\
+
+{\bf 1. The General \(n \times n\) Matrix Definition}
+Let \(\alpha = \sqrt[n]{d}\) be an algebraic radical of degree \(n\). 
+The algebraic denominator expression to be cleared is defined as:
+\(Q(\alpha )=\sum _{j=0}^{n-1}a_{j}\alpha ^{j}=a_{0}+a_{1}\alpha +a_{2}\alpha ^{2}+\dots +a_{n-1}\alpha ^{n-1}\)
+The associated \(n \times n\) twisted circulant matrix \(C\) is structured as follows:
+\[C=\left(\begin{matrix}a_{0}&a_{1}&a_{2}&\dots &a_{n-2}&a_{n-1}\\ d\cdot a_{n-1}&a_{0}&a_{1}&\dots &a_{n-3}&a_{n-2}\\ d\cdot a_{n-2}&d\cdot a_{n-1}&a_{0}&\dots &a_{n-4}&a_{n-3}\\ \vdots &\vdots &\vdots &\ddots &\vdots &\vdots \\ d\cdot a_{2}&d\cdot a_{3}&d\cdot a_{4}&\dots &a_{0}&a_{1}\\ d\cdot a_{1}&d\cdot a_{2}&d\cdot a_{3}&\dots &d\cdot a_{n-1}&a_{0}\end{matrix}\right)\] 
+
+{\bf 2. The Determinant (Field Norm Formula)}
+Let \(\omega = e^{\frac{2\pi i}{n}}\) be the primitive \(n\)-th root of unity.
+The determinant factors into the product of the field conjugates:
+\[\det (C)=\prod _{k=0}^{n-1}\left(\sum _{j=0}^{n-1}a_{j}\left(\omega ^{k}\sqrt[n]{d}\right)^{j}\right)\]
+Expanding this product eliminates all instances of \(\omega \) and \(\sqrt[n]{d}\).
+It yields a purely rational polynomial:
+\[\det (C)=\text{Norm}_{\mathbb{Q}(\sqrt[n]{d})/\mathbb{Q}}(Q(\alpha ))\in \mathbb{Q}\] 
+
+{\bf 3. Clearing the Denominator via Adjugate}
+To rationalize the fraction \(\frac{1}{Q(\alpha )}\), use the matrix inversion property involving the adjugate matrix 
+\(\text{adj}(C)\): \[C\cdot \text{adj}(C)=\det (C)\cdot I_{n}\]
+The vector of algebraic basis elements is defined as:
+\[\vec{\alpha }=\left(\begin{matrix}1\\ \alpha \\ \alpha ^{2}\\ \vdots \\ \alpha ^{n-1}\end{matrix}\right)\]
+By the construction of the twisted circulant matrix, we have the identity:
+\[C\vec{\alpha }=Q(\alpha )\vec{\alpha }\]
+Multiplying both sides by the adjugate matrix 
+\(\text{adj}(C)\) yields:\[\det (C)\vec{\alpha }=Q(\alpha )\cdot \text{adj}(C)\vec{\alpha }\]
+Extracting the first component (the top row) gives the exact rationalization identity:
+\[\frac{1}{a_{0}+a_{1}\alpha +\dots +a_{n-1}\alpha ^{n-1}}=\frac{\sum _{j=0}^{n-1}M_{0,j}\alpha ^{j}}{\det (C)}\]
+Where \(M_{0,j}\) represents the signed \((0,j)\) cofactor of the first row of matrix \(C\):
+\[M_{0,j}=(-1)^{j}\det (C_{\text{minor}(0,j)})\]
