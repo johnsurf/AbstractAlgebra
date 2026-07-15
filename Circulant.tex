@@ -62,6 +62,20 @@ By mapping the denominator's coefficients into a circulant matrix, the resulting
 Because this product covers every root of unity, all the complex and irrational radical terms cancel out,
 leaving a completely rationalized, pure integer or polynomial value as the final determinant. \\ 
 
+{\bf Twisted Circulant Matrix}
+
+A twisted Circulant matrix (often called a $\lambda$-circulant or twistulant matrix) is a square $n \times n$ matrix where each row is shifted cyclically to the right by one position, much like a traditional circulant matrix. 
+However, when the final element wraps around to the beginning, it is multiplied by a specific complex scalar, usually denoted as $\lambda$. \\
+
+{\bf Structure}
+For an $n \times n$ matrix defined by the first row \((c_0, c_1, c_2, \dots, c_{n-1})\) and a twist factor $\lambda$, 
+the matrix takes the following form:
+\[\left[\begin{matrix}c_{0}&c_{1}&c_{2}&\dots &c_{n-1}\\ 
+\lambda c_{n-1}&c_{0}&c_{1}&\dots &c_{n-2}\\ 
+\lambda c_{n-2}&\lambda c_{n-1}&c_{0}&\dots &c_{n-3}\\ 
+\vdots &\vdots &\vdots &\ddots &\vdots \\ 
+\lambda c_{1}&\lambda c_{2}&\lambda c_{3}&\dots &c_{0}\end{matrix}\right]\] \\
+
 {\bf Summary of Rationalizing Denominators in Abel's Ratio $P(x)/Q(x)$}\\
 
 {\bf 1. The General \(n \times n\) Matrix Definition}
