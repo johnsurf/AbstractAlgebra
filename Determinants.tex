@@ -122,3 +122,61 @@ a_{\beta_q\sigma_1} & a_{\beta_q\sigma_2} & \hdots & a_{\beta_q\sigma_q} \\
 The sets $\{\alpha_1, \alpha_2, ..., \alpha_p\}$ and $\{ \beta_1, \beta_2, ..., \beta_q\}$ were defined to be fixed.
 The summation is taken over all $p$-tuples $(\rho_1, \rho_2, ..., \rho_p)$ from among the numbers $1,2,...,n$ for which $\rho_1 < \rho_2 < ... < \rho_p$ and where
 $$\sigma_1 < \sigma_2 < ... < \sigma_q$$ are the remaining $q$ integers.\\
+
+{\bf Jordan Canonical Form}
+
+The Jordan Canonical Form (JCF) expresses an 
+$n \times n$ matrix $A$ as \[J = P^{-1}AP,\] where J is a block-diagonal matrix of Jordan blocks, and $P$ is an invertible matrix of generalized eigenvectors. 
+This transformation reveals the underlying action of a linear operator by isolating its eigenvalues and its defectiveness.\\
+
+{\bf The Transformation Formula for Jordan Canonical Form} 
+The similarity transformation relates an arbitrary matrix $A$ to its JCF, $J$, via the equation:
+\[ J = P^{-1}AP \]
+Where:
+\begin{itemize}
+\item[] A is an $n \times n$ matrix.
+\item[]J is the Jordan canonical form. It is block-diagonal, composed of individual Jordan blocks:  \(J = \text{diag}(J_1, J_2, \dots, J_k)\).
+\item[]P is the change-of-basis matrix, whose columns are the generalized eigenvectors of A.
+\end{itemize}
+
+{\bf Structure of the Jordan Block (\(J_{i}\))}
+A single Jordan block \(J_{i}\) of size $m \times m$ corresponding to an eigenvalue $\lambda$ takes the following form:
+\[J_i = \begin{bmatrix} \lambda & 1 & 0 & \dots & 0 \\
+0 & \lambda & 1 & \dots & 0 \\ 
+0 & 0 & \lambda & \dots & 0 \\ 
+\vdots & \vdots & \vdots & \ddots & 1 \\ 
+0 & 0 & 0 & \dots & \lambda \end{bmatrix}
+\]
+\begin{itemize}
+\item[]The eigenvalue $\lambda$ lies on the main diagonal.
+\item[]The superdiagonal (the entries directly above the main diagonal) consists entirely of 1s.
+\item[]All other entries are 0.
+\item[]If m = 1, the block is simply \([\lambda]\), meaning A is fully diagonalizable for that specific eigenvalue.
+\end{itemize}
+
+{\bf Constructing the Transformation Matrix ($P$) }
+The matrix $P$ is constructed by assembling ``chains of generalized eigenvectors'' that span the generalized eigenspace of $A$. 
+For an eigenvalue $\lambda$ with algebraic multiplicity $m$, a chain of generalized eigenvectors \(\{v_1, v_2, \dots, v_m\}\) is found by solving the following sequence of equations:
+
+\begin{samepage}\begin{itemize}
+\item[]\((A - \lambda I)v_1 = 0\) (This makes $v_1$ a standard eigenvector)
+\item[]\((A - \lambda I)v_2 = v_1\)
+\item[]\((A - \lambda I)v_3 = v_2\)
+\item[]\(\quad \vdots\)
+\item[]\((A - \lambda I)v_m = v_{m-1}\)
+\end{itemize}
+\end{samepage}
+
+The columns of $P$ are then ordered as \([v_1, v_2, \dots, v_m]\). Each Jordan block requires one linearly independent eigenvector, meaning the number of blocks corresponds directly to the geometric multiplicity of the eigenvalue.\\
+
+{\bf Why the JCF is Important}
+\begin{itemize}
+\item[]{\bf Matrix Similarity}: Two square matrices are similar if and only if they have the exact same Jordan canonical form, up to a permutation of the Jordan blocks.
+\item[]{\bf System of Differential Equations}: The JCF simplifies solving systems of linear differential equations of the form $\dot{x} = Ax$ by decoupling the system into simpler, solvable sub-systems, even when A is not diagonalizable.
+\item[]{\bf Matrix Powers}: It simplifies the calculation of complex matrix functions and large powers of a matrix, as \[A^k = P J^k P^{-1}\]
+\end{itemize}
+
+{\bf Relationship of Determinant to Eigenvalues of an $n \times n$ matrix}
+
+In Diagonal or Jordan Canonical Form the Determinant will be given by the product of the diagonal elements $\lambda_k$. For an $n \times n$ matrix $M$ with eigenvalues $\lambda_k, k = 1, 2, \hdots, n$
+\[ \det M = \prod_{k = 1}^n \, \lambda_k.\]
