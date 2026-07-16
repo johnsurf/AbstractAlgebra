@@ -93,14 +93,14 @@ Expanding this product eliminates all instances of \(\omega \) and \(\sqrt[n]{d}
 It yields a purely rational polynomial:
 \[\det (C)=\text{Norm}_{\mathbb{Q}(\sqrt[n]{d})/\mathbb{Q}}(Q(\alpha ))\in \mathbb{Q}\] 
 
-{\bf 3. Clearing the Denominator via Adjugate}
-To rationalize the fraction \(\frac{1}{Q(\alpha )}\), use the matrix inversion property involving the adjugate matrix 
+{\bf 3. Clearing the Denominator via Classical Adjoint}
+To rationalize the fraction \(\frac{1}{Q(\alpha )}\), use the matrix inversion property involving the Classical Adjoint matrix 
 \(\text{adj}(C)\): \[C\cdot \text{adj}(C)=\det (C)\cdot I_{n}\]
 The vector of algebraic basis elements is defined as:
 \[\vec{\alpha }=\left(\begin{matrix}1\\ \alpha \\ \alpha ^{2}\\ \vdots \\ \alpha ^{n-1}\end{matrix}\right)\]
 By the construction of the twisted circulant matrix, we have the identity:
 \[C\vec{\alpha }=Q(\alpha )\vec{\alpha }\]
-Multiplying both sides by the adjugate matrix 
+Multiplying both sides by the Classical Adjoint matrix 
 \(\text{adj}(C)\) yields:\[\det (C)\vec{\alpha }=Q(\alpha )\cdot \text{adj}(C)\vec{\alpha }\]
 Extracting the first component (the top row) gives the exact rationalization identity:
 \[\frac{1}{a_{0}+a_{1}\alpha +\dots +a_{n-1}\alpha ^{n-1}}=\frac{\sum _{j=0}^{n-1}M_{0,j}\alpha ^{j}}{\det (C)}\]
