@@ -1,4 +1,42 @@
-\section{Circulant Matrices}
+\section{Products over the Roots of Unity}
+
+{\bf Product of a polynomial over all the roots of unity}
+
+%When evaluating the product of a polynomial \(P(x)\) evaluated over all \(n\)-th roots of unity, 
+%the result is given by the algebraic formula:
+%\[P(x_1) \cdot P(x_2) \cdots P(x_n) = P(1) \cdot P(\omega) \cdots P(\omega^{n-1}) = P(n, x^n) \quad \text{(or often simply } (-1)^n P(0)^n \text{)}\]
+%This can be heavily simplified to \(x^{mn} - a^n\) for specific forms of polynomials, such as \(P(x) = x^m - a\).
+
+To calculate the product of a monic polynomial \(f(x) = x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0\) over the $p$ roots of unity, 
+one can utilize: 1) the specific properties of roots of  unity: \(x^p - 1 = 0\); 2) circulant matrices; or 3) Sylvester's Resolvents. 
+The resulting product depends on the degree of the polynomial and whether the roots include primitive components.\\
+
+{\bf 1 -- Specific properties of the roots of unity }
+
+\[x^p - 1 = \prod_{i=0}^{p-1} (x - \omega^i ) \]
+
+Consider the monic polynomial $f(x) =  x^n + a_{n-1} x^{n-1} + \hdots + a_1 x + a_0$, with roots $\alpha_1, \alpha_2, \hdots, \alpha_n$. 
+By Vi\`ete's theorem,
+\begin{eqnarray*}
+f(x) &=&  (x - \alpha_1)(x-\alpha_2)(x-\alpha_3) \hdots (x- \alpha_n) \cr
+&=& \prod_{j= 0}^n\, (x - \alpha_j) \cr
+\end{eqnarray*}
+  
+
+\begin{eqnarray*}
+x^p - d &=& \prod_{i=0}^{p-1} (x - \omega^i \sqrt[p]{d}) \mbox{ therefore} \cr
+\prod_{i = 0}^{p-1} f(\omega^i \sqrt[p]{a}) &=& Res_x(x^p - d, f(x)),
+\end{eqnarray*} Where $Res_x(h,g)$ is Sylvester's Resolvent for two polynomials $h(x)$ and $g(x)$. \\
+
+Taking the product of $f(x)$ over all the roots  of $x^p - d = 0$  we form
+
+\[ \prod_{i = 0}^p f(\omega^i \sqrt[p]{d} ) =  \prod_{i = 0}^p\  \prod_{j = 0}^n (\omega^i \sqrt[p]{d} - \alpha_j) =  \prod_{j = 0}^n  \ \prod_{i = 0}^p\, (\omega^i \sqrt[p]{d} - \alpha_j)  =  \prod_{j = 0}^n  \ (d - \alpha_j^p)   \] \\
+
+The final expression on the right-hand side depends only on rational quantities and is free of the roots of unity. \\
+
+%Where  ???????? is the Resolvent of the polynomials in  ??. The above is just a particular case of the so called Poisson product formula. You can then compute the Resolvent using for instance Sylvester's determinant formula.
+
+{\bf 2: Method based on Circulant Matrices}
 
 {\bf 1. The Structure of a Circulant Matrix}
 An \(n \times n\) circulant matrix \(C\) is completely defined by its first row vectors  \((c_0, c_1, \dots, c_{n-1})\). 
@@ -11,7 +49,7 @@ Consequently, its eigenvalues must satisfy \(\lambda^n = 1\), which explicitly f
 Any circulant matrix can be built directly out of \(P\):\(C=c_{0}I+c_{1}P+c_{2}P^{2}+\dots +c_{n-1}P^{n-1}\) \\
 
 {\bf 2. Roots of Unity as Eigenvectors}
-Let \(\omega \) be the primitive \(n\)-th root of unity: \(\omega =e^{\frac{2\pi i}{n}} \).
+Let \(\omega \) be the primitive \(n\)-th root of unity: \(\omega =e^{\frac{2\pi i}{n}} \). Then $\omega^{-k} = \omega^{n-k}$. 
 The distinct \(n\)-th roots of unity are given by \(\omega^0, \omega^1, \omega^2, \dots, \omega^{n-1}\).
 If we construct a test vector \(v_{k}\) using the powers of the \(k\)-th root of unity:
 \[v_{k}=\left(\begin{matrix}1\\ \omega^{k}\\ \omega^{2k}\\ \vdots \\ \omega^{(n-1)k}\end{matrix}\right)\]
@@ -66,19 +104,6 @@ its eigenvalues \(\lambda _{k}\) are simply the Discrete Fourier Transform (DFT)
 Because of this, the determinant of a circulant matrix is the product of all its eigenvalues:
 \[\det (C)=\prod _{k=0}^{n-1}\lambda _{k}.\]
 
-{\bf How Circulants Connect with Abel's method of Rationalization} Abel's method of rationalization is used to eliminate radical expressions from denominators of a ratio of polynomials $P(x)/Q(x)$ and relies on multiplying an algebraic 
-$Q(x)$ expression by its ``conjugates'' $Q(\omega x), Q(\omega^2 x), \hdots, Q(\omega^{n-1} x)$ over a radical extension field, for $\omega$ a primitve $n$-th root of unity\\
-
-{\it Roots of Unity}: In an \(n\times n\) circulant determinant, the eigenvalues of the matrix are given by evaluating a polynomial at the \(n\)-th primitive roots of unity (\(\omega^{k}\)).\\
-
-{\it The Product Rule}: The determinant of a circulant matrix equals the product of all its eigenvalues:
-\[\det (C)=\prod _{k=0}^{n-1}(c_{0}+c_{1}\omega^{k}+c_{2}\omega^{2k}+\dots +c_{n-1}\omega^{(n-1)k})\] 
-
-{\it Rationalization}: In Abel's method, if you want to rationalize a denominator containing a radical like \(\sqrt[n]{a}\), you treat \(\sqrt[n]{a}\) as the variable \(x\) in a polynomial.
-By mapping the denominator's coefficients into a circulant matrix, the resulting determinant calculates the product of the expression across all its field conjugates.
-Because this product covers every root of unity, all the complex and irrational radical terms cancel out,
-leaving a completely rationalized, pure integer or polynomial value as the final determinant. \\ 
-
 {\bf Twisted Circulant Matrix}
 
 A twisted Circulant matrix (or a Twistulant matrix) is a square $n \times n$ matrix where each row is shifted cyclically to the right by one position, much like a traditional circulant matrix. 
@@ -98,20 +123,25 @@ However, when the final element wraps around to the beginning, it is multiplied 
 {\bf 1. The General \(n \times n\) Matrix Definition}
 Let \(\alpha = \sqrt[n]{d}\) be an algebraic radical of degree \(n\). 
 The algebraic denominator expression to be cleared is defined as:
-\(Q(\alpha )=\sum _{j=0}^{n-1}a_{j}\alpha ^{j}=a_{0}+a_{1}\alpha +a_{2}\alpha ^{2}+\dots +a_{n-1}\alpha ^{n-1}\)
+\(Q(\alpha )=\sum _{j=0}^{n-1}c_{j}\alpha ^{j}=c_{0}+c_{1}\alpha +c_{2}\alpha ^{2}+\dots +c_{n-1}\alpha ^{n-1}\)
 The associated \(n \times n\) twisted circulant matrix \(C\) is structured as follows:
-\[C=\left(\begin{matrix}a_{0}&a_{1}&a_{2}&\dots &a_{n-2}&a_{n-1}\\ d\cdot a_{n-1}&a_{0}&a_{1}&\dots &a_{n-3}&a_{n-2}\\ d\cdot a_{n-2}&d\cdot a_{n-1}&a_{0}&\dots &a_{n-4}&a_{n-3}\\ \vdots &\vdots &\vdots &\ddots &\vdots &\vdots \\ d\cdot a_{2}&d\cdot a_{3}&d\cdot a_{4}&\dots &a_{0}&a_{1}\\ d\cdot a_{1}&d\cdot a_{2}&d\cdot a_{3}&\dots &d\cdot a_{n-1}&a_{0}\end{matrix}\right)\] 
+\[C=\left(\begin{matrix}c_{0}&c_{1}&c_{2}&\dots &c_{n-2}&c_{n-1}\\ 
+d\cdot c_{n-1}&c_{0}&c_{1}&\dots &c_{n-3}&c_{n-2}                     \\ 
+d\cdot c_{n-2}&d\cdot c_{n-1}&c_{0}&\dots &c_{n-4}&c_{n-3}      \\ 
+\vdots &\vdots &\vdots &\ddots &\vdots &\vdots                           \\ d\cdot c_{2}&d\cdot c_{3}&d\cdot c_{4}&\dots &c_{0}&c_{1}\\
+ d\cdot c_{1}&d\cdot c_{2}&d\cdot c_{3}&\dots &d\cdot c_{n-1}&c_{0}
+ \end{matrix}\right)\] 
 
 {\bf Eigenvectors}:
 Let \(\omega = e^{\frac{2\pi i}{n}}\) be the primitive \(n\)-th root of unity.
-The eigenvectors are independent of the specific matrix elements \(a_0, a_1, \dots, a_{n-1}\) and rely solely on \(n\) and \( \alpha \).
+The eigenvectors are independent of the specific matrix elements \(c_0, c_1, \dots, c_{n-1}\) and rely solely on \(n\) and \( \alpha \).
 They can be explicitly defined by a scaled Discrete Fourier Transform (DFT) basis.
 For \(k = 0, 1, \dots, n-1\), the \(k\)-th right eigenvector \(v_{k}\) of \(C\) is given by:
-\[v_k = \begin{bmatrix}  1 \\  \omega^{-k} \alpha  \\  \omega^{-2k} \alpha^{2} \\  \vdots \\  \omega^{-(n-1)k} \alpha^{(n-1)}  \end{bmatrix}. \]
+\[v_k = \begin{bmatrix}  1 \\  \omega^{k} \alpha  \\  \omega^{2k} \alpha^{2} \\  \vdots \\  \omega^{(n-1)k} \alpha^{(n-1)}  \end{bmatrix}. \]
 
 {\bf Eigenvalues:} While a standard circulant matrix uses pure Fourier modes as eigenvectors, a $d$-circulant matrix's eigenvectors account for the scalar shift $d$. 
 Each eigenvalue \(\lambda _{k}\) corresponds to the following exact formula:  
-\[ \lambda_k = \sum_{j=0}^{n-1} a_j \left(\omega^k \alpha \right)^j \] \\
+\[ \lambda_k = \sum_{j=0}^{n-1} c_j \left(\omega^k \alpha \right)^j \] \\
 
 {\bf Uncoupled Diagonalization}: Because all twisted circulant matrices commute with the twisted shift operator, they are simultaneously diagonalizable. \\
 
@@ -121,7 +151,7 @@ defined entirely by the roots of unity.\\
 {\bf 2. The Determinant (Field Norm Formula)} \\
 
 The determinant factors into the product of the field conjugates:
-\[\det (C)= \prod_{k=0}^{n-1}\, \lambda_k  =  \prod _{k=0}^{n-1}\left(\sum _{j=0}^{n-1}a_{j} \left(\omega^{k} \alpha \right)^{j}\right)\]
+\[\det (C)= \prod_{k=0}^{n-1}\, \lambda_k  =  \prod _{k=0}^{n-1}\left(\sum _{j=0}^{n-1}c_{j} \left(\omega^{k} \alpha \right)^{j}\right)\]
 Since the left-hand side involves the determinant of an $n \times n$ matrix whose elements are free of \(\omega \) and \(\alpha  =  \sqrt[n]{d} \), therefore expanding the product on the right-hand side eliminates all instances of \(\omega \) and \(\alpha  \).
 This determinant is guaranteed to be a purely rational number if all \(a_{j}\) and $d$ are rational. 
 It yields a purely rational polynomial given by the determinant of $C$:
@@ -137,6 +167,20 @@ By the construction of the twisted circulant matrix, we have the identity:
 Multiplying both sides by the Classical Adjoint matrix 
 \(\text{adj}(C)\) yields:\[\det (C)\vec{\alpha }=Q(\alpha )\cdot \text{adj}(C)\vec{\alpha }\]
 Extracting the first component (the top row) gives the exact rationalization identity:
-\[\frac{1}{a_{0}+a_{1}\alpha +\dots +a_{n-1}\alpha ^{n-1}}=\frac{\sum _{j=0}^{n-1}M_{0,j}\alpha ^{j}}{\det (C)}\]
+\[\frac{1}{c_{0}+c_{1}\alpha +\dots + c_{n-1}\alpha ^{n-1}}=\frac{\sum _{j=0}^{n-1}M_{0,j}\alpha ^{j}}{\det (C)}\]
 Where \(M_{0,j}\) represents the signed \((0,j)\) cofactor of the first row of matrix \(C\):
 \[M_{0,j}=(-1)^{j}\det (C_{\text{minor}(0,j)})\]
+
+{\bf How Circulants Connect with Abel's method of Rationalization} Abel's method of rationalization is used to eliminate radical expressions from denominators of a ratio of polynomials $P(x)/Q(x)$ and relies on multiplying an algebraic 
+$Q(x)$ expression by its ``conjugates'' $Q(\omega x), Q(\omega^2 x), \hdots, Q(\omega^{n-1} x)$ over a radical extension field, for $\omega$ a primitve $n$-th root of unity\\
+
+{\it Roots of Unity}: In an \(n\times n\) circulant determinant, the eigenvalues of the matrix are given by evaluating a polynomial at the \(n\)-th primitive roots of unity (\(\omega^{k}\)).\\
+
+{\it The Product Rule}: The determinant of a circulant matrix equals the product of all its eigenvalues:
+\[\det (C)=\prod _{k=0}^{n-1}(c_{0}+c_{1}\omega^{k}+c_{2}\omega^{2k}+\dots +c_{n-1}\omega^{(n-1)k})\] 
+
+{\it Rationalization}: In Abel's method, if you want to rationalize a denominator containing a radical like \(\sqrt[n]{d}\), you treat \(\sqrt[n]{d}\) as the variable \(x\) in a polynomial.
+By mapping the denominator's coefficients into a circulant matrix, the resulting determinant calculates the product of the expression across all its field conjugates.
+Because this product covers every root of unity, all the complex and irrational radical terms cancel out,
+leaving a completely rationalized, pure integer or polynomial value as the final determinant. \\ 
+

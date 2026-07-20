@@ -98,20 +98,3 @@ Exploit the Product Rule: Because P(x) is a product, \(P(\omega^j)\) becomes the
 
 %Resources
 %For a clear, visual explanation of how the roots of unity filter isolates terms in a product, check out this video:
-
-{\bf Product of a polynomial over all the roots of unity}
-
-When evaluating the product of a polynomial \(P(x)\) evaluated over all \(n\)-th roots of unity, 
-the result is given by the algebraic formula:
-\[P(x_1) \cdot P(x_2) \cdots P(x_n) = P(1) \cdot P(\omega) \cdots P(\omega^{n-1}) = P(n, x^n) \quad \text{(or often simply } (-1)^n P(0)^n \text{)}\]
-This can be heavily simplified to \(x^{mn} - a^n\) for specific forms of polynomials, such as \(P(x) = x^m - a\).
-To calculate this for an arbitrary polynomial \(P(x) = a_m x^m + a_{m-1} x^{m-1} + \dots + a_0\), 
-you can utilize resultants or rely on specific properties of roots of unity, which are formally known to be roots of the polynomial \(x^n - 1\). 
-The resulting product depends on the degree of the polynomial and whether the roots include primitive components.
-
-Notice that
-\begin{eqnarray*}
-y^p - x^p &=& \prod_{i=0}^{p-1} (y - \omega^i x) \mbox{ therefore} \cr
-\prod_{i = 0}^{p-1} f(\omega^i x) &=& Res_y(y^p - x^p, f(y)),
-\end{eqnarray*} Where $Res_y(h,g)$ is Sylvester's Resolvent for two polynomials $h(x)$ and $g(x)$. 
-%Where  ???????? is the resultant of the polynomials in  ??. The above is just a particular case of the so called Poisson product formula. You can then compute the resultant using for instance Sylvester's determinant formula.
