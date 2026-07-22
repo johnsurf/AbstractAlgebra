@@ -1,0 +1,79 @@
+%{\bf Summary of Rationalizing Denominators in Abel's Ratio $P(x)/Q(x)$}\\
+
+\section{Twisted Circulant Matrix}
+
+A twisted Circulant matrix (or a Twistulant matrix) is a square $n \times n$ matrix where each row is shifted cyclically to the right by one position, much like a traditional circulant matrix. 
+However, when the final element wraps around to the beginning, it is multiplied by a specific complex scalar $d$. \\
+
+%{\bf Structure}
+%For an $n \times n$ matrix defined by the first row \((c_0, c_1, c_2, \dots, c_{n-1})\) and a twist factor $\lambda$, 
+%the matrix takes the following form:
+%\[\left[\begin{matrix}c_{0}&c_{1}&c_{2}&\dots &c_{n-1}\\ 
+%\lambda c_{n-1}&c_{0}&c_{1}&\dots &c_{n-2}\\ 
+%\lambda c_{n-2}&\lambda c_{n-1}&c_{0}&\dots &c_{n-3}\\ 
+%\vdots &\vdots &\vdots &\ddots &\vdots \\ 
+%\lambda c_{1}&\lambda c_{2}&\lambda c_{3}&\dots &c_{0}\end{matrix}\right]\] \\
+
+{\bf 1. The General \(n \times n\) Twisted Circulant Matrix Definition}
+Let \(\alpha = \sqrt[n]{d}\) be an algebraic radical of degree \(n\). 
+The algebraic denominator expression to be cleared is defined as:
+\(Q(\alpha )=\sum _{j=0}^{n-1}c_{j}\alpha ^{j}=c_{0}+c_{1}\alpha +c_{2}\alpha ^{2}+\dots +c_{n-1}\alpha ^{n-1}\)
+The associated \(n \times n\) twisted circulant matrix \(C\) is structured as follows:
+\[C=\left(\begin{matrix}c_{0}&c_{1}&c_{2}&\dots &c_{n-2}&c_{n-1}\\ 
+d\cdot c_{n-1}&c_{0}&c_{1}&\dots &c_{n-3}&c_{n-2}                     \\ 
+d\cdot c_{n-2}&d\cdot c_{n-1}&c_{0}&\dots &c_{n-4}&c_{n-3}      \\ 
+\vdots &\vdots &\vdots &\ddots &\vdots &\vdots                           \\ d\cdot c_{2}&d\cdot c_{3}&d\cdot c_{4}&\dots &c_{0}&c_{1}\\
+ d\cdot c_{1}&d\cdot c_{2}&d\cdot c_{3}&\dots &d\cdot c_{n-1}&c_{0}
+ \end{matrix}\right)\] 
+
+{\bf Eigenvectors}:
+Let \(\omega = e^{\frac{2\pi i}{n}}\) be the primitive \(n\)-th root of unity.
+The eigenvectors are independent of the specific matrix elements \(c_0, c_1, \dots, c_{n-1}\) and rely solely on \(n\) and \( \alpha \).
+They can be explicitly defined by a scaled Discrete Fourier Transform (DFT) basis.
+For \(k = 0, 1, \dots, n-1\), the \(k\)-th right eigenvector \(v_{k}\) of \(C\) is given by:
+\[v_k = \begin{bmatrix}  1 \\  \omega^{k} \alpha  \\  \omega^{2k} \alpha^{2} \\  \vdots \\  \omega^{(n-1)k} \alpha^{(n-1)}  \end{bmatrix}. \]
+
+{\bf Eigenvalues:} While a standard circulant matrix uses pure Fourier modes as eigenvectors, a $d$-circulant matrix's eigenvectors account for the scalar shift $d$. 
+Each eigenvalue \(\lambda _{k}\) corresponds to the following exact formula:  
+\[ \lambda_k = \sum_{j=0}^{n-1} c_j \left(\omega^k \alpha \right)^j \] \\
+
+{\bf Uncoupled Diagonalization}: Because all twisted circulant matrices commute with the twisted shift operator, they are simultaneously diagonalizable. \\
+
+{\bf Standard Circulant}: When \(d = 1\), the matrix collapses into a standard circulant matrix, and the eigenvectors become the standard columns of the inverse DFT matrix, 
+defined entirely by the roots of unity.\\
+
+{\bf 2. The Determinant (Field Norm Formula)} \\
+
+The determinant factors into the product of the field conjugates:
+\[\det (C)= \prod_{k=0}^{n-1}\, \lambda_k  =  \prod _{k=0}^{n-1}\left(\sum _{j=0}^{n-1}c_{j} \left(\omega^{k} \alpha \right)^{j}\right)\]
+Since the left-hand side involves the determinant of an $n \times n$ matrix whose elements are free of \(\omega \) and \(\alpha  =  \sqrt[n]{d} \), therefore expanding the product on the right-hand side eliminates all instances of \(\omega \) and \(\alpha  \).
+This determinant is guaranteed to be a purely rational number if all \(a_{j}\) and $d$ are rational. 
+It yields a purely rational polynomial given by the determinant of $C$:
+\[\det (C)=\text{Norm}_{\mathbb{Q}(\sqrt[n]{d})/\mathbb{Q}}(Q(\alpha ))\in \mathbb{Q}\] 
+
+{\bf 3. Clearing the Denominator via Classical Adjoint}
+To rationalize the fraction \(\frac{1}{Q(\alpha )}\), use the matrix inversion property involving the Classical Adjoint matrix 
+\(\text{adj}(C)\): \[C\cdot \text{adj}(C)=\det (C)\cdot I_{n}\]
+The vector of algebraic basis elements is defined as:
+\[\vec{\alpha }=\left(\begin{matrix}1\\ \alpha \\ \alpha ^{2}\\ \vdots \\ \alpha ^{n-1}\end{matrix}\right)\]
+By the construction of the twisted circulant matrix, we have the identity:
+\[C\vec{\alpha }=Q(\alpha )\vec{\alpha }\]
+Multiplying both sides by the Classical Adjoint matrix 
+\(\text{adj}(C)\) yields:\[\det (C)\vec{\alpha }=Q(\alpha )\cdot \text{adj}(C)\vec{\alpha }\]
+Extracting the first component (the top row) gives the exact rationalization identity:
+\[\frac{1}{c_{0}+c_{1}\alpha +\dots + c_{n-1}\alpha ^{n-1}}=\frac{\sum _{j=0}^{n-1}M_{0,j}\alpha ^{j}}{\det (C)}\]
+Where \(M_{0,j}\) represents the signed \((0,j)\) cofactor of the first row of matrix \(C\):
+\[M_{0,j}=(-1)^{j}\det (C_{\text{minor}(0,j)})\]
+
+%{\bf How Circulants Connect with Abel's method of Rationalization} Abel's method of rationalization is used to eliminate radical expressions from denominators of a ratio of polynomials $P(x)/Q(x)$ and relies on multiplying an algebraic 
+%$Q(x)$ expression by its ``conjugates'' $Q(\omega x), Q(\omega^2 x), \hdots, Q(\omega^{n-1} x)$ over a radical extension field, for $\omega$ a primitve $n$-th root of unity\\
+
+%{\it Roots of Unity}: In an \(n\times n\) circulant determinant, the eigenvalues of the matrix are given by evaluating a polynomial at the \(n\)-th primitive roots of unity (\(\omega^{k}\)).\\
+
+%{\it The Product Rule}: The determinant of a circulant matrix equals the product of all its eigenvalues:
+%\[\det (C)=\prod _{k=0}^{n-1}(c_{0}+c_{1}\omega^{k}+c_{2}\omega^{2k}+\dots +c_{n-1}\omega^{(n-1)k})\] 
+
+%{\it Rationalization}: In Abel's method, if you want to rationalize a denominator containing a radical like \(\sqrt[n]{d}\), you treat \(\sqrt[n]{d}\) as the variable \(x\) in a polynomial.
+%By mapping the denominator's coefficients into a circulant matrix, the resulting determinant calculates the product of the expression across all its field conjugates.
+%Because this product covers every root of unity, all the complex and irrational radical terms cancel out,
+%leaving a completely rationalized, pure integer or polynomial value as the final determinant. \\ 

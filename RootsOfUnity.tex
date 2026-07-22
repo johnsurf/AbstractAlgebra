@@ -60,23 +60,22 @@ Geometrically, when \(m\) is not a multiple of \(n\), the terms \(\omega ^{km}\)
 %Source of my knowledge: http://zacharyabel.com/papers/Multi-GF_A06_MathRefl.pdf
 %There are some examples also which may help you. Please have a look at Problem 2 on page 3.
 
-The roots of unity filter (or roots of unity trick) is a mathematical technique used in generating functions and combinatorics to isolate and sum specific polynomial coefficients, such as every n-th term. When applied to a product of polynomials, it allows you to easily extract terms whose exponents are periodic. [1, 2]\\
+The roots of unity filter (or roots of unity trick) is a mathematical technique used in generating functions and combinatorics to isolate and sum specific polynomial coefficients, such as every $n$-th term. When applied to a product of polynomials, it extracts those terms whose exponents are periodic.\\
 
-How It Works\\
-The core of the filter relies on the following summation property for an n-th root of unity ? (where \(\omega^n = 1\)): [1]
+The core of the filter relies on the following summation property for an $n$-th root of unity (where \(\omega^n = 1\)):
 \(\sum_{k=0}^{n-1} \omega^{mk} = \begin{cases} n, & \text{if } m \text{ is a multiple of } n \\ 0, & \text{otherwise} \end{cases}\)\\
 
-If you have a generating function P(x), you can isolate the sum of every n-th coefficient (e.g., \(a_0, a_n, a_{2n}, \dots\)) by averaging P(x) evaluated at all n-th roots of unity: [1, 2]
-\(\sum_{k=0}^{\infty} a_{kn} = \frac{P(1) + P(\omega) + P(\omega^2) + \dots + P(\omega^{n-1})}{n}\)\\
+Given a polynomial function f(x), you can isolate the sum of every n-th coefficient (e.g., \(a_0, a_n, a_{2n}, \dots\)) by averaging f(x) evaluated at all n-th roots of unity:
+\[ \sum_{k=0}^{\infty} a_{kn} = \frac{f(1) + f(\omega) + f(\omega^2) + \dots + f(\omega^{n-1})}{n} \]\\
 
-Applying It to Products
-In combinatorial problems (such as finding the number of subsets whose sum is divisible by a certain integer), your polynomial is often expressed as a product of factors, \(P(x) = \prod_{i=1}^{m} F_i(x)\). [1, 2]
-Applying the filter to this product involves substituting each root of unity \(\omega ^{j}\) into the product individually:\\
+%Applying It to Products
+%In combinatorial problems (such as finding the number of subsets whose sum is divisible by a certain integer), your polynomial is often expressed as a product of factors, \(P(x) = \prod_{i=1}^{m} F_i(x)\). [1, 2]
+%Applying the filter to this product involves substituting each root of unity \(\omega ^{j}\) into the product individually:\\
 
-Construct the Generating Function: Represent the event or choice as a polynomial, where powers indicate the "value" and coefficients indicate the number of combinations.
-Evaluate at Roots of Unity: Calculate \(P(\omega^j)\) for \(j = 0, 1, \dots, n-1\).
-Exploit the Product Rule: Because P(x) is a product, \(P(\omega^j)\) becomes the product of the individual evaluated factors:
-\(P(\omega^j) = F_1(\omega^j) \cdot F_2(\omega^j) \cdot \dots \cdot F_m(\omega^j)\) \\
+%Construct the Generating Function: Represent the event or choice as a polynomial, where powers indicate the "value" and coefficients indicate the number of combinations.
+%Evaluate at Roots of Unity: Calculate \(P(\omega^j)\) for \(j = 0, 1, \dots, n-1\).
+%Exploit the Product Rule: Because P(x) is a product, \(P(\omega^j)\) becomes the product of the individual evaluated factors:
+%\(P(\omega^j) = F_1(\omega^j) \cdot F_2(\omega^j) \cdot \dots \cdot F_m(\omega^j)\) \\
 
 
 %Average the Results: Sum these products and divide by n to isolate the terms matching your modulo condition. [1, 2, 3]\\
