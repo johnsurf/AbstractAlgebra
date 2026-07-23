@@ -1,18 +1,29 @@
 \section{Algebraic Form for a Rational Expression of a Radical}
 
-Let $d$ be a rational number which is not a perfect $p$-th root and let $p$ be a prime number so we don't have to further reduce the expression (composite numbers can always be factored into primes which can subsequently 
-be considered separately by nesting the radical expressions). Let $\alpha = \sqrt[p]{d}$ and
+Let $R$ be a rational number which is not a perfect $p$-th root and let $p$ be a prime number so we don't have to further reduce the expression (composite numbers can always be factored into primes which can subsequently 
+be considered separately by nesting the radical expressions). Let $\alpha = \sqrt[p]{R}$ and
 consider the set $\{ \alpha, \alpha^{2}, \hdots, \alpha^{(p-1)} \}$. These components form the basis set for a vector space, $V$ over a field $F$. The general form for an element in this space is given by
- \[  c_0 + c_1 \alpha  + \dots +  c_{p-1} \alpha^{p-1},\quad c_i \in F, i = 0,1,2\hdots, p-1. \]  
+\be  f(\alpha) = c_0 + c_1 \alpha  + \dots +  c_{p-1} \alpha^{p-1},\quad c_i \in F, i = 0,1,2\hdots, p-1. \label{AlphaBasis} \ee
 
-Rational expression in $V$ take the form \( P(\alpha) / Q(\alpha) \), where 
+A rational expression in $V$ takes the form \( P(\alpha) / Q(\alpha) \), where 
 \begin{eqnarray*}
-P(\alpha) &=& a_0 + a_1 \alpha  + \dots +  a_{p-1} \alpha^{n-1} \cr
-Q(\alpha) &=& b_0 + b_1 \alpha  + \dots +  b_{p-1} \alpha^{n-1},
-\end{eqnarray*}where $a_i, b_i \in F$ for $i = 0, 1, 2, \hdots, p$. \\
+P(\alpha) &=& a_0 + a_1 \alpha  + \dots +  a_{m} \alpha^{m} \cr
+Q(\alpha) &=& b_0 + b_1 \alpha  + \dots +  b_{n} \alpha^{n},
+\end{eqnarray*}where $a_i \in F$ for $i = 0, 1, 2, \hdots, ,m$  and $b_j = 0, 1, 2, \hdots n$. \\
 
-Such a rational expression can be brought back into the form of   \(  c_0 + c_1 \alpha  + \dots +  c_{p-1} \alpha^{p-1} \), by rationalizing the denominator by multiplying by all of the conjugate values using the $p$-roots of unity $\omega$ 
-$\omega^p = 1$.
+Such a rational expression can be brought back into the form of   \(  c_0 + c_1 \alpha  + \dots +  c_{p-1} \alpha^{p-1} \), by first using Eq. (\ref{AlphaBasis}) for any terms with degree greater than $p$ in either the numerator or denominator and by rationalizing the denominator by multiplying $Q(\alpha)$
+by all of the conjugate values using the $p$-roots of unity $\omega$: $\omega^p = 1$.
+
+We put this in the form of:
+\begin{theorem}
+Any algebraic function can be put in the form
+\[ y = c_0 + c_1 \alpha + c_2 \alpha^2 + \hdots + c_{p-1} \alpha^{p-1}, \]
+for $p$ a prime and $c_0, c_1, \hdots c_{p-1}, R$ are algebraic functions of lower order than y.
+\end{theorem}
+
+\begin{proof}
+
+We start by showing that it is possible to clear the denominator of terms that depend only on rational quantities and a free of roots of unity. To proceed we multiply the numerator and denominator by the conjugate values of $Q(\alpha)$ over the $p$ roots of unity: 
 
 \[ {P(\alpha)  \over Q(\alpha) } = {P(\alpha) Q(\omega\alpha)Q(\omega^2\alpha) \hdots Q(\omega^{p-1}\alpha) \over Q(\alpha) Q(\omega\alpha)Q(\omega^2\alpha) \hdots Q(\omega^{p-1}\alpha)} . \]
 
@@ -22,7 +33,7 @@ In order to see how this works we examine the denominator on the right-hand side
 
 Some of the books and papers suggest proceeding by using the distributive law to expand the product of polynomial functions on the right hand side and using the appropriate cyclotomic polynomial: 
 \[ 1 + \omega + \omega^2 + \hdots + \omega^{(p-1)} = 0,\] to eliminate terms involving irrational terms in $\alpha$ or roots of unity. This brute force method appears very laborious to perform and we look for other methods.
-It is certainly true the the final expression for $D$ is symmetric in the roots of the polynomial $Q(x)$ and hence by the theorem on Symmetric Functions can be expressed in terms of the coefficients of $Q(x)$ and hence is rational. 
+It is certainly true the the final expression for $R$ is symmetric in the roots of the polynomial $Q(x)$ and hence by the theorem on Symmetric Functions can be expressed in terms of the coefficients of $Q(x)$ and hence is rational. 
 However, we would like probe in more detail to help visualize the problem. \\
 
 Three such methods suggest themselves: \\
@@ -42,11 +53,11 @@ Q(x) &=&  (x - \alpha_0)(x-\alpha_2)(x-\alpha_3) \hdots (x- \alpha_{p-1}) \cr
 \end{eqnarray*}
   
 From \[x^p - 1 = \prod_{i=0}^{p-1} (x - \omega^i ) \] we can show 
-\[ x^p - d = \prod_{i=0}^{p-1} (x - \omega^i \sqrt[p]{d}) \]
+\[ x^p - d = \prod_{i=0}^{p-1} (x - \omega^i \sqrt[p]{R}) \]
 
 Taking the product of $f(x)$ over all the roots  of $x^p - d = 0$  we form
 
-\[ \prod_{i = 0}^{p-1} Q(\omega^i \sqrt[p]{d} ) =  \prod_{i = 0}^{p-1} \  \prod_{j = 0}^{p-1} (\omega^i \sqrt[p]{d} - \alpha_j) =  \prod_{j = 0}^{p-1}  \ \prod_{i = 0}^{p-1}\, (\omega^i \sqrt[p]{d} - \alpha_j)  =  \prod_{j = 0}^{p-1}  \ (d - \alpha_j^p)   \] \\
+\[ \prod_{i = 0}^{p-1} Q(\omega^i \sqrt[p]{R} ) =  \prod_{i = 0}^{p-1} \  \prod_{j = 0}^{p-1} (\omega^i \sqrt[p]{R} - \alpha_j) =  \prod_{j = 0}^{p-1}  \ \prod_{i = 0}^{p-1}\, (\omega^i \sqrt[p]{R} - \alpha_j)  =  \prod_{j = 0}^{p-1}  \ (d - \alpha_j^p)   \] \\
 
 The final expression on the right-hand side depends only on rational quantities and is free of the roots of unity. \\
 
@@ -55,30 +66,31 @@ The final expression on the right-hand side depends only on rational quantities 
 Let 
 \begin{align*}
 f(x)  &= x^{p} - d\\
-Q(x) &=  a_{p-1} x^{p-1}  + a_{p-2} x^{p-2} + \hdots + a_1 x   + a_0,  \\
-\end{align*} where $d$ is not a $p$th power of an element in the field of coefficients. 
-$f(x)$ and $g(x)$ will have a common root if the Sylvester Resultant formed by these two functions vanishes. 
-The roots of $f(x) = 0$ take the form $z_k = \omega^k d^{1\over p}$ and we're assuming that $d^{1\over p}$ is an irrationality in the domain containing the coefficients. 
+Q(x) &= b_{n} \alpha^{n} + b_{n-1}\alpha^{n-1} + \dots + b_1 \alpha    + b_0  , 
+\end{align*} 
+where $R$ is not a $p$-th power of an element in the field of coefficients. 
+$f(x)$ and $Q(x)$ will have a common root if the Sylvester Resultant formed by these two functions vanishes. 
+The roots of $f(x) = 0$ take the form $z_k = \omega^k \sqrt[p]{R}$ and we're assuming that $d^{1\over p}$ is an irrationality in the domain containing the coefficients. 
 Also with respect to Abel's rationalization method 
 we need to show that 
-\be \prod_{k=0}^{p-1}\, g(z_k) = G(z^p)  = G(d)  \mbox{  where $G(d)$ is rational in the domain of the coefficients of } g(x).\ee
-Using $f(x)$ and $g(x)$ we construct the Sylvester Resultant
-\[\det(M) = \prod_{k=0}^{p-1}\, g(z_k)  =
+\be \prod_{k=0}^{p-1}\, Q(z_k) = G(z^p)  = G(d)  \mbox{  where $G(d)$ is rational in the domain of the coefficients of  }  Q(x).\ee
+Using $f(x)$ and $Q(x)$ we construct the Sylvester Resultant
+\[\det(M) = \prod_{k=0}^{p-1}\, Q(z_k)  =
 \det \begin{bmatrix}
-1     & 0 & \cdots  & -d                   &            &    \\
+1     & 0 & \cdots  & -R                   &            &    \\
  0    &  1 & \ddots & \dots               & \ddots  &    \\
  \vdots  &  & \ddots & \cdots               & \ddots  &    \\
- 0      &  \hdots   &            & 1                       & \cdots  & -d\\
-a_{p-1} &     & \cdots & ~~~~~~a_0 &             & \\
+ 0      &  \hdots   &            & 1                       & \cdots  & -R\\
+b_{n} &     & \cdots & ~~~~~~b_0 &             & \\
        &     & \ddots & \cdots                & \ddots & \\
-       &     &            &a_{p-1}                     & \cdots &a_0 \\
+       &     &            &b_{n}                     & \cdots &b_0 \\
 \end{bmatrix}.\]
 
-Since the roots of $f(x) = x^p - d$ are exactly $z_k = \omega^k R^{1\over p}$, substituting them into the formula yields 
-\[ \det(M) =  \prod_{k=0}^{p-1}\, g(z_k) .\] 
+Since the roots of $f(x) = x^p - R$ are exactly $z_k = \omega^k \sqrt[p]{R}$, substituting them into the formula yields 
+\[ \det(M) =  \prod_{k=0}^{p-1}\, Q(z_k) .\] 
 Because computing the determinant $\det(M)$ only involves additions, subtractions, and multiplication of the matrix entries, the 
-final polynomial expression outputted by the determinant can only contain powers of combinations of the terms in the matrix M. 
-Therefore the resulting polynomial must be a function of $x^p = d$ and the coefficients and must therefore be a rational expression. 
+final polynomial expression outputted by the determinant can only contain powers of combinations of the terms in the Sylvester matrix. 
+Therefore the resulting polynomial must be a function of $x^p = R$ and the coefficients and must therefore be a rational expression. 
 %The above is a demonstration of Abel's method of Rationalization. 
 
 %Using Sylvester's Resolvent we can eliminate $x$ between 
@@ -86,7 +98,7 @@ Therefore the resulting polynomial must be a function of $x^p = d$ and the coeff
 %This procedure leads to evaluating the determinant of a $2p -1 \times 2p -1$ matrix. 
 
 %\begin{eqnarray*}
-%x^p - d &=& \prod_{i=0}^{p-1} (x - \omega^i \sqrt[p]{d}) \mbox{ therefore} \cr
+%x^p - d &=& \prod_{i=0}^{p-1} (x - \omega^i \sqrt[p]{R}) \mbox{ therefore} \cr
 %\prod_{i = 0}^{p-1} Q(\omega^i \sqrt[p]{a}) &=& Res_x(x^p - d, Q(x)),
 %\end{eqnarray*} Where $Res_x(h,g)$ is Sylvester's Resolvent for two polynomials $h(x)$ and $g(x)$. \\
 
@@ -101,7 +113,7 @@ Sylvester's Resolvent depends only on rational quantities and is also free of th
 {\bf Method C -- Based on Twisted Circulant Matrix}
 
 A twisted Circulant matrix (or a Twistulant matrix) is a square $p \times p$ matrix where each row is shifted cyclically to the right by one position, much like a traditional circulant matrix. 
-However, when the final element wraps around to the beginning, it is multiplied by a specific complex scalar $d$. \\
+However, when the final element wraps around to the beginning, it is multiplied by a specific complex scalar $R$. \\
 
 %{\bf Structure}
 %For an $n \times n$ matrix defined by the first row \((c_0, c_1, c_2, \dots, c_{n-1})\) and a twist factor $\lambda$, 
@@ -113,7 +125,7 @@ However, when the final element wraps around to the beginning, it is multiplied 
 %\lambda c_{1}&\lambda c_{2}&\lambda c_{3}&\dots &c_{0}\end{matrix}\right]\] \\
 
 {\bf 1. The General \(n \times n\) Twisted Circulant Matrix Definition}
-Let \(\alpha = \sqrt[n]{d}\) be an algebraic radical of degree \(n\). 
+Let \(\alpha = \sqrt[n]{R}\) be an algebraic radical of degree \(n\). 
 The algebraic denominator expression to be cleared is defined as:
 \(Q(\alpha )=\sum _{j=0}^{n-1}c_{j}\alpha ^{j}=c_{0}+c_{1}\alpha +c_{2}\alpha ^{2}+\dots +c_{n-1}\alpha ^{n-1}\)
 The associated \(n \times n\) twisted circulant matrix \(C\) is structured as follows:
@@ -131,7 +143,7 @@ They can be explicitly defined by a scaled Discrete Fourier Transform (DFT) basi
 For \(k = 0, 1, \dots, p-1\), the \(k\)-th right eigenvector \(v_{k}\) of \(C\) is given by:
 \[v_k = \begin{bmatrix}  1 \\  \omega^{k} \alpha  \\  \omega^{2k} \alpha^{2} \\  \vdots \\  \omega^{(n-1)k} \alpha^{(p-1)}  \end{bmatrix}. \]
 
-{\bf Eigenvalues:} While a standard circulant matrix uses pure Fourier modes as eigenvectors, a $d$-circulant matrix's eigenvectors account for the scalar shift $d$. 
+{\bf Eigenvalues:} While a standard circulant matrix uses pure Fourier modes as eigenvectors, a $R$-circulant matrix's eigenvectors account for the scalar shift $R$. 
 Each eigenvalue \(\lambda _{k}\) corresponds to the following exact formula:  
 \[ \lambda_k = \sum_{j=0}^{p-1} c_j \left(\omega^k \alpha \right)^j \] \\
 
@@ -144,10 +156,10 @@ defined entirely by the roots of unity.\\
 
 The determinant factors into the product of the field conjugates:
 \[\det (C)= \prod_{k=0}^{p-1}\, \lambda_k  =  \prod _{k=0}^{p-1}\left(\sum _{j=0}^{n-1}c_{j} \left(\omega^{k} \alpha \right)^{j}\right)\]
-Since the left-hand side involves the determinant of an $n \times n$ matrix whose elements are free of \(\omega \) and \(\alpha  =  \sqrt[p]{d} \), therefore expanding the product on the right-hand side eliminates all instances of \(\omega \) and \(\alpha  \).
-This determinant is guaranteed to be a purely rational number if all \(a_{j}\) and $d$ are rational. 
+Since the left-hand side involves the determinant of an $n \times n$ matrix whose elements are free of \(\omega \) and \(\alpha  =  \sqrt[p]{R} \), therefore expanding the product on the right-hand side eliminates all instances of \(\omega \) and \(\alpha  \).
+This determinant is guaranteed to be a purely rational number if all \(a_{j}\) and $R$ are rational. 
 It yields a purely rational polynomial given by the determinant of $C$:
-\[\det (C)=\text{Norm}_{\mathbb{Q}(\sqrt[p]{d})/\mathbb{Q}}(Q(\alpha ))\in \mathbb{Q}\] 
+\[\det (C)=\text{Norm}_{\mathbb{Q}(\sqrt[p]{R})/\mathbb{Q}}(Q(\alpha ))\in \mathbb{Q}\] 
 
 {\bf 3. Clearing the Denominator via Classical Adjoint of the Twisted Circulant Matrix}
 To rationalize the fraction \(\frac{1}{Q(\alpha )}\), use the matrix inversion property involving the Classical Adjoint matrix 
@@ -164,6 +176,8 @@ Where \(M_{0,j}\) represents the signed \((0,j)\) cofactor of the first row of m
 \[M_{0,j}=(-1)^{j}\det (C_{\text{minor}(0,j)})\]
 
 The product of the eigenvalues of the Twisted Circulant is equal to the determinant of the same matrix whose elements depend only on rational quantities and are also free of the roots of unity. \\
+
+\end{proof}
 
 {\bf Conclusion } 
 
@@ -188,8 +202,8 @@ All three methods provide different approaches to rationalizing the denominator 
 \hline
 \textbf{Feature} & \textbf{Twisted Circulant Matrix} & \textbf{Sylvester Resultant Matrix} \\ \hline
 Matrix Size& Compact: $ p \times p$ & Large: $2p-1 \times 2p -1 $\\ \hline
-Mathematica Basis &  \makecell{Linear operator on the field basis \\ $\{1, \alpha, \dots, \alpha^{n-1}\} $}    & \makecell{Elimination tool for two \\ distinct  polynomial rings} \\ \hline
-Intrinsic Rule & \makecell{Radical Reduction $x^p = d$ \\ built in to the ``twist''}& \makecell{Radical Reduction explicitly handled \\ by inserting $-d$ into the rows }\\ \hline
+Mathematica Basis &  \makecell{Linear operator on the field basis \\ $\{1, \alpha, \dots, \alpha^{p-1}\} $}    & \makecell{Elimination tool for two \\ distinct  polynomial rings} \\ \hline
+Intrinsic Rule & \makecell{Radical Reduction $x^p = R$ \\ built in to the ``twist''}& \makecell{Radical Reduction explicitly handled \\ by inserting $-R$ into the rows }\\ \hline
 Bezout Identity & \makecell{Obtained by using \\ the Classical Adjoint  \(\text{adj}(C)\) }& \makecell{Obtained by solving the system \\ $S^\dagger \vec{ x} = \vec{e}$} \\ \hline
 \end{tabular}
 \end{table}
