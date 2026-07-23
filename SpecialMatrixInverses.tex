@@ -1,0 +1,28 @@
+\section{Inverses of Special Cases}
+
+{\bf The inverse of a Symmetric Matrix is Symmetric}
+A symmetric matrix is defined by $A = A^\dagger$. The inverse of $A$ satisfies
+\[ A^{-1} A = I \] Therefore, by taking the transpose of both sides we have
+\[ A^T (A^{-1})^\dagger = A (A^{-1})^\dagger = I.\]Therefore
+\[ A^{-1} A (A^{-1})^\dagger = A^{-1} I = A^{-1},\] or
+\[(A^{-1})^\dagger = A^{-1}.\]Therefore the inverse of a symmetric matrix is also symmetric. \\
+
+{\bf The inverse of a Triangular Matrix}
+\begin{theorem}[Upper Triangular Matrices]
+Let $U$ be an upper triangular matrix. If the inverse $U^{-1}$ exists, then it is upper triangular.
+\end{theorem}
+\begin{proof}
+Recall the $(n-1)\times(n-1)$ cofactor matrix, $M_{rs}$ that results from omitting row $r$ and column $s$ of $U = (u_{ij})$.
+When it exists, \[ U^{-1} = {1\over|U|}{\bf adj}(U),\] so it is enough to prove that the $n \times n$ matrix $(|C_{rs}|)$ of cofactor determinants whose transpose
+is $(|C_{rs}|)^\dagger$ is the adjugate, is lower triangular.\\
+
+In the case $r < s$, every element below the diagonal of the matrix $C_{rs}$ is also below the diagonal of $U$, so must be equal to $0$.\\
+
+Hence $C_{rs}$ is upper triangular, with the determinant equal to the product of its diagonal elements.\\
+
+However, $s-r$ of these diagonal elements are $u_{i+1,j}$ for $i=r,\hdots,s-1$. These elements are from below the diagonal of $U$, and so are equal to $0$. \\
+
+Hence $r < s$ implies that $|C_{rs}| = 0$, so the $n\times n$ matrix $(|C_{rs}|)$ of cofactor determinants is indeed lower triangular. Hence the adjugate
+$(|C_{rs}|)^\dagger$ is upper triangular. Hence the inverse of and upper triangular matrix is upper triangular. By similar reasoning we can show that the
+inverse of a lower triangular matrix is lower triangula.\qed
+\end{proof}
